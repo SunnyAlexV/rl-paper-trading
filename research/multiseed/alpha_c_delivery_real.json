@@ -1,0 +1,96 @@
+{
+ "tag": "c_delivery_real",
+ "H": 20,
+ "null_seed": null,
+ "seed": 0,
+ "evals": 2400,
+ "seconds": 2282.527668952942,
+ "train_pool_ic": 0.0648011517460013,
+ "train_net_ir": 1.022086296705486,
+ "weights": [
+  0.06931741049377602,
+  -0.017009937852210024,
+  -0.012042219268817728,
+  0.006662656111254606,
+  0.004154336960349238
+ ],
+ "alphas": [
+  {
+   "formula": "ts_max_10(ts_max_60(ts_mean_20(deliv_pct)))",
+   "seq": [
+    "deliv_pct",
+    "ts_mean_20",
+    "ts_max_60",
+    "ts_max_10"
+   ],
+   "weight": 0.06931741049377602,
+   "train_ic": 0.060995412674941726,
+   "train_autocorr": 0.9996677960385099,
+   "valid_ic": 0.031984149575348675,
+   "valid_net_ir_alone": -0.5668177119950968
+  },
+  {
+   "formula": "ts_min_40(ts_pct_60(deliv_pct))",
+   "seq": [
+    "deliv_pct",
+    "ts_pct_60",
+    "ts_min_40"
+   ],
+   "weight": -0.017009937852210024,
+   "train_ic": 0.007328108082875508,
+   "train_autocorr": 0.9837614425256063,
+   "valid_ic": -0.0019705098186727017,
+   "valid_net_ir_alone": -0.19333700864660386
+  },
+  {
+   "formula": "ts_rank_20(close)",
+   "seq": [
+    "close",
+    "ts_rank_20"
+   ],
+   "weight": -0.012042219268817728,
+   "train_ic": -0.0069334463098851915,
+   "train_autocorr": 0.8018230027777407,
+   "valid_ic": -0.002781564149592205,
+   "valid_net_ir_alone": -1.9287851260195918
+  },
+  {
+   "formula": "ts_delta_10(ts_min_20(ts_max_10(value)))",
+   "seq": [
+    "value",
+    "ts_max_10",
+    "ts_min_20",
+    "ts_delta_10"
+   ],
+   "weight": 0.006662656111254606,
+   "train_ic": 0.009419629024385602,
+   "train_autocorr": 0.8906264679209347,
+   "valid_ic": -0.022488178978304338,
+   "valid_net_ir_alone": -2.557368764165602
+  },
+  {
+   "formula": "ts_pct_60(ts_min_40(ts_max_5(deliv_val)))",
+   "seq": [
+    "deliv_val",
+    "ts_max_5",
+    "ts_min_40",
+    "ts_pct_60"
+   ],
+   "weight": 0.004154336960349238,
+   "train_ic": 0.00866529477358099,
+   "train_autocorr": 0.9789301135477615,
+   "valid_ic": -0.006050850495446536,
+   "valid_net_ir_alone": 0.39036680629531717
+  }
+ ],
+ "valid_pool_ic": 0.03066678278611294,
+ "valid_net_ir": -0.45825933457263096,
+ "valid_turnover": 8.237975951903808,
+ "train_turnover": 6.996335078534031,
+ "tried_reward_quantiles": {
+  "0.5": -0.12437312065243178,
+  "0.9": 0.00199644867413996,
+  "0.99": 0.1202852267356953,
+  "1.0": 0.5656012255047508
+ }
+}

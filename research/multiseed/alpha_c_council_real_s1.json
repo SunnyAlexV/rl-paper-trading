@@ -1,0 +1,136 @@
+{
+ "seed": 1,
+ "market": "real",
+ "n_members": 12,
+ "train_net_ir": 0.5469733180580285,
+ "valid_net_ir": 0.5758199925511566,
+ "alphas": [
+  {
+   "seq": [
+    "open",
+    "ts_rank_20",
+    "ts_max_10",
+    "ts_mean_60"
+   ],
+   "formula": "ts_mean_60(ts_max_10(ts_rank_20(open)))",
+   "weight": 0.029515008574139075,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "volume",
+    "slog",
+    "ts_delay_60",
+    "ts_std_60",
+    "ts_max_5"
+   ],
+   "formula": "ts_max_5(ts_std_60(ts_delay_60(slog(volume))))",
+   "weight": -0.004855610864300727,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "low",
+    "ts_delay_10",
+    "ts_pct_40",
+    "ts_min_20",
+    "ts_rank_40"
+   ],
+   "formula": "ts_rank_40(ts_min_20(ts_pct_40(ts_delay_10(low))))",
+   "weight": 0.006641760647365358,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "value",
+    "ts_min_5",
+    "ts_min_5"
+   ],
+   "formula": "ts_min_5(ts_min_5(value))",
+   "weight": 0.029980653074122662,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_mean_60"
+   ],
+   "formula": "ts_mean_60(deliv_pct)",
+   "weight": -0.036970558813113896,
+   "researcher": "delivery"
+  },
+  {
+   "seq": [
+    "close",
+    "ts_pct_60",
+    "ts_mean_40"
+   ],
+   "formula": "ts_mean_40(ts_pct_60(close))",
+   "weight": 0.001720133839166363,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "basis",
+    "ts_delay_60",
+    "ts_min_20"
+   ],
+   "formula": "ts_min_20(ts_delay_60(basis))",
+   "weight": 0.006309229569674785,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "value",
+    "ts_max_5",
+    "ts_max_5",
+    "ts_std_10"
+   ],
+   "formula": "ts_std_10(ts_max_5(ts_max_5(value)))",
+   "weight": -0.007228433151193921,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_mean_20"
+   ],
+   "formula": "ts_mean_20(deliv_pct)",
+   "weight": 0.07988634875423037,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_std_60",
+    "neg"
+   ],
+   "formula": "neg(ts_std_60(deliv_pct))",
+   "weight": -0.056697046254723514,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_delta_20",
+    "close",
+    "ts_pct_20",
+    "sub"
+   ],
+   "formula": "sub(ts_delta_20(deliv_pct), ts_pct_20(close))",
+   "weight": 0.01700878310963392,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "basis",
+    "basis",
+    "ts_mean_60",
+    "sub"
+   ],
+   "formula": "sub(basis, ts_mean_60(basis))",
+   "weight": 0.007091627988241795,
+   "researcher": "llm"
+  }
+ ]
+}

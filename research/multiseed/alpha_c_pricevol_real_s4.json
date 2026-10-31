@@ -1,0 +1,101 @@
+{
+ "tag": "c_pricevol_real_s4",
+ "H": 20,
+ "null_seed": null,
+ "seed": 4,
+ "evals": 1500,
+ "seconds": 1262.1024904251099,
+ "train_pool_ic": 0.061783558048316985,
+ "train_net_ir": 1.0876151699517869,
+ "weights": [
+  -0.03374367750808977,
+  0.059879355946587394,
+  0.045148433221747705,
+  -0.011198460823077159,
+  -0.007090326897450426
+ ],
+ "alphas": [
+  {
+   "formula": "ts_pct_20(slog(ts_min_60(ts_mean_60(neg(low)))))",
+   "seq": [
+    "low",
+    "neg",
+    "ts_mean_60",
+    "ts_min_60",
+    "slog",
+    "ts_pct_20"
+   ],
+   "weight": -0.03374367750808977,
+   "train_ic": 0.022560485302051524,
+   "train_autocorr": 0.9968363985421594,
+   "valid_ic": 0.019372994512242506,
+   "valid_net_ir_alone": -1.6453124021002536
+  },
+  {
+   "formula": "ts_pct_20(ts_max_10(ts_min_40(ts_mean_60(ts_delay_40(high)))))",
+   "seq": [
+    "high",
+    "ts_delay_40",
+    "ts_mean_60",
+    "ts_min_40",
+    "ts_max_10",
+    "ts_pct_20"
+   ],
+   "weight": 0.059879355946587394,
+   "train_ic": 0.050784740772468626,
+   "train_autocorr": 0.9980064164661224,
+   "valid_ic": 0.031809087771126385,
+   "valid_net_ir_alone": 1.7472179965531531
+  },
+  {
+   "formula": "ts_pct_60(ts_max_20(vwap))",
+   "seq": [
+    "vwap",
+    "ts_max_20",
+    "ts_pct_60"
+   ],
+   "weight": 0.045148433221747705,
+   "train_ic": 0.025892701214510146,
+   "train_autocorr": 0.9939634447787944,
+   "valid_ic": 7.637399250556636e-05,
+   "valid_net_ir_alone": 0.029907393670302387
+  },
+  {
+   "formula": "ts_std_40(ts_rank_5(ts_min_5(ret)))",
+   "seq": [
+    "ret",
+    "ts_min_5",
+    "ts_rank_5",
+    "ts_std_40"
+   ],
+   "weight": -0.011198460823077159,
+   "train_ic": -0.013770191000471131,
+   "train_autocorr": 0.9528241827624248,
+   "valid_ic": -0.004315047729357122,
+   "valid_net_ir_alone": -0.8390837715710866
+  },
+  {
+   "formula": "ts_delta_10(ts_max_5(ret))",
+   "seq": [
+    "ret",
+    "ts_max_5",
+    "ts_delta_10"
+   ],
+   "weight": -0.007090326897450426,
+   "train_ic": -0.008830674747580054,
+   "train_autocorr": 0.7353079359576006,
+   "valid_ic": -0.013299069275861952,
+   "valid_net_ir_alone": -0.7866666032177246
+  }
+ ],
+ "valid_pool_ic": 0.02181556565000163,
+ "valid_net_ir": 1.241736198925548,
+ "valid_turnover": 8.944989979959919,
+ "train_turnover": 7.861256544502618,
+ "tried_reward_quantiles": {
+  "0.5": -0.06619913335115785,
+  "0.9": 0.03837371440932016,
+  "0.99": 0.16802992073206963,
+  "1.0": 0.43650635205706273
+ }
+}

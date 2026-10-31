@@ -1,0 +1,176 @@
+{
+ "seed": 3,
+ "market": "real",
+ "n_members": 14,
+ "train_net_ir": 0.7493247504960836,
+ "valid_net_ir": 0.5652869166814811,
+ "alphas": [
+  {
+   "seq": [
+    "close",
+    "ts_min_40",
+    "open",
+    "vwap",
+    "ts_max_40",
+    "ts_delta_40",
+    "abs",
+    "ts_corr_20",
+    "ts_delta_5",
+    "ts_corr_5",
+    "ts_std_60",
+    "ts_mean_20"
+   ],
+   "formula": "ts_mean_20(ts_std_60(ts_corr_5(ts_min_40(close), ts_delta_5(ts_corr_20(open, abs(ts_delta_40(ts_max_40(vwap))))))))",
+   "weight": 0.013220527869080368,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "high",
+    "ret",
+    "ts_min_5",
+    "ts_delay_40",
+    "ts_corr_40"
+   ],
+   "formula": "ts_corr_40(high, ts_delay_40(ts_min_5(ret)))",
+   "weight": 0.0023262833532257526,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "vwap",
+    "ts_delta_60",
+    "ts_mean_60",
+    "ts_delay_40",
+    "open",
+    "ts_pct_40",
+    "ts_corr_20"
+   ],
+   "formula": "ts_corr_20(ts_delay_40(ts_mean_60(ts_delta_60(vwap))), ts_pct_40(open))",
+   "weight": -0.006103234444374862,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "low",
+    "ts_pct_20"
+   ],
+   "formula": "ts_pct_20(low)",
+   "weight": 0.005657673746665812,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "value",
+    "ts_min_60",
+    "ts_min_60",
+    "ts_min_60",
+    "ts_delta_60",
+    "ts_min_10",
+    "slog",
+    "ts_delay_10"
+   ],
+   "formula": "ts_delay_10(slog(ts_min_10(ts_delta_60(ts_min_60(ts_min_60(ts_min_60(value)))))))",
+   "weight": 0.01115266146178677,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "close",
+    "abs",
+    "ts_rank_20",
+    "ts_max_40",
+    "ts_delay_5",
+    "ts_delay_20",
+    "ts_std_5"
+   ],
+   "formula": "ts_std_5(ts_delay_20(ts_delay_5(ts_max_40(ts_rank_20(abs(close))))))",
+   "weight": -0.016872758506706272,
+   "researcher": "delivery"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_pct_60",
+    "ts_max_60",
+    "ts_max_40"
+   ],
+   "formula": "ts_max_40(ts_max_60(ts_pct_60(deliv_pct)))",
+   "weight": 0.0311194018127826,
+   "researcher": "delivery"
+  },
+  {
+   "seq": [
+    "close",
+    "ts_pct_60",
+    "ts_mean_40"
+   ],
+   "formula": "ts_mean_40(ts_pct_60(close))",
+   "weight": 0.018948279557233442,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "basis",
+    "ts_delay_60",
+    "ts_min_20"
+   ],
+   "formula": "ts_min_20(ts_delay_60(basis))",
+   "weight": 0.00799804295179285,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "value",
+    "ts_max_5",
+    "ts_max_5",
+    "ts_std_10"
+   ],
+   "formula": "ts_std_10(ts_max_5(ts_max_5(value)))",
+   "weight": 0.012975064642794083,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_mean_20"
+   ],
+   "formula": "ts_mean_20(deliv_pct)",
+   "weight": 0.06102235379545498,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_std_60",
+    "neg"
+   ],
+   "formula": "neg(ts_std_60(deliv_pct))",
+   "weight": -0.03495934870214701,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "deliv_pct",
+    "ts_delta_20",
+    "close",
+    "ts_pct_20",
+    "sub"
+   ],
+   "formula": "sub(ts_delta_20(deliv_pct), ts_pct_20(close))",
+   "weight": 0.019366659256388932,
+   "researcher": "llm"
+  },
+  {
+   "seq": [
+    "basis",
+    "basis",
+    "ts_mean_60",
+    "sub"
+   ],
+   "formula": "sub(basis, ts_mean_60(basis))",
+   "weight": 0.007650952463066981,
+   "researcher": "llm"
+  }
+ ]
+}

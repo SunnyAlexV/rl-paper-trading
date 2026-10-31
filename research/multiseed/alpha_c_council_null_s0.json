@@ -1,0 +1,123 @@
+{
+ "seed": 0,
+ "market": "null",
+ "n_members": 9,
+ "train_net_ir": 0.2204753005342323,
+ "valid_net_ir": -0.4855352530142946,
+ "alphas": [
+  {
+   "seq": [
+    "volume",
+    "ts_std_20",
+    "ts_min_60"
+   ],
+   "formula": "ts_min_60(ts_std_20(volume))",
+   "weight": 5.421753314755333e-06,
+   "researcher": "pricevol"
+  },
+  {
+   "seq": [
+    "close",
+    "ts_mean_60",
+    "ts_max_60",
+    "ts_mean_5",
+    "ts_min_20",
+    "deliv_val",
+    "ts_max_60",
+    "sub",
+    "ts_delay_5"
+   ],
+   "formula": "ts_delay_5(sub(ts_min_20(ts_mean_5(ts_max_60(ts_mean_60(close)))), ts_max_60(deliv_val)))",
+   "weight": -0.00454667981488099,
+   "researcher": "delivery"
+  },
+  {
+   "seq": [
+    "close",
+    "ts_rank_10"
+   ],
+   "formula": "ts_rank_10(close)",
+   "weight": 4.871092098450004e-05,
+   "researcher": "delivery"
+  },
+  {
+   "seq": [
+    "close",
+    "basis",
+    "ts_min_5",
+    "ret",
+    "ts_delta_20",
+    "ts_delay_60",
+    "ts_max_40",
+    "ts_pct_60",
+    "ts_min_40",
+    "ts_delta_60",
+    "div",
+    "add"
+   ],
+   "formula": "add(close, div(ts_min_5(basis), ts_delta_60(ts_min_40(ts_pct_60(ts_max_40(ts_delay_60(ts_delta_20(ret))))))))",
+   "weight": -0.00268460419909473,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "fut_oi_val",
+    "ts_max_40",
+    "ts_max_5"
+   ],
+   "formula": "ts_max_5(ts_max_40(fut_oi_val))",
+   "weight": 0.0005882142159148024,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "close",
+    "ts_pct_40",
+    "ts_delay_60"
+   ],
+   "formula": "ts_delay_60(ts_pct_40(close))",
+   "weight": 0.0015763013766588079,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "basis",
+    "ts_delta_20",
+    "ts_std_60"
+   ],
+   "formula": "ts_std_60(ts_delta_20(basis))",
+   "weight": 0.002285748527177259,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "oi_chg",
+    "ts_pct_5",
+    "ts_mean_40",
+    "ts_pct_20"
+   ],
+   "formula": "ts_pct_20(ts_mean_40(ts_pct_5(oi_chg)))",
+   "weight": -0.0015056884585613447,
+   "researcher": "derivs"
+  },
+  {
+   "seq": [
+    "ret",
+    "oi_chg",
+    "ts_delta_60",
+    "oi_chg",
+    "ts_corr_60",
+    "add",
+    "close",
+    "fut_oi_val",
+    "ts_corr_5",
+    "ts_delta_60",
+    "sign",
+    "ts_corr_10"
+   ],
+   "formula": "ts_corr_10(add(ret, ts_corr_60(ts_delta_60(oi_chg), oi_chg)), sign(ts_delta_60(ts_corr_5(close, fut_oi_val))))",
+   "weight": -0.000140457603298918,
+   "researcher": "derivs"
+  }
+ ]
+}
