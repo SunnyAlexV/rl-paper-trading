@@ -1,0 +1,408 @@
+[
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "ts_delay_5",
+   "ts_pct_40"
+  ],
+  "rationale": "Intermediate-horizon momentum skipping the most recent week to avoid short-term reversal; underreaction to news (Jegadeesh & Titman 1993; Indian evidence in Sehgal & Balakrishnan 2002).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "ts_pct_60",
+   "ret",
+   "ts_std_60",
+   "div"
+  ],
+  "rationale": "Risk-adjusted (Sharpe) momentum: trend scaled by its own volatility is less crash-prone and more persistent (Barroso & Santa-Clara 2015; Blitz, Huij & Martens 2011 residual momentum).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "ret",
+   "ts_std_60",
+   "neg"
+  ],
+  "rationale": "Low-volatility anomaly: leverage-constrained and lottery-seeking investors overpay for volatile stocks (Ang et al. 2006; Frazzini & Pedersen 2014 betting-against-beta; Joshipura & Joshipura 2016 for India).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "close",
+   "ts_max_60",
+   "div"
+  ],
+  "rationale": "Proximity to recent high: anchoring makes investors underreact to good news near highs (George & Hwang 2004 52-week-high momentum, here with a 3-month high).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "ret",
+   "ts_max_20"
+  ],
+  "rationale": "MAX/lottery effect: stocks with extreme recent daily gains are overpriced by lottery-seeking (retail-heavy) investors and subsequently underperform (Bali, Cakici & Whitelaw 2011).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "high",
+   "low",
+   "div",
+   "slog",
+   "ts_mean_20"
+  ],
+  "rationale": "Average intraday range as an idiosyncratic-volatility proxy; high-IVOL stocks underperform (Parkinson 1980 range estimator; Ang, Hodrick, Xing & Zhang 2006 IVOL puzzle).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "ret",
+   "abs",
+   "value",
+   "div",
+   "ts_mean_20",
+   "slog"
+  ],
+  "rationale": "Amihud illiquidity: price impact per rupee traded earns a liquidity premium (Amihud 2002), slow-moving enough for a monthly hold.",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "ts_pct_20",
+   "neg"
+  ],
+  "rationale": "One-month reversal from liquidity provision and overreaction at monthly horizon (Jegadeesh 1990; Lehmann 1990), strong in emerging markets with heavy retail flow.",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "value",
+   "ts_std_20",
+   "value",
+   "ts_mean_20",
+   "div"
+  ],
+  "rationale": "Variability of trading activity: stocks with volatile turnover earn lower returns (Chordia, Subrahmanyam & Anshuman 2001).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "value",
+   "ts_mean_5",
+   "value",
+   "ts_mean_60",
+   "div",
+   "slog"
+  ],
+  "rationale": "High-volume return premium: abnormal trading activity raises visibility and investor recognition, followed by higher returns (Gervais, Kaniel & Mingelgrin 2001; Merton 1987).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "low",
+   "sub",
+   "high",
+   "low",
+   "sub",
+   "div",
+   "ts_mean_20"
+  ],
+  "rationale": "Close location value (Chaikin accumulation/distribution): persistently closing near the day's high indicates end-of-day buying pressure from informed/institutional traders (market practice; cf. Lou, Polk & Skouras 2019 on intraday vs overnight clienteles).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "pricevol",
+  "rpn": [
+   "close",
+   "volume",
+   "ts_corr_20"
+  ],
+  "rationale": "Price-volume co-movement: rises on swelling volume signal attention-driven chasing that later reverses (Lee & Swaminathan 2000; WorldQuant 101 Alphas, Kakushadze 2016).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "ts_mean_20",
+   "deliv_pct",
+   "ts_mean_60",
+   "sub"
+  ],
+  "rationale": "Rising delivery share signals accumulation by position-taking investors rather than intraday speculators (NSE delivery-volume market practice; informed-trading interpretation in Indian studies of delivery data).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "ts_mean_20"
+  ],
+  "rationale": "High average delivery share indicates a long-horizon, information-based investor base and less noise-trader mispricing (Indian market practice; cf. Barber & Odean 2008 on noise-trader concentration).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "ret",
+   "deliv_pct",
+   "mul",
+   "ts_mean_20"
+  ],
+  "rationale": "Delivery-weighted momentum: returns earned on high-delivery days reflect committed capital and information, so they persist (cf. Llorente, Michaely, Saar & Wang 2002 on informed vs hedging volume).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "ret",
+   "value",
+   "deliv_val",
+   "sub",
+   "value",
+   "div",
+   "mul",
+   "ts_mean_20"
+  ],
+  "rationale": "Speculation-weighted return: price moves driven by intraday squared-off volume are noise and reverse over the following month (Llorente et al. 2002; De Long et al. 1990 noise traders).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "ret",
+   "deliv_pct",
+   "ts_corr_40"
+  ],
+  "rationale": "Positive correlation between returns and delivery share means buying is done by holders taking delivery (accumulation) while selling is speculative, a bullish flow signature (Wyckoff/OBV practice; Llorente et al. 2002).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_val",
+   "ts_mean_20",
+   "deliv_val",
+   "ts_mean_60",
+   "div",
+   "slog"
+  ],
+  "rationale": "Surge in rupee delivered value measures fresh institutional/investor capital entering the stock, an under-reacted demand shift (Gervais et al. 2001 adapted to delivered volume).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "ts_rank_60"
+  ],
+  "rationale": "Delivery share at the top of its own 3-month range flags abnormal accumulation relative to the stock's normal speculative mix (time-series anomaly practice).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "deliv_pct",
+   "ts_mean_60",
+   "sub",
+   "deliv_pct",
+   "ts_std_60",
+   "div"
+  ],
+  "rationale": "Standardised abnormal delivery share: a z-score version of accumulation comparable across stocks with different baseline delivery levels.",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "ret",
+   "ts_std_20",
+   "deliv_pct",
+   "ts_mean_20",
+   "div"
+  ],
+  "rationale": "Volatility per unit of delivery: volatility produced by speculative intraday trading rather than investor repositioning is mispricing-prone and lottery-like (Ang et al. 2006; Bali et al. 2011).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "ts_std_60",
+   "neg"
+  ],
+  "rationale": "Stable delivery share means a stable holder base; erratic delivery reflects episodic speculative bursts that precede underperformance (Chordia et al. 2001 liquidity-variability analogue).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "deliv_pct",
+   "ts_delta_20",
+   "close",
+   "ts_pct_20",
+   "sub"
+  ],
+  "rationale": "Accumulation divergence: delivery share rising while price falls indicates patient buyers absorbing supply, preceding recovery (Wyckoff accumulation / OBV divergence practice).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "delivery",
+  "rpn": [
+   "close",
+   "ts_delay_5",
+   "ts_pct_40",
+   "deliv_pct",
+   "ts_mean_40",
+   "mul"
+  ],
+  "rationale": "Momentum confirmed by high delivery: trends backed by committed holders underreact and persist, while low-delivery trends are speculative (Lee & Swaminathan 2000 volume-momentum interaction).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "basis",
+   "ts_mean_20"
+  ],
+  "rationale": "Persistent futures premium above carry reflects leveraged long demand that cannot be arbitraged under cash short-sale constraints, i.e. overpricing (Miller 1977; Ofek & Richardson on constrained arbitrage).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "basis",
+   "basis",
+   "ts_mean_60",
+   "sub"
+  ],
+  "rationale": "Abnormal basis relative to the stock's own norm isolates speculative futures demand from structural carry; excess optimism reverses (Miller 1977; Stambaugh, Yu & Yuan 2012 sentiment-driven overpricing).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "basis",
+   "ts_delta_20"
+  ],
+  "rationale": "Rising futures premium indicates informed traders using leverage in futures first, as futures lead spot in price discovery (Chan 1992; Indian evidence in Thenmozhi 2002).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "basis",
+   "ts_std_20",
+   "neg"
+  ],
+  "rationale": "Unstable basis signals arbitrage stress and investor disagreement, associated with overpricing and later underperformance (Miller 1977; Diether, Malloy & Scherbina 2002 dispersion).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "pcr",
+   "ts_mean_20"
+  ],
+  "rationale": "Elevated put open interest relative to calls reflects informed bearish positioning in options, which predicts lower stock returns (Pan & Poteshman 2006; Cremers & Weinbaum 2010).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "pcr",
+   "ts_mean_5",
+   "pcr",
+   "ts_mean_60",
+   "div"
+  ],
+  "rationale": "Short-term spike in PCR relative to its norm marks fear extremes and put-writer support levels, a contrarian sentiment signal in Indian F&O practice (cf. Simon & Wiggins 2001 on contrarian sentiment indicators).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "pcr",
+   "ts_pct_20"
+  ],
+  "rationale": "Rising put/call open interest over a month indicates accumulating bearish informed positioning (Pan & Poteshman 2006; Johnson & So 2012 option-to-stock activity).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "ret",
+   "oi_chg",
+   "ts_corr_20"
+  ],
+  "rationale": "Positive return/OI-change correlation means price rises come with new longs (long build-up) and falls with unwinding, the bullish build-up pattern used in Indian F&O practice (cf. Bessembinder & Seguin 1993 on OI and price).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "oi_chg",
+   "ts_mean_20",
+   "close",
+   "ts_pct_20",
+   "sign",
+   "mul"
+  ],
+  "rationale": "Open-interest build-up signed by price direction: long build-up (OI up, price up) is bullish, short build-up (OI up, price down) bearish (NSE F&O market practice; Hong & Yogo 2012 on OI predictive content).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "fut_oi_val",
+   "ts_pct_20",
+   "close",
+   "ts_pct_20",
+   "mul"
+  ],
+  "rationale": "Monthly long build-up vs short build-up in rupee open interest: new leveraged capital agreeing with the price move signals informed conviction (Hong & Yogo 2012; market practice).",
+  "expected_sign": "+"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "fut_oi_val",
+   "ts_mean_20",
+   "value",
+   "ts_mean_20",
+   "div",
+   "slog"
+  ],
+  "rationale": "Futures positioning crowded relative to cash liquidity marks leveraged speculation and MWPL/ban risk, followed by weaker returns (crowding literature, e.g. Lou & Polk comomentum; SEBI market-wide position limit practice).",
+  "expected_sign": "-"
+ },
+ {
+  "domain": "derivs",
+  "rpn": [
+   "close",
+   "ts_pct_60",
+   "fut_oi_val",
+   "ts_pct_60",
+   "sub"
+  ],
+  "rationale": "Price gain not explained by growth in futures leverage indicates cash-market (fundamental) demand that persists, whereas leverage-driven rallies unwind (cf. Brunnermeier & Pedersen 2009 funding-driven prices).",
+  "expected_sign": "+"
+ }
+]

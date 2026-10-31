@@ -1,0 +1,38 @@
+{
+ "system": "Research council (least-squares combiner) + band rule",
+ "panel": "council",
+ "pool": "c_council_real",
+ "rule": "band",
+ "k": 20,
+ "band": 100,
+ "min_trade_frac": 0.01,
+ "capital": 100000,
+ "frozen_on": "2026-10-31",
+ "paper_trading_starts": "first NSE trading day after freeze",
+ "pool_formulas": [
+  "ts_min_60(ts_mean_5(ts_pct_60(ts_min_20(ts_delay_20(low)))))",
+  "ts_delta_60(vwap)",
+  "ts_delay_10(ret)",
+  "ts_rank_60(sign(ts_min_10(ts_delay_40(ts_std_10(mul(high, ts_rank_10(ts_min_5(ts_rank_20(ts_mean_5(volume))))))))))",
+  "ts_corr_20(ts_std_10(ts_pct_5(value)), ts_rank_10(value))",
+  "ts_max_10(ts_max_60(ts_mean_20(deliv_pct)))",
+  "ts_min_40(ts_pct_60(deliv_pct))",
+  "ts_rank_20(close)",
+  "ts_delta_10(ts_min_20(ts_max_10(value)))",
+  "ts_pct_60(ts_min_40(ts_max_5(deliv_val)))",
+  "ts_mean_40(ts_pct_60(close))",
+  "ts_min_20(ts_delay_60(basis))",
+  "ts_std_10(ts_max_5(ts_max_5(value)))",
+  "ts_mean_20(deliv_pct)",
+  "neg(ts_std_60(deliv_pct))",
+  "sub(ts_delta_20(deliv_pct), ts_pct_20(close))",
+  "sub(basis, ts_mean_60(basis))"
+ ],
+ "pool_sha256": "9afc257d4f56777af65ac00af27913146c6a1cecc803dbe5504a8d09e30cc4f3",
+ "rules": [
+  "no retraining or re-tuning during the paper-trading period",
+  "orders are written and hashed into the ledger before the next open",
+  "results are scored with the same cost and tax engine as the backtests",
+  "primary comparison: the same system built on the no-edge (null) market, and the equal-weight universe"
+ ]
+}
