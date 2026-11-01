@@ -5,7 +5,11 @@ Run once per NSE trading day after the bhavcopy is published (about 6-7 pm IST):
 
 Each run, for trading day D:
   1. downloads D's bhavcopy (if missing) and rebuilds the point-in-time panel;
-  2. applies corporate actions on D to holdings (shares / factor);
+  2. credits cash dividends with ex-date in (D-1, D] to holdings at D-1's close, net of the
+     30% + 4% cess slab tax (amended 1 Nov 2026, before the first paper-trading day), and
+     applies corporate actions on D to holdings (shares / factor). NSE also adjusts PREVCLOSE for
+     extraordinary dividends; when a factor matches a dividend (f ~ 1 - D / previous close) the
+     dividend is credited as cash and the share count is left unchanged;
   3. fills the orders logged after D-1's close at D's open, with the full Stage 0 costs
      (STT, stamp, exchange, SEBI, GST, DP, spread, square-root impact) and FIFO tax lots;
   4. marks the book at D's close and appends to paper/nav.csv;
@@ -38,6 +42,7 @@ def main():
     council = cfg.get("panel") == "council"
     if not a.no_download:
         subprocess.run([sys.executable, "data_download_bhav.py"], check=False)
+        subprocess.run([sys.executable, "data_download_corpact.py"], check=False)
         caches = ["data/bhav/panel.pkl", "data/bhav/long.pkl"]
         if council:
             subprocess.run([sys.executable, "data_download_council.py"], check=False)
@@ -70,8 +75,34 @@ def main():
     if fy_of(D) != st["fy"]:
         tax, st["cf_st"], st["cf_lt"] = book._settle(st["fy"], st["st"], st["lt"], st["cf_st"], st["cf_lt"])
         st["cash"] -= tax; st["st"] = st["lt"] = 0.0; st["fy"] = fy_of(D)
-    # 1. corporate actions on holdings
+    # 1a. cash dividends (ex-date in (previous trading day, D]) on holdings at the previous close
+    div_cash, in_factor = 0.0, set()
+    if st["shares"] and t > 0:
+        from alpha.dividends import load_announcements
+        from alpha.bhav_panel import parse_all, stitch_renames
+        A = load_announcements()
+        A = A[(A["ex"] > P.dates[t - 1]) & (A["ex"] <= D) & (A["amount"] > 0)]
+        if len(A):
+            lg = parse_all(); lg = lg[lg["isin"].astype(str).str.startswith("INE")]
+            lg, _ = stitch_renames(lg)
+            sym_of = lg[lg["date"] <= D].sort_values("date").groupby("id")["sym"].last()
+            for s in list(st["shares"]):
+                rows = A[A["symbol"] == sym_of.get(s, s)]
+                if not len(rows):
+                    continue
+                amt = float(rows["amount"].sum())
+                prev = float(raw_c[s].ffill().iloc[t - 1]); f = fac[s].iloc[t] if s in fac else 1.0
+                y = amt / prev if prev > 0 else np.nan
+                if not (y < 0.6):
+                    continue                              # implausible parse, as in the backtest
+                if f < 0.995 and y > 0.02 and abs(y - (1 - f)) < 0.25 * (1 - f):
+                    in_factor.add(s)                      # price adjusted for this dividend
+                div_cash += st["shares"][s] * amt
+        st["cash"] += div_cash * (1 - 0.30 * 1.04)
+    # 1b. corporate actions on holdings
     for s in list(st["shares"]):
+        if s in in_factor:
+            continue
         f = fac[s].iloc[t] if s in fac else 1.0
         if f != 1.0 and np.isfinite(f):
             st["shares"][s] = int(round(st["shares"][s] / f))
@@ -118,7 +149,7 @@ def main():
     accrued = book._settle(st["fy"], st["st"], st["lt"], st["cf_st"], st["cf_lt"])[0]
     nav = st["cash"] + mv
     pd.DataFrame([dict(date=str(D.date()), nav=nav, nav_post_tax=nav - accrued, cash=st["cash"],
-                       n_holdings=len(st["shares"]), fills=len(fills))]).to_csv(
+                       n_holdings=len(st["shares"]), fills=len(fills), dividends_gross=round(div_cash, 2))]).to_csv(
         f"{OUT}/nav.csv", mode="a", header=not os.path.exists(f"{OUT}/nav.csv"), index=False)
     # 4. decide for tomorrow (same rules as the backtests)
     sh = np.zeros(len(names), dtype=np.int64)

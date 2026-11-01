@@ -41,6 +41,20 @@ commit timestamps prove each decision was made before the market it trades in.
 
 ## Known limitations stated in advance
 
-Price returns in the backtest (dividends not modelled); assumed mid-cap spreads; single research
+Price returns in the backtest (dividends not modelled; see the amendment below); assumed mid-cap spreads; single research
 seeds (a multi-seed check is running and will be reported in a separate commit without changing
 the frozen system); delisting exits at the last traded price.
+
+## Amendment, 1 Nov 2026 (before the first paper-trading day)
+
+The paper trader now credits cash dividends: on each ex-date, holdings at the previous close
+receive the announced dividend (NSE corporate-action announcements, `data_download_corpact.py`,
+parsed by `alpha/dividends.py`), net of slab-rate tax (30% + 4% cess). When NSE adjusts PREVCLOSE for
+an extraordinary dividend, the payment is credited as cash and the share count is not scaled.
+`nav.csv` gains a `dividends_gross` column. The signal, the trading rule, the costs and the config
+are unchanged. No paper-trading day had been run, so the 12-month clock starts with the first run
+as planned.
+
+With the same dividend treatment in the backtest (`research/dividends/`), the frozen council
+returns 22.2% a year after costs and tax over Jan 2013 - Oct 2026 (Sharpe 1.25), and 11.6% a year in
+2022-26 (Sharpe 0.78). Its null twin returns 10.7% a year overall and 11.4% in 2022-26.
