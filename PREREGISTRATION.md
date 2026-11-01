@@ -58,3 +58,19 @@ as planned.
 With the same dividend treatment in the backtest (`research/dividends/`), the frozen council
 returns 22.2% a year after costs and tax over Jan 2013 - Oct 2026 (Sharpe 1.25), and 11.6% a year in
 2022-26 (Sharpe 0.78). Its null twin returns 10.7% a year overall and 11.4% in 2022-26.
+
+## Correction, 1 Nov 2026 (before the first paper-trading day): expected backtest figures
+
+The figures quoted above (21.7% a year; 22.2% with dividends) came from a backtest of the band rule
+**without** the slot rule this system trades with: skip a new name whose single share costs more
+than a slot. Backtesting the rule exactly as traded (with dividends, no interest on idle cash) gives
+**19.2% a year after costs and tax, Jan 2013 - Oct 2026 (Sharpe 1.13), and 8.1% a year in 2022-26
+(Sharpe 0.58)**. These are the reference figures for this test. The two rules are both about
+99.5% invested; the 3-point gap comes from which names happen to be held. That shows how much
+single-name luck sits in any one backtest path.
+
+The same luck shows when the rule's settings are varied (`research/timing/path_noise.csv`). Over
+9 variants (15, 20 or 25 names; band 60, 100 or 150), the full-period Sharpe ranges from 0.95 to 1.36
+and the 2022-26 Sharpe from 0.46 to 0.95. The frozen settings (20 / 100) sit in the middle overall
+and in the lower half for 2022-26. Nothing in the system changes; only the reference numbers are
+corrected.
