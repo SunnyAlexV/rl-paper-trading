@@ -1,0 +1,28 @@
+{
+ "decided_after_close_of": "2026-11-02",
+ "created_utc": "2026-11-02T16:19:09.906184+00:00",
+ "orders": {
+  "ABREL": 0.05,
+  "AJANTPHARM": 0.05,
+  "FIVESTAR": 0.05,
+  "GLAND": 0.05,
+  "INDSWFTLAB": 0.05,
+  "IPCALAB": 0.05,
+  "KAJARIACER": 0.05,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "LODHA": 0.05,
+  "MANKIND": 0.05,
+  "MANORAMA": 0.05,
+  "MPHASIS": 0.05,
+  "OBEROIRLTY": 0.05,
+  "SAILIFE": 0.05,
+  "SBCL": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "USHAMART": 0.05
+ },
+ "fills_today": [],
+ "nav": 100000
+}
