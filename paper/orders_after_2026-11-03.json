@@ -1,0 +1,151 @@
+{
+ "decided_after_close_of": "2026-11-03",
+ "created_utc": "2026-11-03T15:18:12.306557+00:00",
+ "orders": {
+  "FSL": 0.2023904180400048,
+  "SHILPAMED": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "ABREL",
+   "side": "buy",
+   "qty": 4,
+   "price": 1035.61,
+   "costs": 4.78
+  },
+  {
+   "symbol": "AJANTPHARM",
+   "side": "buy",
+   "qty": 1,
+   "price": 3441.75,
+   "costs": 3.65
+  },
+  {
+   "symbol": "FIVESTAR",
+   "side": "buy",
+   "qty": 12,
+   "price": 403.14,
+   "costs": 5.91
+  },
+  {
+   "symbol": "GLAND",
+   "side": "buy",
+   "qty": 1,
+   "price": 3121.8,
+   "costs": 3.59
+  },
+  {
+   "symbol": "INDSWFTLAB",
+   "side": "buy",
+   "qty": 13,
+   "price": 357.97,
+   "costs": 5.87
+  },
+  {
+   "symbol": "IPCALAB",
+   "side": "buy",
+   "qty": 2,
+   "price": 1970.11,
+   "costs": 4.74
+  },
+  {
+   "symbol": "KAJARIACER",
+   "side": "buy",
+   "qty": 4,
+   "price": 1144.56,
+   "costs": 5.86
+  },
+  {
+   "symbol": "KRN",
+   "side": "buy",
+   "qty": 4,
+   "price": 1049.3,
+   "costs": 4.79
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "side": "buy",
+   "qty": 2,
+   "price": 1888.25,
+   "costs": 4.71
+  },
+  {
+   "symbol": "LODHA",
+   "side": "buy",
+   "qty": 4,
+   "price": 1023.29,
+   "costs": 4.77
+  },
+  {
+   "symbol": "MANKIND",
+   "side": "buy",
+   "qty": 2,
+   "price": 2501.34,
+   "costs": 5.94
+  },
+  {
+   "symbol": "MANORAMA",
+   "side": "buy",
+   "qty": 2,
+   "price": 1850.67,
+   "costs": 4.69
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "buy",
+   "qty": 1,
+   "price": 2586.51,
+   "costs": 3.48
+  },
+  {
+   "symbol": "OBEROIRLTY",
+   "side": "buy",
+   "qty": 3,
+   "price": 1636.22,
+   "costs": 5.92
+  },
+  {
+   "symbol": "SAILIFE",
+   "side": "buy",
+   "qty": 3,
+   "price": 1565.87,
+   "costs": 5.88
+  },
+  {
+   "symbol": "SBCL",
+   "side": "buy",
+   "qty": 4,
+   "price": 1040.51,
+   "costs": 4.78
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 12,
+   "price": 403.23,
+   "costs": 5.91
+  },
+  {
+   "symbol": "SGMART",
+   "side": "buy",
+   "qty": 5,
+   "price": 882.95,
+   "costs": 4.83
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "buy",
+   "qty": 5,
+   "price": 931.52,
+   "costs": 5.87
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "buy",
+   "qty": 10,
+   "price": 460.92,
+   "costs": 5.86
+  }
+ ],
+ "nav": 99790.73947984754
+}
