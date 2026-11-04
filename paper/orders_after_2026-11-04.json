@@ -1,0 +1,25 @@
+{
+ "decided_after_close_of": "2026-11-04",
+ "created_utc": "2026-11-04T15:17:45.307297+00:00",
+ "orders": {
+  "LODHA": 0.0,
+  "NUVAMA": 0.045812398514115116
+ },
+ "fills_today": [
+  {
+   "symbol": "SHILPAMED",
+   "side": "sell",
+   "qty": 5,
+   "price": 925.58,
+   "costs": 20.51
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 69,
+   "price": 289.23,
+   "costs": 23.74
+  }
+ ],
+ "nav": 101524.37513246501
+}
