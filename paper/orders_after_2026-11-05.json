@@ -1,0 +1,25 @@
+{
+ "decided_after_close_of": "2026-11-05",
+ "created_utc": "2026-11-05T15:18:37.946842+00:00",
+ "orders": {
+  "ABREL": 0.0,
+  "REDINGTON": 0.051607829281006934
+ },
+ "fills_today": [
+  {
+   "symbol": "LODHA",
+   "side": "sell",
+   "qty": 4,
+   "price": 1134.68,
+   "costs": 20.51
+  },
+  {
+   "symbol": "NUVAMA",
+   "side": "buy",
+   "qty": 2,
+   "price": 1906.06,
+   "costs": 4.71
+  }
+ ],
+ "nav": 101241.29338521238
+}
