@@ -1,0 +1,22 @@
+{
+ "decided_after_close_of": "2026-11-06",
+ "created_utc": "2026-11-06T17:21:53.963627+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "ABREL",
+   "side": "sell",
+   "qty": 4,
+   "price": 1099.35,
+   "costs": 19.5
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "buy",
+   "qty": 14,
+   "price": 351.9,
+   "costs": 5.92
+  }
+ ],
+ "nav": 100937.52065166758
+}
