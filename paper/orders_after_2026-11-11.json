@@ -1,0 +1,22 @@
+{
+ "decided_after_close_of": "2026-11-11",
+ "created_utc": "2026-11-11T15:17:48.242343+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "SBCL",
+   "side": "sell",
+   "qty": 4,
+   "price": 1027.4,
+   "costs": 19.49
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 27,
+   "price": 157.09,
+   "costs": 4.79
+  }
+ ],
+ "nav": 102873.51629340045
+}
