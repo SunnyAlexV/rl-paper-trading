@@ -1,0 +1,39 @@
+{
+ "decided_after_close_of": "2026-11-13",
+ "created_utc": "2026-11-13T15:49:51.478839+00:00",
+ "orders": {
+  "MANORAMA": 0.0,
+  "THELEELA": 0.03986304518396555
+ },
+ "fills_today": [
+  {
+   "symbol": "INDSWFTLAB",
+   "side": "sell",
+   "qty": 13,
+   "price": 358.79,
+   "costs": 20.51
+  },
+  {
+   "symbol": "OBEROIRLTY",
+   "side": "sell",
+   "qty": 3,
+   "price": 1820.78,
+   "costs": 20.54
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 12,
+   "price": 414.23,
+   "costs": 5.93
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "buy",
+   "qty": 117,
+   "price": 43.71,
+   "costs": 5.96
+  }
+ ],
+ "nav": 103283.39046068754
+}
