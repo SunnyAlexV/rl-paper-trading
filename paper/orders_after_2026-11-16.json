@@ -1,0 +1,19 @@
+{
+ "decided_after_close_of": "2026-11-16",
+ "created_utc": "2026-11-16T15:20:05.565495+00:00",
+ "orders": {
+  "NUVAMA": 0.0,
+  "PVRINOX": 0.03801651464265393,
+  "THELEELA": 0.03801651464265393
+ },
+ "fills_today": [
+  {
+   "symbol": "MANORAMA",
+   "side": "sell",
+   "qty": 2,
+   "price": 1952.96,
+   "costs": 19.49
+  }
+ ],
+ "nav": 102011.34130053729
+}
