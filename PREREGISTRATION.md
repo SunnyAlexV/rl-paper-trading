@@ -74,3 +74,13 @@ The same luck shows when the rule's settings are varied (`research/timing/path_n
 and the 2022-26 Sharpe from 0.46 to 0.95. The frozen settings (20 / 100) sit in the middle overall
 and in the lower half for 2022-26. Nothing in the system changes; only the reference numbers are
 corrected.
+
+## Amendment, 16 Nov 2026 (parallel Rs 10,00,000 account)
+
+Added after the 16 Nov close. The Rs 1,00,000 account in `paper/` is unchanged and remains the
+primary test. A second paper account, `paper_10L/`, runs the identical frozen system
+(`paper/config_10L.json` differs only in `capital`) with Rs 10,00,000. Its only purpose is to
+measure how much whole-share rounding (about Rs 5,000 per name at Rs 1,00,000) affects results.
+It starts with orders written after the 16 Nov close, filled at the 17 Nov open. It runs each
+evening after the primary account with `--out paper_10L --no-download`, on the same data, with
+its own ledger and the same 12-month minimum.
