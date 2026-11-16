@@ -1,0 +1,33 @@
+{
+ "decided_after_close_of": "2026-11-16",
+ "created_utc": "2026-11-16T18:12:23.388036+00:00",
+ "orders": {
+  "AJANTPHARM": 0.04,
+  "CAPLIPOINT": 0.04,
+  "CARBORUNIV": 0.04,
+  "CIPLA": 0.04,
+  "EMAMILTD": 0.04,
+  "FIVESTAR": 0.04,
+  "FSL": 0.04,
+  "GLAND": 0.04,
+  "INDGN": 0.04,
+  "INDIANB": 0.04,
+  "JUBLFOOD": 0.04,
+  "KRN": 0.04,
+  "LALPATHLAB": 0.04,
+  "MANKIND": 0.04,
+  "MPHASIS": 0.04,
+  "NAZARA": 0.04,
+  "PVRINOX": 0.04,
+  "REDINGTON": 0.04,
+  "SAGILITY": 0.04,
+  "SAILIFE": 0.04,
+  "SGLTL": 0.04,
+  "SGMART": 0.04,
+  "TATACOMM": 0.04,
+  "THELEELA": 0.04,
+  "VINCOFE": 0.04
+ },
+ "fills_today": [],
+ "nav": 1000000
+}

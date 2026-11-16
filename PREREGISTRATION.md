@@ -84,3 +84,20 @@ measure how much whole-share rounding (about Rs 5,000 per name at Rs 1,00,000) a
 It starts with orders written after the 16 Nov close, filled at the 17 Nov open. It runs each
 evening after the primary account with `--out paper_10L --no-download`, on the same data, with
 its own ledger and the same 12-month minimum.
+
+## Amendment, 16 Nov 2026 (exploratory fleet)
+
+Five more paper accounts start with orders written after the 16 Nov close (first fills 17 Nov
+open), listed in `paper/fleet.json` and run nightly by `run_fleet.py` on the same data, after the
+primary: daily equal-weight top 20 with no band and no minimum trade (Rs 10L and Rs 1L); band rule
+25/60 and 15/150 (Rs 10L); and the pre-registered null control, the band rule on the no-edge
+council (Rs 10L). All pay the same fees, costs and tax. The daily rule is a new branch in
+`alpha/paper_trade.py`; the band-rule code path used by the primary is unchanged. These accounts
+are exploratory: the Rs 1,00,000 account in `paper/` remains the primary test and its rule,
+signal and conclusion criteria are unchanged.
+
+Backtest of these variants on the only data the repo holds (Jul 2025 - Nov 2026, post-tax, no
+dividends; `research/fleet/`): at Rs 10L, frozen 20/100 +12.4%, 15/150 +15.3%, 25/60 +0.8%,
+daily no-band -3.6% (costs Rs 2.57L, 26% of capital), null control -1.6%. At Rs 1L the daily
+rule lost 24%. Sixteen months is far too short to rank these; it is recorded before the live
+results so they cannot be cherry-picked afterwards.

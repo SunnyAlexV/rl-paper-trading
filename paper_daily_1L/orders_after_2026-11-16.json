@@ -1,0 +1,28 @@
+{
+ "decided_after_close_of": "2026-11-16",
+ "created_utc": "2026-11-16T18:12:22.009233+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "CIPLA": 0.05,
+  "FIVESTAR": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "INDGN": 0.05,
+  "INDIANB": 0.05,
+  "JUBLFOOD": 0.05,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "MPHASIS": 0.05,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "REDINGTON": 0.05,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [],
+ "nav": 100000
+}

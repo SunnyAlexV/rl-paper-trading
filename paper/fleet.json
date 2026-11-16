@@ -1,0 +1,39 @@
+{
+ "accounts": [
+  {
+   "out": "paper",
+   "config": "paper/config.json",
+   "role": "PRIMARY frozen test, Rs 1L"
+  },
+  {
+   "out": "paper_10L",
+   "config": "paper/config_10L.json",
+   "role": "frozen rule, Rs 10L"
+  },
+  {
+   "out": "paper_daily_10L",
+   "config": "paper/config_daily_10L.json",
+   "role": "Max-turnover: daily equal-weight top 20, no band, no minimum trade size"
+  },
+  {
+   "out": "paper_daily_1L",
+   "config": "paper/config_daily_1L.json",
+   "role": "Max-turnover at Rs 1L, to show the capital effect on a daily rebalance"
+  },
+  {
+   "out": "paper_hi_10L",
+   "config": "paper/config_hi_10L.json",
+   "role": "Higher-turnover band rule: 25 names, band 60"
+  },
+  {
+   "out": "paper_lo_10L",
+   "config": "paper/config_lo_10L.json",
+   "role": "Lower-turnover band rule: 15 names, band 150"
+  },
+  {
+   "out": "paper_null_10L",
+   "config": "paper/config_null_10L.json",
+   "role": "Pre-registered null control: same band rule on the no-edge council"
+  }
+ ]
+}

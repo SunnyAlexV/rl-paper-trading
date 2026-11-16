@@ -174,6 +174,15 @@ def main():
             for i in keep: target[i] = w_now[i]
             freed = 1.0 - sum(w_now[i] for i in keep)
             for i in new: target[i] = max(freed, 0) / len(new) if new else 0
+    elif cfg.get("rule") == "daily":
+        # daily rule (added 16 Nov 2026 for the fleet; not used by the frozen account): every day,
+        # equal weight in today's top k buyable names, no band; with min_trade_frac 0 every drift
+        # is traded back to target. Costs and tax as for every other account.
+        k = cfg.get("k", 20); slot = nav / k
+        sc = np.where(P.mask[t] & np.isfinite(score[t]), score[t], -np.inf)
+        px = raw_c.ffill().values[t]
+        top = [i for i in np.argsort(-sc) if np.isfinite(sc[i]) and 0 < px[i] <= slot][:k]
+        target = np.zeros(len(names)); target[top] = 1.0 / k
     else:
         agent = AgentStrategy(P, score, cfg["theta"], cfg.get("hyst", 0.0))
         agent.reset(None)
