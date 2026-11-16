@@ -34,6 +34,11 @@
    "out": "paper_null_10L",
    "config": "paper/config_null_10L.json",
    "role": "Pre-registered null control: same band rule on the no-edge council"
+  },
+  {
+   "out": "paper_timed_10L",
+   "config": "paper/config_timed_10L.json",
+   "role": "Band rule 20/100 + RL timing agent (exposure 1/0.5/0), Rs 10L"
   }
  ]
 }

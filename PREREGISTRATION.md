@@ -101,3 +101,22 @@ dividends; `research/fleet/`): at Rs 10L, frozen 20/100 +12.4%, 15/150 +15.3%, 2
 daily no-band -3.6% (costs Rs 2.57L, 26% of capital), null control -1.6%. At Rs 1L the daily
 rule lost 24%. Sixteen months is far too short to rank these; it is recorded before the live
 results so they cannot be cherry-picked afterwards.
+
+## Amendment, 16 Nov 2026 (benchmarks and timing-agent account)
+
+- **Benchmarks.** `data_download_indices.py` stores daily closes of the Nifty 50, Nifty 500, Nifty
+  Midcap 150 and Nifty Smallcap 250 (NSE price indices) from 30 Oct 2026. `fleet_report.py`
+  writes `paper/fleet_report.md`: each account's post-tax return since its start against the
+  indices over the same dates. Both run nightly after the accounts. The Nifty 50 is the
+  pre-registered market control.
+- **Timing account.** `paper_timed_10L/` (Rs 10L) runs the frozen band rule (20 / 100) with the
+  research timing agent `agent_s0` (`research/timing/`), which sets the invested fraction to 1,
+  0.5 or 0; idle cash earns 5.5% a year taxed at slab rate. Live code: `alpha/timing_live.py`.
+  Because the repo keeps 500 trading days, the agent's two strategy-health features use the band
+  rule re-simulated over that window (without dividends). On 16 Nov 2026 it is fully invested and
+  would have stayed fully invested over the last year, so it will track the 10L band account
+  until markets fall. The research found it adds almost nothing after 2021; this is a live check.
+- **Check.** Replaying the primary account from 2 Nov with the code before and after these changes
+  gives identical results, so the primary's code path is unchanged. Replays on today's data do
+  not match the live record exactly, because the rolling 500-day window and the signal have moved
+  since; the committed, hashed order files remain the record.

@@ -107,6 +107,10 @@ def main():
         if f != 1.0 and np.isfinite(f):
             st["shares"][s] = int(round(st["shares"][s] / f))
             st["lots"][s] = [[d, int(round(q / f)), p * f] for d, q, p in st["lots"][s]]
+    # 1c. optional interest on idle cash (liquid fund, taxed at slab rate as in research/timing);
+    #     only accounts whose config sets cash_rate; the primary has none
+    if cfg.get("cash_rate") and st["last"] and st["cash"] > 0:
+        st["cash"] += st["cash"] * cfg["cash_rate"] * (1 - 0.312) / 252
     # 2. fill yesterday's orders at today's open
     fills = []
     if st["orders"]:
@@ -174,6 +178,29 @@ def main():
             for i in keep: target[i] = w_now[i]
             freed = 1.0 - sum(w_now[i] for i in keep)
             for i in new: target[i] = max(freed, 0) / len(new) if new else 0
+    elif cfg.get("rule") == "band_timed":
+        # band rule + research timing agent (added 16 Nov 2026 for the fleet): the agent sets the
+        # invested fraction e in {1, 0.5, 0}; kept names scale by e/e_prev; new names share the rest
+        from alpha.timing_live import exposure_today
+        k, band = cfg.get("k", 20), cfg.get("band", 100)
+        e_prev = st.get("e")
+        e, timing_rec = exposure_today(P, score, t, e_prev, cfg["agent_file"], cfg["agent"])
+        sc = np.where(P.mask[t] & np.isfinite(score[t]), score[t], -np.inf)
+        order = list(np.argsort(-sc)); rank = {i: r for r, i in enumerate(order)}
+        held = [i for i in np.where(sh > 0)[0]]
+        keep = [i for i in held if rank[i] < band and np.isfinite(sc[i])]
+        target = None
+        if not (len(keep) == len(held) == k and e == e_prev):
+            slot = nav * e / k
+            new = [i for i in order if i not in keep and np.isfinite(sc[i])
+                   and 0 < raw_c.ffill().values[t, i] <= slot][: k - len(keep)] if e > 0 else []
+            target = np.zeros(len(names))
+            scale = (e / e_prev) if (e_prev and e != e_prev) else (1.0 if e > 0 else 0.0)
+            for i in keep: target[i] = w_now[i] * scale
+            rest = e - target.sum()
+            for i in new: target[i] = max(rest, 0) / len(new)
+            if target.sum() > e + 1e-9: target *= e / target.sum()     # never above exposure
+        st["e"] = e; st["timing"] = timing_rec
     elif cfg.get("rule") == "daily":
         # daily rule (added 16 Nov 2026 for the fleet; not used by the frozen account): every day,
         # equal weight in today's top k buyable names, no band; with min_trade_frac 0 every drift
@@ -197,7 +224,8 @@ def main():
     st["orders"], st["last"] = orders, str(D.date())
     json.dump(st, open(f"{OUT}/state.json", "w"), indent=1, default=float)
     rec = dict(decided_after_close_of=str(D.date()), created_utc=datetime.now(timezone.utc).isoformat(),
-               orders=orders or {}, fills_today=fills, nav=nav)
+               orders=orders or {}, fills_today=fills, nav=nav,
+               **({"exposure": st["e"], "timing": st["timing"]} if "e" in st else {}))
     fn = f"{OUT}/orders_after_{D.date()}.json"
     json.dump(rec, open(fn, "w"), indent=1, default=float)
     h = hashlib.sha256(open(fn, "rb").read()).hexdigest()
