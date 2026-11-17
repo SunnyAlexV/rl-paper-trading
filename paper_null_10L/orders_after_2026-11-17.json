@@ -1,0 +1,148 @@
+{
+ "decided_after_close_of": "2026-11-17",
+ "created_utc": "2026-11-17T15:17:05.038289+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "ADANIPOWER",
+   "side": "buy",
+   "qty": 244,
+   "price": 204.87,
+   "costs": 59.37
+  },
+  {
+   "symbol": "BAJFINANCE",
+   "side": "buy",
+   "qty": 45,
+   "price": 1111.33,
+   "costs": 59.37
+  },
+  {
+   "symbol": "BHEL",
+   "side": "buy",
+   "qty": 116,
+   "price": 428.04,
+   "costs": 59.31
+  },
+  {
+   "symbol": "CGPOWER",
+   "side": "buy",
+   "qty": 61,
+   "price": 812.28,
+   "costs": 59.29
+  },
+  {
+   "symbol": "COFORGE",
+   "side": "buy",
+   "qty": 24,
+   "price": 2012.64,
+   "costs": 57.05
+  },
+  {
+   "symbol": "DLF",
+   "side": "buy",
+   "qty": 66,
+   "price": 754.96,
+   "costs": 59.34
+  },
+  {
+   "symbol": "HCLTECH",
+   "side": "buy",
+   "qty": 36,
+   "price": 1375.43,
+   "costs": 59.28
+  },
+  {
+   "symbol": "INDUSINDBK",
+   "side": "buy",
+   "qty": 54,
+   "price": 915.87,
+   "costs": 58.27
+  },
+  {
+   "symbol": "ITC",
+   "side": "buy",
+   "qty": 169,
+   "price": 295.24,
+   "costs": 59.35
+  },
+  {
+   "symbol": "LODHA",
+   "side": "buy",
+   "qty": 42,
+   "price": 1180.43,
+   "costs": 59.29
+  },
+  {
+   "symbol": "LTF",
+   "side": "buy",
+   "qty": 179,
+   "price": 278.91,
+   "costs": 59.36
+  },
+  {
+   "symbol": "MOTHERSON",
+   "side": "buy",
+   "qty": 305,
+   "price": 163.55,
+   "costs": 59.35
+  },
+  {
+   "symbol": "NYKAA",
+   "side": "buy",
+   "qty": 138,
+   "price": 361.13,
+   "costs": 59.34
+  },
+  {
+   "symbol": "SAIL",
+   "side": "buy",
+   "qty": 296,
+   "price": 168.46,
+   "costs": 59.34
+  },
+  {
+   "symbol": "SBICARD",
+   "side": "buy",
+   "qty": 87,
+   "price": 573.39,
+   "costs": 59.35
+  },
+  {
+   "symbol": "SHRIRAMFIN",
+   "side": "buy",
+   "qty": 50,
+   "price": 981.25,
+   "costs": 58.19
+  },
+  {
+   "symbol": "SUZLON",
+   "side": "buy",
+   "qty": 1344,
+   "price": 37.21,
+   "costs": 59.37
+  },
+  {
+   "symbol": "SWIGGY",
+   "side": "buy",
+   "qty": 262,
+   "price": 190.76,
+   "costs": 59.37
+  },
+  {
+   "symbol": "WIPRO",
+   "side": "buy",
+   "qty": 260,
+   "price": 192.26,
+   "costs": 59.37
+  },
+  {
+   "symbol": "ZOMATO",
+   "side": "buy",
+   "qty": 134,
+   "price": 371.61,
+   "costs": 59.33
+  }
+ ],
+ "nav": 1002105.9047629284
+}

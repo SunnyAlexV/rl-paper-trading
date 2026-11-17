@@ -1,0 +1,148 @@
+{
+ "decided_after_close_of": "2026-11-17",
+ "created_utc": "2026-11-17T15:17:00.328779+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "AJANTPHARM",
+   "side": "buy",
+   "qty": 14,
+   "price": 3363.75,
+   "costs": 55.83
+  },
+  {
+   "symbol": "CIPLA",
+   "side": "buy",
+   "qty": 35,
+   "price": 1390.49,
+   "costs": 58.12
+  },
+  {
+   "symbol": "FIVESTAR",
+   "side": "buy",
+   "qty": 117,
+   "price": 426.38,
+   "costs": 59.35
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 174,
+   "price": 286.77,
+   "costs": 59.35
+  },
+  {
+   "symbol": "GLAND",
+   "side": "buy",
+   "qty": 14,
+   "price": 3381.25,
+   "costs": 55.87
+  },
+  {
+   "symbol": "INDGN",
+   "side": "buy",
+   "qty": 76,
+   "price": 654.49,
+   "costs": 59.32
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 53,
+   "price": 930.98,
+   "costs": 58.25
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "buy",
+   "qty": 116,
+   "price": 429.78,
+   "costs": 59.34
+  },
+  {
+   "symbol": "KRN",
+   "side": "buy",
+   "qty": 52,
+   "price": 960.67,
+   "costs": 59.36
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "side": "buy",
+   "qty": 25,
+   "price": 1998.39,
+   "costs": 59.36
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "buy",
+   "qty": 20,
+   "price": 2432.88,
+   "costs": 58.12
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 116,
+   "price": 428.35,
+   "costs": 59.31
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 30,
+   "price": 1635.61,
+   "costs": 58.2
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "buy",
+   "qty": 146,
+   "price": 341.42,
+   "costs": 59.34
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "buy",
+   "qty": 1156,
+   "price": 43.28,
+   "costs": 59.38
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 141,
+   "price": 354.28,
+   "costs": 59.36
+  },
+  {
+   "symbol": "SGMART",
+   "side": "buy",
+   "qty": 51,
+   "price": 979.7,
+   "costs": 59.36
+  },
+  {
+   "symbol": "TATACOMM",
+   "side": "buy",
+   "qty": 26,
+   "price": 1861.29,
+   "costs": 57.07
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "buy",
+   "qty": 74,
+   "price": 673.1,
+   "costs": 59.33
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 322,
+   "price": 155.01,
+   "costs": 59.35
+  }
+ ],
+ "nav": 999704.7457157853
+}

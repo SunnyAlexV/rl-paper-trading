@@ -1,0 +1,113 @@
+{
+ "decided_after_close_of": "2026-11-17",
+ "created_utc": "2026-11-17T15:17:04.358687+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "AJANTPHARM",
+   "side": "buy",
+   "qty": 19,
+   "price": 3363.85,
+   "costs": 75.98
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 232,
+   "price": 286.78,
+   "costs": 79.47
+  },
+  {
+   "symbol": "GLAND",
+   "side": "buy",
+   "qty": 19,
+   "price": 3381.32,
+   "costs": 76.04
+  },
+  {
+   "symbol": "INDGN",
+   "side": "buy",
+   "qty": 101,
+   "price": 654.51,
+   "costs": 78.39
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 71,
+   "price": 931.0,
+   "costs": 78.39
+  },
+  {
+   "symbol": "KRN",
+   "side": "buy",
+   "qty": 69,
+   "price": 960.69,
+   "costs": 78.42
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "side": "buy",
+   "qty": 33,
+   "price": 1998.45,
+   "costs": 78.36
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "buy",
+   "qty": 27,
+   "price": 2432.93,
+   "costs": 78.31
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 40,
+   "price": 1635.64,
+   "costs": 77.26
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "buy",
+   "qty": 195,
+   "price": 341.43,
+   "costs": 79.48
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "buy",
+   "qty": 1541,
+   "price": 43.28,
+   "costs": 79.5
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 188,
+   "price": 354.3,
+   "costs": 79.48
+  },
+  {
+   "symbol": "SGMART",
+   "side": "buy",
+   "qty": 68,
+   "price": 979.73,
+   "costs": 79.49
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "buy",
+   "qty": 99,
+   "price": 673.12,
+   "costs": 79.49
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 430,
+   "price": 155.02,
+   "costs": 79.49
+  }
+ ],
+ "nav": 1001496.4244829883
+}

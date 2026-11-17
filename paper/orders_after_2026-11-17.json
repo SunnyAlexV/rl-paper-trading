@@ -1,0 +1,29 @@
+{
+ "decided_after_close_of": "2026-11-17",
+ "created_utc": "2026-11-17T15:16:59.342531+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "NUVAMA",
+   "side": "sell",
+   "qty": 2,
+   "price": 1879.86,
+   "costs": 19.48
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 2,
+   "price": 1635.47,
+   "costs": 3.61
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "buy",
+   "qty": 5,
+   "price": 672.98,
+   "costs": 3.63
+  }
+ ],
+ "nav": 101697.23419615022
+}

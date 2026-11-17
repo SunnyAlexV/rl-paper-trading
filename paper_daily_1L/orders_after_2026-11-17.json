@@ -1,0 +1,174 @@
+{
+ "decided_after_close_of": "2026-11-17",
+ "created_utc": "2026-11-17T15:17:02.301767+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "CIPLA": 0.0,
+  "FIVESTAR": 0.0,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "INDGN": 0.05,
+  "INDIANB": 0.0,
+  "JUBLFOOD": 0.0,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "MANKIND": 0.05,
+  "MPHASIS": 0.05,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "REDINGTON": 0.0,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "TATACOMM": 0.05,
+  "TECHM": 0.05,
+  "THELEELA": 0.05,
+  "USHAMART": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "AJANTPHARM",
+   "side": "buy",
+   "qty": 1,
+   "price": 3363.26,
+   "costs": 3.63
+  },
+  {
+   "symbol": "CIPLA",
+   "side": "buy",
+   "qty": 3,
+   "price": 1390.39,
+   "costs": 4.78
+  },
+  {
+   "symbol": "FIVESTAR",
+   "side": "buy",
+   "qty": 11,
+   "price": 426.3,
+   "costs": 5.88
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 17,
+   "price": 286.72,
+   "costs": 5.91
+  },
+  {
+   "symbol": "GLAND",
+   "side": "buy",
+   "qty": 1,
+   "price": 3380.95,
+   "costs": 3.63
+  },
+  {
+   "symbol": "INDGN",
+   "side": "buy",
+   "qty": 7,
+   "price": 654.38,
+   "costs": 5.86
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 5,
+   "price": 930.9,
+   "costs": 5.87
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "buy",
+   "qty": 11,
+   "price": 429.74,
+   "costs": 5.89
+  },
+  {
+   "symbol": "KRN",
+   "side": "buy",
+   "qty": 5,
+   "price": 960.54,
+   "costs": 5.9
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "side": "buy",
+   "qty": 2,
+   "price": 1998.11,
+   "costs": 4.75
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "buy",
+   "qty": 2,
+   "price": 2432.7,
+   "costs": 5.91
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 11,
+   "price": 428.29,
+   "costs": 5.88
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 3,
+   "price": 1635.48,
+   "costs": 5.92
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "buy",
+   "qty": 14,
+   "price": 341.4,
+   "costs": 5.9
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "buy",
+   "qty": 115,
+   "price": 43.27,
+   "costs": 5.93
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 14,
+   "price": 354.21,
+   "costs": 5.93
+  },
+  {
+   "symbol": "SGMART",
+   "side": "buy",
+   "qty": 5,
+   "price": 979.55,
+   "costs": 5.92
+  },
+  {
+   "symbol": "TATACOMM",
+   "side": "buy",
+   "qty": 2,
+   "price": 1861.03,
+   "costs": 4.7
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "buy",
+   "qty": 7,
+   "price": 672.99,
+   "costs": 5.88
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 32,
+   "price": 154.98,
+   "costs": 5.93
+  }
+ ],
+ "nav": 100102.66677452471
+}
