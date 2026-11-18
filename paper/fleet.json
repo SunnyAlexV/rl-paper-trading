@@ -39,6 +39,11 @@
    "out": "paper_timed_10L",
    "config": "paper/config_timed_10L.json",
    "role": "Band rule 20/100 + RL timing agent (exposure 1/0.5/0), Rs 10L"
+  },
+  {
+   "out": "paper_mom_10L",
+   "config": "paper/config_mom_10L.json",
+   "role": "Band rule 20/100 on plain 12-1 momentum instead of the council signal, Rs 10L"
   }
  ]
 }

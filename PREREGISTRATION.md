@@ -120,3 +120,23 @@ results so they cannot be cherry-picked afterwards.
   gives identical results, so the primary's code path is unchanged. Replays on today's data do
   not match the live record exactly, because the rolling 500-day window and the signal have moved
   since; the committed, hashed order files remain the record.
+
+## Amendment, 18 Nov 2026 (momentum account)
+
+- **Account.** `paper_mom_10L/` (Rs 10L, `paper/config_mom_10L.json`) runs the same band rule
+  (20 names / band 100, minimum trade 1% of NAV), universe, costs and tax as the frozen system, with
+  plain 12-1 momentum in place of the council signal: close(t-21) / close(t-252) - 1 on back-adjusted
+  closes. No fitted parameters. It starts with orders written after the 18 Nov close (first fills at
+  the 19 Nov open) and is run nightly by `run_fleet.py` after the primary, on the same data.
+- **Why.** A rebuild of the system on NSE data for 2015 - Nov 2026 (`research/momentum/`) gave the
+  council 17.6% a year post-tax (11.5% in 2022-26) and momentum 12-1 24.5% (18.1% in 2022-26), with a
+  deeper drawdown for momentum (-45% vs -39%), similar Sharpe (0.95 vs 1.03) and a difference that
+  is not significant (t = 1.3). Momentum 12-1 was picked after being the best of five slow signals on
+  that data. Recorded here before any live result.
+- **Code.** `alpha/paper_trade.py` computes the momentum score only when a config sets
+  `"signal": "momentum_12_1"`; every other account, the primary included, takes the unchanged
+  council path. Check: the primary's orders after the 17 Nov close, replayed from a fresh state with
+  the code before and after this change, are identical.
+- **Status.** Exploratory. The Rs 1,00,000 account in `paper/` remains the primary test; its rule,
+  signal and conclusion criteria are unchanged. Comparison for this account: `paper_10L` (the frozen
+  rule at the same capital), the null control and the Nifty 50, after at least 12 months.

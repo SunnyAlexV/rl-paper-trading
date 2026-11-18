@@ -159,7 +159,14 @@ def main():
     sh = np.zeros(len(names), dtype=np.int64)
     for s_, q in st["shares"].items(): sh[ix[s_]] = q
     w_now = sh * np.nan_to_num(raw_c.ffill().values[t]) / nav
-    score = pool_score(P, cfg["pool"])
+    if cfg.get("signal") == "momentum_12_1":
+        # exploratory momentum account (added 18 Nov 2026): 12-month return skipping the latest
+        # month, close(t-21) / close(t-252) - 1 on adjusted closes; accounts without a "signal"
+        # key (the primary included) keep the council score below
+        c_ = pd.DataFrame(P.feat["close"], index=P.dates).ffill()
+        score = (c_.shift(21) / c_.shift(252) - 1).values
+    else:
+        score = pool_score(P, cfg["pool"])
     if cfg.get("rule") == "band":
         # band rule: hold k names; replace one only when it leaves the top `band`; new names share
         # the freed weight; skip names whose single share costs more than a slot

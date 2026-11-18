@@ -1,0 +1,21 @@
+{
+ "system": "Plain 12-1 momentum + band rule (exploratory)",
+ "panel": "council",
+ "signal": "momentum_12_1",
+ "pool": null,
+ "rule": "band",
+ "k": 20,
+ "band": 100,
+ "min_trade_frac": 0.01,
+ "capital": 1000000,
+ "frozen_on": "2026-11-18",
+ "paper_trading_starts": "2026-11-19 (first open after 18 Nov 2026)",
+ "signal_definition": "close(t-21) / close(t-252) - 1, back-adjusted closes, ranked over the frozen universe mask",
+ "rules": [
+  "no retraining or re-tuning during the paper-trading period",
+  "orders are written and hashed into the ledger before the next open",
+  "results are scored with the same cost and tax engine as the backtests",
+  "comparison: the frozen council band rule at Rs 10L (paper_10L), the null control and the Nifty 50"
+ ],
+ "note": "Exploratory: same band rule 20/100, universe, costs and tax as the primary, with plain 12-1 momentum in place of the council signal. Added 18 Nov 2026; not part of the frozen primary test."
+}
