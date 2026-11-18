@@ -1,0 +1,28 @@
+{
+ "decided_after_close_of": "2026-11-18",
+ "created_utc": "2026-11-18T15:16:56.739258+00:00",
+ "orders": {
+  "AEROFLEX": 0.05,
+  "ATHERENERG": 0.05,
+  "CPPLUS": 0.05,
+  "CUPID": 0.05,
+  "GANDHAR": 0.05,
+  "INDSWFTLAB": 0.05,
+  "KMEW": 0.05,
+  "MANINDS": 0.05,
+  "RATNAVEER": 0.05,
+  "RPTECH": 0.05,
+  "RUBICON": 0.05,
+  "SANSERA": 0.05,
+  "SBC": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "SHREEJISPG": 0.05,
+  "SKYGOLD": 0.05,
+  "TFCILTD": 0.05,
+  "WELCORP": 0.05,
+  "WHEELS": 0.05
+ },
+ "fills_today": [],
+ "nav": 1000000
+}

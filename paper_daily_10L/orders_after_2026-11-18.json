@@ -1,0 +1,187 @@
+{
+ "decided_after_close_of": "2026-11-18",
+ "created_utc": "2026-11-18T15:16:42.222530+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "BAJAJ-AUTO": 0.05,
+  "CARBORUNIV": 0.05,
+  "DIVISLAB": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "INDGN": 0.0,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "MANINDS": 0.05,
+  "MANKIND": 0.0,
+  "MPHASIS": 0.0,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SANSERA": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "TATACOMM": 0.05,
+  "TECHM": 0.05,
+  "THELEELA": 0.05,
+  "USHAMART": 0.0,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "CIPLA",
+   "side": "sell",
+   "qty": 35,
+   "price": 1389.51,
+   "costs": 66.16
+  },
+  {
+   "symbol": "FIVESTAR",
+   "side": "sell",
+   "qty": 117,
+   "price": 436.61,
+   "costs": 68.25
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "sell",
+   "qty": 53,
+   "price": 935.42,
+   "costs": 67.19
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "sell",
+   "qty": 116,
+   "price": 427.62,
+   "costs": 67.2
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "sell",
+   "qty": 1,
+   "price": 1677.52,
+   "costs": 17.4
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "sell",
+   "qty": 146,
+   "price": 342.87,
+   "costs": 67.21
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 26,
+   "price": 44.18,
+   "costs": 16.38
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "sell",
+   "qty": 6,
+   "price": 368.44,
+   "costs": 17.42
+  },
+  {
+   "symbol": "SGMART",
+   "side": "sell",
+   "qty": 3,
+   "price": 1021.44,
+   "costs": 18.45
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "sell",
+   "qty": 1,
+   "price": 675.94,
+   "costs": 16.37
+  },
+  {
+   "symbol": "AJANTPHARM",
+   "side": "buy",
+   "qty": 1,
+   "price": 3301.82,
+   "costs": 3.62
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 49,
+   "price": 1011.94,
+   "costs": 59.29
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 1,
+   "price": 285.15,
+   "costs": 0.05
+  },
+  {
+   "symbol": "GLAND",
+   "side": "buy",
+   "qty": 1,
+   "price": 3260.92,
+   "costs": 3.61
+  },
+  {
+   "symbol": "INDGN",
+   "side": "buy",
+   "qty": 1,
+   "price": 648.19,
+   "costs": 1.12
+  },
+  {
+   "symbol": "MANKIND",
+   "side": "buy",
+   "qty": 19,
+   "price": 2620.83,
+   "costs": 59.33
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 3,
+   "price": 420.02,
+   "costs": 1.24
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "buy",
+   "qty": 54,
+   "price": 920.46,
+   "costs": 59.32
+  },
+  {
+   "symbol": "TATACOMM",
+   "side": "buy",
+   "qty": 1,
+   "price": 1804.47,
+   "costs": 2.34
+  },
+  {
+   "symbol": "TECHM",
+   "side": "buy",
+   "qty": 28,
+   "price": 1747.65,
+   "costs": 58.17
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "buy",
+   "qty": 108,
+   "price": 460.38,
+   "costs": 59.32
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 4,
+   "price": 153.08,
+   "costs": 1.11
+  }
+ ],
+ "nav": 995229.3981086813
+}

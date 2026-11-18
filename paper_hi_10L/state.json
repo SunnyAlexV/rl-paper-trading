@@ -231,11 +231,14 @@
   "THELEELA": "2026-11-17",
   "VINCOFE": "2026-11-17"
  },
- "orders": null,
+ "orders": {
+  "BAJAJ-AUTO": 0.05052976612578164,
+  "CAPLIPOINT": 0.0
+ },
  "st": 0.0,
  "lt": 0.0,
  "cf_st": [],
  "cf_lt": [],
  "fy": 2026,
- "last": "2026-11-17"
+ "last": "2026-11-18"
 }

@@ -1,0 +1,131 @@
+{
+ "decided_after_close_of": "2026-11-18",
+ "created_utc": "2026-11-18T15:16:44.803401+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "INDGN": 0.0,
+  "INDIANB": 0.05,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "MANINDS": 0.05,
+  "MANKIND": 0.0,
+  "MPHASIS": 0.0,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SANSERA": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "TATACOMM": 0.05,
+  "TECHM": 0.05,
+  "THELEELA": 0.05,
+  "USHAMART": 0.0,
+  "VINCOFE": 0.05,
+  "WIPRO": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "CIPLA",
+   "side": "sell",
+   "qty": 3,
+   "price": 1389.61,
+   "costs": 19.5
+  },
+  {
+   "symbol": "FIVESTAR",
+   "side": "sell",
+   "qty": 11,
+   "price": 436.69,
+   "costs": 20.52
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "sell",
+   "qty": 5,
+   "price": 935.5,
+   "costs": 20.51
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "sell",
+   "qty": 11,
+   "price": 427.66,
+   "costs": 20.52
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "sell",
+   "qty": 1,
+   "price": 1677.52,
+   "costs": 17.4
+  },
+  {
+   "symbol": "REDINGTON",
+   "side": "sell",
+   "qty": 14,
+   "price": 342.9,
+   "costs": 20.52
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 2,
+   "price": 44.18,
+   "costs": 15.34
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "sell",
+   "qty": 1,
+   "price": 368.46,
+   "costs": 15.35
+  },
+  {
+   "symbol": "SGMART",
+   "side": "sell",
+   "qty": 1,
+   "price": 1021.46,
+   "costs": 16.38
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 4,
+   "price": 1011.7,
+   "costs": 4.76
+  },
+  {
+   "symbol": "MANKIND",
+   "side": "buy",
+   "qty": 1,
+   "price": 2620.62,
+   "costs": 3.49
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "buy",
+   "qty": 5,
+   "price": 920.36,
+   "costs": 5.86
+  },
+  {
+   "symbol": "TECHM",
+   "side": "buy",
+   "qty": 2,
+   "price": 1747.57,
+   "costs": 3.66
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "buy",
+   "qty": 10,
+   "price": 460.28,
+   "costs": 5.86
+  }
+ ],
+ "nav": 99583.6257162251
+}
