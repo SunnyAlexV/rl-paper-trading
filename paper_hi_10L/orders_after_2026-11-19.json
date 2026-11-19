@@ -1,0 +1,27 @@
+{
+ "decided_after_close_of": "2026-11-19",
+ "created_utc": "2026-11-19T15:17:17.784028+00:00",
+ "orders": {
+  "COROMANDEL": 0.04369444389111421,
+  "REDINGTON": 0.0,
+  "SAILIFE": 0.0,
+  "SHYAMMETL": 0.04369444389111421
+ },
+ "fills_today": [
+  {
+   "symbol": "CAPLIPOINT",
+   "side": "sell",
+   "qty": 17,
+   "price": 2058.37,
+   "costs": 51.65
+  },
+  {
+   "symbol": "BAJAJ-AUTO",
+   "side": "buy",
+   "qty": 4,
+   "price": 10454.32,
+   "costs": 49.84
+  }
+ ],
+ "nav": 994053.7627198247
+}

@@ -1,10 +1,9 @@
 {
- "cash": 1132.6041961502137,
+ "cash": 831.5324981892136,
  "shares": {
   "AJANTPHARM": 1,
   "FIVESTAR": 12,
   "GLAND": 1,
-  "IPCALAB": 2,
   "KAJARIACER": 4,
   "KRN": 4,
   "LALPATHLAB": 2,
@@ -20,7 +19,8 @@
   "NAZARA": 12,
   "SAGILITY": 117,
   "PVRINOX": 2,
-  "THELEELA": 5
+  "THELEELA": 5,
+  "CARBORUNIV": 4
  },
  "lots": {
   "AJANTPHARM": [
@@ -42,13 +42,6 @@
     "2026-11-03",
     1,
     3085.842942076918
-   ]
-  ],
-  "IPCALAB": [
-   [
-    "2026-11-03",
-    2,
-    1970.1053872984173
    ]
   ],
   "KAJARIACER": [
@@ -162,13 +155,19 @@
     5,
     672.9783607342935
    ]
+  ],
+  "CARBORUNIV": [
+   [
+    "2026-11-19",
+    4,
+    997.4938721179321
+   ]
   ]
  },
  "entry": {
   "AJANTPHARM": "2026-11-03",
   "FIVESTAR": "2026-11-03",
   "GLAND": "2026-11-03",
-  "IPCALAB": "2026-11-03",
   "KAJARIACER": "2026-11-03",
   "KRN": "2026-11-03",
   "LALPATHLAB": "2026-11-03",
@@ -184,16 +183,14 @@
   "NAZARA": "2026-11-13",
   "SAGILITY": "2026-11-13",
   "PVRINOX": "2026-11-17",
-  "THELEELA": "2026-11-17"
+  "THELEELA": "2026-11-17",
+  "CARBORUNIV": "2026-11-19"
  },
- "orders": {
-  "CARBORUNIV": 0.047994780886743915,
-  "IPCALAB": 0.0
- },
- "st": 1321.480041140866,
+ "orders": null,
+ "st": 1094.3996957579875,
  "lt": 0.0,
  "cf_st": [],
  "cf_lt": [],
  "fy": 2026,
- "last": "2026-11-18"
+ "last": "2026-11-19"
 }

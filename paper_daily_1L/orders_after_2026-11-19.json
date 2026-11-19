@@ -1,0 +1,118 @@
+{
+ "decided_after_close_of": "2026-11-19",
+ "created_utc": "2026-11-19T15:17:14.313149+00:00",
+ "orders": {
+  "ABDL": 0.05,
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "HONASA": 0.05,
+  "INDIANB": 0.0,
+  "KRN": 0.0,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "MANINDS": 0.05,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SANSERA": 0.0,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "SHYAMMETL": 0.05,
+  "TATACOMM": 0.05,
+  "TECHM": 0.0,
+  "THELEELA": 0.05,
+  "VINCOFE": 0.05,
+  "WIPRO": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "INDGN",
+   "side": "sell",
+   "qty": 7,
+   "price": 655.62,
+   "costs": 20.51
+  },
+  {
+   "symbol": "MANKIND",
+   "side": "sell",
+   "qty": 1,
+   "price": 2624.28,
+   "costs": 18.44
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "sell",
+   "qty": 2,
+   "price": 2380.91,
+   "costs": 20.52
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 3,
+   "price": 45.18,
+   "costs": 15.35
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "sell",
+   "qty": 10,
+   "price": 459.82,
+   "costs": 20.51
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 1,
+   "price": 274.59,
+   "costs": 0.05
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 5,
+   "price": 937.45,
+   "costs": 5.88
+  },
+  {
+   "symbol": "MANINDS",
+   "side": "buy",
+   "qty": 6,
+   "price": 765.38,
+   "costs": 5.86
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 1,
+   "price": 413.96,
+   "costs": 0.08
+  },
+  {
+   "symbol": "SANSERA",
+   "side": "buy",
+   "qty": 1,
+   "price": 4500.45,
+   "costs": 5.84
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 1,
+   "price": 150.63,
+   "costs": 0.03
+  },
+  {
+   "symbol": "WIPRO",
+   "side": "buy",
+   "qty": 27,
+   "price": 183.86,
+   "costs": 5.93
+  }
+ ],
+ "nav": 99883.64474131723
+}

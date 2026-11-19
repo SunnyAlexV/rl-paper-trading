@@ -1,8 +1,7 @@
 {
- "cash": 14518.827537038305,
+ "cash": 7592.352719824681,
  "shares": {
   "AJANTPHARM": 11,
-  "CAPLIPOINT": 17,
   "CARBORUNIV": 37,
   "CIPLA": 28,
   "EMAMILTD": 96,
@@ -25,7 +24,8 @@
   "SGMART": 40,
   "TATACOMM": 21,
   "THELEELA": 59,
-  "VINCOFE": 258
+  "VINCOFE": 258,
+  "BAJAJ-AUTO": 4
  },
  "lots": {
   "AJANTPHARM": [
@@ -33,13 +33,6 @@
     "2026-11-17",
     11,
     3363.66960112448
-   ]
-  ],
-  "CAPLIPOINT": [
-   [
-    "2026-11-17",
-    17,
-    2329.862946265238
    ]
   ],
   "CARBORUNIV": [
@@ -202,11 +195,17 @@
     258,
     155.00802499480417
    ]
+  ],
+  "BAJAJ-AUTO": [
+   [
+    "2026-11-19",
+    4,
+    10454.320742930551
+   ]
   ]
  },
  "entry": {
   "AJANTPHARM": "2026-11-17",
-  "CAPLIPOINT": "2026-11-17",
   "CARBORUNIV": "2026-11-17",
   "CIPLA": "2026-11-17",
   "EMAMILTD": "2026-11-17",
@@ -229,16 +228,19 @@
   "SGMART": "2026-11-17",
   "TATACOMM": "2026-11-17",
   "THELEELA": "2026-11-17",
-  "VINCOFE": "2026-11-17"
+  "VINCOFE": "2026-11-17",
+  "BAJAJ-AUTO": "2026-11-19"
  },
  "orders": {
-  "BAJAJ-AUTO": 0.05052976612578164,
-  "CAPLIPOINT": 0.0
+  "COROMANDEL": 0.04369444389111421,
+  "REDINGTON": 0.0,
+  "SAILIFE": 0.0,
+  "SHYAMMETL": 0.04369444389111421
  },
- "st": 0.0,
+ "st": -4615.376200522764,
  "lt": 0.0,
  "cf_st": [],
  "cf_lt": [],
  "fy": 2026,
- "last": "2026-11-18"
+ "last": "2026-11-19"
 }

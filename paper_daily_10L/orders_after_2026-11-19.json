@@ -1,0 +1,146 @@
+{
+ "decided_after_close_of": "2026-11-19",
+ "created_utc": "2026-11-19T15:17:11.151065+00:00",
+ "orders": {
+  "ABDL": 0.05,
+  "AJANTPHARM": 0.05,
+  "BAJAJ-AUTO": 0.0,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "DIVISLAB": 0.0,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "HONASA": 0.05,
+  "KRN": 0.0,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "MANINDS": 0.05,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SANSERA": 0.0,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "SHYAMMETL": 0.05,
+  "TATACOMM": 0.05,
+  "TECHM": 0.0,
+  "THELEELA": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "INDGN",
+   "side": "sell",
+   "qty": 77,
+   "price": 655.51,
+   "costs": 67.23
+  },
+  {
+   "symbol": "KRN",
+   "side": "sell",
+   "qty": 1,
+   "price": 967.39,
+   "costs": 16.38
+  },
+  {
+   "symbol": "MANKIND",
+   "side": "sell",
+   "qty": 19,
+   "price": 2624.06,
+   "costs": 67.2
+  },
+  {
+   "symbol": "MPHASIS",
+   "side": "sell",
+   "qty": 20,
+   "price": 2380.72,
+   "costs": 65.12
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 30,
+   "price": 45.18,
+   "costs": 16.39
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "sell",
+   "qty": 1,
+   "price": 921.52,
+   "costs": 16.37
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "sell",
+   "qty": 1,
+   "price": 688.98,
+   "costs": 16.37
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "sell",
+   "qty": 108,
+   "price": 459.72,
+   "costs": 67.2
+  },
+  {
+   "symbol": "BAJAJ-AUTO",
+   "side": "buy",
+   "qty": 4,
+   "price": 10454.32,
+   "costs": 49.84
+  },
+  {
+   "symbol": "DIVISLAB",
+   "side": "buy",
+   "qty": 4,
+   "price": 11063.28,
+   "costs": 52.29
+  },
+  {
+   "symbol": "FSL",
+   "side": "buy",
+   "qty": 6,
+   "price": 274.6,
+   "costs": 2.31
+  },
+  {
+   "symbol": "MANINDS",
+   "side": "buy",
+   "qty": 65,
+   "price": 765.49,
+   "costs": 59.32
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 1,
+   "price": 413.96,
+   "costs": 0.08
+  },
+  {
+   "symbol": "SANSERA",
+   "side": "buy",
+   "qty": 11,
+   "price": 4500.92,
+   "costs": 59.28
+  },
+  {
+   "symbol": "TATACOMM",
+   "side": "buy",
+   "qty": 1,
+   "price": 1770.95,
+   "costs": 2.33
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 4,
+   "price": 150.63,
+   "costs": 1.11
+  }
+ ],
+ "nav": 1000167.4053101878
+}

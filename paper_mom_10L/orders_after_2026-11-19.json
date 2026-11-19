@@ -1,0 +1,148 @@
+{
+ "decided_after_close_of": "2026-11-19",
+ "created_utc": "2026-11-19T15:17:28.183402+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "AEROFLEX",
+   "side": "buy",
+   "qty": 101,
+   "price": 494.91,
+   "costs": 59.37
+  },
+  {
+   "symbol": "ATHERENERG",
+   "side": "buy",
+   "qty": 26,
+   "price": 1908.6,
+   "costs": 59.3
+  },
+  {
+   "symbol": "CPPLUS",
+   "side": "buy",
+   "qty": 12,
+   "price": 3957.55,
+   "costs": 55.9
+  },
+  {
+   "symbol": "CUPID",
+   "side": "buy",
+   "qty": 137,
+   "price": 363.32,
+   "costs": 59.33
+  },
+  {
+   "symbol": "GANDHAR",
+   "side": "buy",
+   "qty": 192,
+   "price": 260.22,
+   "costs": 59.36
+  },
+  {
+   "symbol": "INDSWFTLAB",
+   "side": "buy",
+   "qty": 148,
+   "price": 336.03,
+   "costs": 59.32
+  },
+  {
+   "symbol": "KMEW",
+   "side": "buy",
+   "qty": 68,
+   "price": 733.36,
+   "costs": 59.35
+  },
+  {
+   "symbol": "MANINDS",
+   "side": "buy",
+   "qty": 65,
+   "price": 765.49,
+   "costs": 59.32
+  },
+  {
+   "symbol": "RATNAVEER",
+   "side": "buy",
+   "qty": 134,
+   "price": 372.05,
+   "costs": 59.34
+  },
+  {
+   "symbol": "RPTECH",
+   "side": "buy",
+   "qty": 79,
+   "price": 630.45,
+   "costs": 59.33
+  },
+  {
+   "symbol": "RUBICON",
+   "side": "buy",
+   "qty": 30,
+   "price": 1659.59,
+   "costs": 59.33
+  },
+  {
+   "symbol": "SANSERA",
+   "side": "buy",
+   "qty": 11,
+   "price": 4500.92,
+   "costs": 59.28
+  },
+  {
+   "symbol": "SBC",
+   "side": "buy",
+   "qty": 733,
+   "price": 68.22,
+   "costs": 59.37
+  },
+  {
+   "symbol": "SGMART",
+   "side": "buy",
+   "qty": 48,
+   "price": 1028.78,
+   "costs": 58.25
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "buy",
+   "qty": 54,
+   "price": 922.63,
+   "costs": 59.34
+  },
+  {
+   "symbol": "SHREEJISPG",
+   "side": "buy",
+   "qty": 55,
+   "price": 904.64,
+   "costs": 59.32
+  },
+  {
+   "symbol": "SKYGOLD",
+   "side": "buy",
+   "qty": 54,
+   "price": 925.58,
+   "costs": 59.37
+  },
+  {
+   "symbol": "TFCILTD",
+   "side": "buy",
+   "qty": 294,
+   "price": 169.75,
+   "costs": 59.35
+  },
+  {
+   "symbol": "WELCORP",
+   "side": "buy",
+   "qty": 22,
+   "price": 2225.66,
+   "costs": 58.18
+  },
+  {
+   "symbol": "WHEELS",
+   "side": "buy",
+   "qty": 21,
+   "price": 2296.65,
+   "costs": 57.04
+  }
+ ],
+ "nav": 999910.6441677513
+}

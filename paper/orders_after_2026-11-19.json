@@ -1,0 +1,22 @@
+{
+ "decided_after_close_of": "2026-11-19",
+ "created_utc": "2026-11-19T15:17:04.975219+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "IPCALAB",
+   "side": "sell",
+   "qty": 2,
+   "price": 1856.57,
+   "costs": 19.48
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 4,
+   "price": 997.49,
+   "costs": 4.75
+  }
+ ],
+ "nav": 101505.58249818925
+}
