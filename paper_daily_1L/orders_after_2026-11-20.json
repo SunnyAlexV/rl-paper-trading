@@ -1,0 +1,123 @@
+{
+ "decided_after_close_of": "2026-11-20",
+ "created_utc": "2026-11-20T15:17:34.794471+00:00",
+ "orders": {
+  "ABDL": 0.0,
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "HONASA": 0.0,
+  "INDIANB": 0.05,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "MANINDS": 0.05,
+  "NAZARA": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.05,
+  "SHILPAMED": 0.05,
+  "SHYAMMETL": 0.0,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "USHAMART": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "INDIANB",
+   "side": "sell",
+   "qty": 5,
+   "price": 946.49,
+   "costs": 20.52
+  },
+  {
+   "symbol": "KRN",
+   "side": "sell",
+   "qty": 5,
+   "price": 996.23,
+   "costs": 20.53
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "sell",
+   "qty": 1,
+   "price": 421.78,
+   "costs": 15.36
+  },
+  {
+   "symbol": "SANSERA",
+   "side": "sell",
+   "qty": 1,
+   "price": 4662.45,
+   "costs": 20.51
+  },
+  {
+   "symbol": "TECHM",
+   "side": "sell",
+   "qty": 2,
+   "price": 1719.34,
+   "costs": 18.47
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "sell",
+   "qty": 1,
+   "price": 151.22,
+   "costs": 15.35
+  },
+  {
+   "symbol": "WIPRO",
+   "side": "sell",
+   "qty": 27,
+   "price": 180.95,
+   "costs": 20.52
+  },
+  {
+   "symbol": "ABDL",
+   "side": "buy",
+   "qty": 6,
+   "price": 807.46,
+   "costs": 5.91
+  },
+  {
+   "symbol": "COROMANDEL",
+   "side": "buy",
+   "qty": 2,
+   "price": 1951.11,
+   "costs": 4.73
+  },
+  {
+   "symbol": "HONASA",
+   "side": "buy",
+   "qty": 9,
+   "price": 524.29,
+   "costs": 5.88
+  },
+  {
+   "symbol": "LGEINDIA",
+   "side": "buy",
+   "qty": 2,
+   "price": 1716.03,
+   "costs": 3.64
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "buy",
+   "qty": 1,
+   "price": 44.62,
+   "costs": 0.01
+  },
+  {
+   "symbol": "SHYAMMETL",
+   "side": "buy",
+   "qty": 3,
+   "price": 1285.72,
+   "costs": 4.72
+  }
+ ],
+ "nav": 99587.69360471508
+}
