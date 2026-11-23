@@ -1,0 +1,22 @@
+{
+ "decided_after_close_of": "2026-11-23",
+ "created_utc": "2026-11-23T15:16:58.369443+00:00",
+ "orders": {},
+ "fills_today": [
+  {
+   "symbol": "EMAMILTD",
+   "side": "sell",
+   "qty": 96,
+   "price": 424.67,
+   "costs": 57.86
+  },
+  {
+   "symbol": "LGEINDIA",
+   "side": "buy",
+   "qty": 23,
+   "price": 1741.12,
+   "costs": 47.5
+  }
+ ],
+ "nav": 990632.6556948256
+}

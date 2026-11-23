@@ -1,0 +1,174 @@
+{
+ "decided_after_close_of": "2026-11-23",
+ "created_utc": "2026-11-23T15:16:52.592400+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "BAJAJ-AUTO": 0.05,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "GOODLUCK": 0.05,
+  "INDIANB": 0.05,
+  "JUBLFOOD": 0.05,
+  "KRN": 0.05,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "MANINDS": 0.0,
+  "NAZARA": 0.05,
+  "OIL": 0.05,
+  "PVRINOX": 0.0,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SGMART": 0.0,
+  "SHILPAMED": 0.0,
+  "SHYAMMETL": 0.05,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "USHAMART": 0.0,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "ABDL",
+   "side": "sell",
+   "qty": 61,
+   "price": 797.67,
+   "costs": 66.16
+  },
+  {
+   "symbol": "FSL",
+   "side": "sell",
+   "qty": 2,
+   "price": 281.2,
+   "costs": 16.36
+  },
+  {
+   "symbol": "GLAND",
+   "side": "sell",
+   "qty": 1,
+   "price": 3354.65,
+   "costs": 18.47
+  },
+  {
+   "symbol": "HONASA",
+   "side": "sell",
+   "qty": 94,
+   "price": 526.64,
+   "costs": 67.19
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "side": "sell",
+   "qty": 1,
+   "price": 2007.71,
+   "costs": 17.42
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "sell",
+   "qty": 117,
+   "price": 416.59,
+   "costs": 66.16
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 17,
+   "price": 45.73,
+   "costs": 16.37
+  },
+  {
+   "symbol": "SGMART",
+   "side": "sell",
+   "qty": 6,
+   "price": 1149.34,
+   "costs": 22.6
+  },
+  {
+   "symbol": "SHYAMMETL",
+   "side": "sell",
+   "qty": 38,
+   "price": 1312.85,
+   "costs": 67.21
+  },
+  {
+   "symbol": "BAJAJ-AUTO",
+   "side": "buy",
+   "qty": 4,
+   "price": 10778.4,
+   "costs": 51.08
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 1,
+   "price": 1001.45,
+   "costs": 1.19
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 52,
+   "price": 956.99,
+   "costs": 59.33
+  },
+  {
+   "symbol": "KRN",
+   "side": "buy",
+   "qty": 52,
+   "price": 952.21,
+   "costs": 59.28
+  },
+  {
+   "symbol": "MANINDS",
+   "side": "buy",
+   "qty": 2,
+   "price": 730.49,
+   "costs": 1.27
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 1,
+   "price": 1655.76,
+   "costs": 2.31
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 3,
+   "price": 355.19,
+   "costs": 1.2
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "buy",
+   "qty": 1,
+   "price": 845.29,
+   "costs": 1.16
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "buy",
+   "qty": 1,
+   "price": 696.37,
+   "costs": 1.13
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "buy",
+   "qty": 108,
+   "price": 461.55,
+   "costs": 59.34
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "buy",
+   "qty": 7,
+   "price": 149.61,
+   "costs": 1.2
+  }
+ ],
+ "nav": 992208.7826865646
+}
