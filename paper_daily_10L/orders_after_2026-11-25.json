@@ -1,0 +1,160 @@
+{
+ "decided_after_close_of": "2026-11-25",
+ "created_utc": "2026-11-25T15:17:13.769905+00:00",
+ "orders": {
+  "63MOONS": 0.05,
+  "ADANIPORTS": 0.05,
+  "AJANTPHARM": 0.05,
+  "BAJAJ-AUTO": 0.0,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "GOODLUCK": 0.05,
+  "HONASA": 0.05,
+  "INDGN": 0.05,
+  "INDIANB": 0.05,
+  "JUBLFOOD": 0.05,
+  "KRN": 0.0,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "NAZARA": 0.0,
+  "OIL": 0.0,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SHYAMMETL": 0.0,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "UNOMINDA": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "AJANTPHARM",
+   "side": "sell",
+   "qty": 1,
+   "price": 3327.16,
+   "costs": 18.46
+  },
+  {
+   "symbol": "FSL",
+   "side": "sell",
+   "qty": 5,
+   "price": 287.44,
+   "costs": 16.39
+  },
+  {
+   "symbol": "KRN",
+   "side": "sell",
+   "qty": 2,
+   "price": 979.46,
+   "costs": 17.41
+  },
+  {
+   "symbol": "MANINDS",
+   "side": "sell",
+   "qty": 68,
+   "price": 719.28,
+   "costs": 66.17
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "sell",
+   "qty": 30,
+   "price": 1690.96,
+   "costs": 68.24
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 27,
+   "price": 46.52,
+   "costs": 16.39
+  },
+  {
+   "symbol": "SGMART",
+   "side": "sell",
+   "qty": 43,
+   "price": 948.05,
+   "costs": 57.86
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "sell",
+   "qty": 59,
+   "price": 859.45,
+   "costs": 68.24
+  },
+  {
+   "symbol": "THELEELA",
+   "side": "sell",
+   "qty": 1,
+   "price": 691.63,
+   "costs": 16.37
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "sell",
+   "qty": 108,
+   "price": 458.0,
+   "costs": 66.19
+  },
+  {
+   "symbol": "VINCOFE",
+   "side": "sell",
+   "qty": 1,
+   "price": 148.74,
+   "costs": 15.35
+  },
+  {
+   "symbol": "GOODLUCK",
+   "side": "buy",
+   "qty": 96,
+   "price": 514.33,
+   "costs": 58.25
+  },
+  {
+   "symbol": "INDIANB",
+   "side": "buy",
+   "qty": 1,
+   "price": 937.98,
+   "costs": 1.18
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "buy",
+   "qty": 117,
+   "price": 424.28,
+   "costs": 59.3
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 121,
+   "price": 409.3,
+   "costs": 59.28
+  },
+  {
+   "symbol": "OIL",
+   "side": "buy",
+   "qty": 117,
+   "price": 423.42,
+   "costs": 59.28
+  },
+  {
+   "symbol": "SGLTL",
+   "side": "buy",
+   "qty": 2,
+   "price": 347.19,
+   "costs": 1.13
+  },
+  {
+   "symbol": "SHYAMMETL",
+   "side": "buy",
+   "qty": 38,
+   "price": 1278.83,
+   "costs": 58.11
+  }
+ ],
+ "nav": 990342.5746921597
+}

@@ -1,0 +1,118 @@
+{
+ "decided_after_close_of": "2026-11-25",
+ "created_utc": "2026-11-25T15:17:17.188433+00:00",
+ "orders": {
+  "63MOONS": 0.05,
+  "ADANIPORTS": 0.05,
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "GOODLUCK": 0.05,
+  "HONASA": 0.05,
+  "INDGN": 0.05,
+  "INDIANB": 0.05,
+  "JUBLFOOD": 0.05,
+  "KRN": 0.0,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "NAZARA": 0.0,
+  "OIL": 0.0,
+  "PVRINOX": 0.0,
+  "SAGILITY": 0.05,
+  "SGLTL": 0.05,
+  "SHYAMMETL": 0.0,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "UNOMINDA": 0.05,
+  "VINCOFE": 0.05
+ },
+ "fills_today": [
+  {
+   "symbol": "MANINDS",
+   "side": "sell",
+   "qty": 6,
+   "price": 719.39,
+   "costs": 19.5
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "sell",
+   "qty": 1,
+   "price": 1691.12,
+   "costs": 17.4
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 3,
+   "price": 46.52,
+   "costs": 15.35
+  },
+  {
+   "symbol": "SGMART",
+   "side": "sell",
+   "qty": 4,
+   "price": 948.17,
+   "costs": 19.48
+  },
+  {
+   "symbol": "SHILPAMED",
+   "side": "sell",
+   "qty": 5,
+   "price": 859.57,
+   "costs": 19.5
+  },
+  {
+   "symbol": "USHAMART",
+   "side": "sell",
+   "qty": 10,
+   "price": 458.12,
+   "costs": 20.51
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 1,
+   "price": 982.93,
+   "costs": 1.18
+  },
+  {
+   "symbol": "GOODLUCK",
+   "side": "buy",
+   "qty": 9,
+   "price": 514.21,
+   "costs": 5.87
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "buy",
+   "qty": 11,
+   "price": 424.23,
+   "costs": 5.87
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 1,
+   "price": 409.21,
+   "costs": 0.08
+  },
+  {
+   "symbol": "OIL",
+   "side": "buy",
+   "qty": 11,
+   "price": 423.38,
+   "costs": 5.87
+  },
+  {
+   "symbol": "SHYAMMETL",
+   "side": "buy",
+   "qty": 3,
+   "price": 1278.62,
+   "costs": 4.72
+  }
+ ],
+ "nav": 98462.86075322545
+}

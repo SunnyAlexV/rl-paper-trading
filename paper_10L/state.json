@@ -186,11 +186,14 @@
   "THELEELA": "2026-11-17",
   "VINCOFE": "2026-11-17"
  },
- "orders": null,
+ "orders": {
+  "CARBORUNIV": 0.06224005100628416,
+  "FIVESTAR": 0.0
+ },
  "st": 0.0,
  "lt": 0.0,
  "cf_st": [],
  "cf_lt": [],
  "fy": 2026,
- "last": "2026-11-23"
+ "last": "2026-11-25"
 }
