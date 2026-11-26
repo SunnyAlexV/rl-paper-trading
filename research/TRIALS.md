@@ -1,0 +1,38 @@
+# Trials ledger: every strategy test, so the multiple-testing burden stays visible
+
+Rule: every backtest run on the rebuilt history is logged here before its result is used anywhere.
+The more strategies tried, the more likely the best one looks good by luck; this count is what any
+"best result" must be discounted for.
+
+| Date | Study | Strategies tested | Selected / reported |
+|---|---|---|---|
+| Oct 2026 | Research council (`results/`) | thousands of formulas searched by MCTS and an LLM; 17 kept | frozen council (primary) |
+| 18 Nov 2026 | `research/momentum/` | 5 slow signals | 12-1 momentum (exploratory account) |
+| 26 Nov 2026 | Signal health (`research/committee/`) | 4 researchers + council + momentum x 3 horizons x 3 size buckets x F&O split | diagnostics only |
+| 26 Nov 2026 | Pods round 1 (`research/pods/ROUND1.md`) | 3 pods x 9 variants + cost stress | trend passed |
+| 27 Nov 2026 | Long-short (`ROUND_LS.md`) | 3 books, 18 variants + 2 stress | none passed |
+| 27 Nov 2026 | Integrated (`ROUND_INT.md`) | 1 composite x 9 variants + stress + 3 diagnostic pairs | integrated failed; momentum+delivery chosen after the fact |
+
+**Count of strategy-level trials in the pods work: about 45 backtests, about 10 distinct ideas.**
+The delivery ingredient also inherits the council's search, since delivery formulas were nominated
+by that search.
+
+## Deflated Sharpe check (27 Nov 2026)
+
+Probability that the backtest Sharpe reflects a real edge rather than the luck of picking the best
+of N trials (Bailey & Lopez de Prado deflated Sharpe ratio; trial-Sharpe dispersion estimated from the 43
+backtests of the pods work; Feb 2016 - Nov 2026, post-tax daily returns):
+
+| Book | Sharpe | N = 10 | N = 30 | N = 100 | N = 1000 |
+|---|---|---|---|---|---|
+| Momentum + delivery | 1.35 | 0.99 | 0.95 | 0.86 | 0.58 |
+| Integrated (3 ingredients) | 1.23 | 0.97 | 0.90 | 0.77 | 0.43 |
+| Council (frozen) | 1.11 | 0.94 | 0.82 | 0.64 | 0.29 |
+| Trend pod | 0.92 | 0.83 | 0.63 | 0.40 | 0.12 |
+
+Excess return over the equal-weight universe: momentum + delivery +11.3% a year (t = 3.4), trend
++8.4% (t = 2.0), council +2.8% (t = 0.9), integrated +2.2% (t = 0.6). Momentum + delivery's excess is
+concentrated: +41 points in 2017 and +34 in 2024; -2 to -6 in 2022 and 2025.
+
+Reading: if the honest trial count is tens, momentum + delivery is probably real; if it includes
+the council's search (thousands), it is close to a coin flip. Forward paper trading settles it.

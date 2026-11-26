@@ -168,3 +168,24 @@ results so they cannot be cherry-picked afterwards.
   the backtest's: 20 of 20 for both (one stock appears under its former symbol in the backtest).
 - **Status.** Exploratory. The Rs 1,00,000 account in `paper/` remains the primary test; its rule,
   signal and conclusion criteria are unchanged.
+
+## Amendment, 27 Nov 2026 (safeguards against overfitting)
+
+Written before any live result of the 27 Nov accounts.
+
+1. **Frozen means frozen.** No parameter, ingredient, universe or rule of any running account is
+   changed. A changed idea is a new account with its own amendment, never an edit.
+2. **Trials are counted.** Every backtest is logged in `research/TRIALS.md` before its result is used,
+   and any backtest figure quoted in a review states the trial count behind it.
+3. **Rules before results.** Every new study writes its rules and pass/fail criteria in a dated
+   commit before it is run (as in `research/pods/SPEC*.md`).
+4. **Fleet cap and pace.** At most 12 paper accounts at once (11 now). At most one new exploratory
+   account per calendar quarter after 27 Nov 2026, so the fleet does not become a search of its own.
+5. **No early verdicts.** No account is judged better or worse than another on less than 12 months of
+   live data, except the pre-stated kill reviews (6 months).
+6. **Live comparison rule.** Because 10 exploratory accounts run side by side, the best of them will look
+   good by chance. An exploratory account counts as beating `paper_mom_10L` or the equal-weight
+   universe only if its daily excess return has t >= 2.8 (5% one-sided, Bonferroni for 10 accounts). At
+   realistic edges this needs two to three years of live data; 12 months will usually be "not yet known".
+7. **Real money gate.** No real money follows any account before it passes rule 6 out of sample. Even
+   then, it starts as a small satellite next to a broad index core.
