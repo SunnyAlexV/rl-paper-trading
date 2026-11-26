@@ -1,0 +1,23 @@
+book,start,version,CAGR,Sharpe,MaxDD,CAGR_2022_26
+equal-weight universe,2014-01-01,net (costs + tax),0.1501,0.858,-0.483,0.1301
+equal-weight universe,2014-01-01,"gross (no costs, no tax)",0.1578,0.894,-0.477,0.1382
+council (frozen),2014-01-01,net (costs + tax),0.2032,1.239,-0.339,0.0974
+council (frozen),2014-01-01,"gross (no costs, no tax)",0.2858,1.69,-0.336,0.1806
+trend (momentum),2014-01-01,net (costs + tax),0.2121,0.894,-0.449,0.1877
+trend (momentum),2014-01-01,"gross (no costs, no tax)",0.2582,1.05,-0.428,0.25
+momentum + delivery,2014-01-01,net (costs + tax),0.2816,1.404,-0.32,0.2257
+momentum + delivery,2014-01-01,"gross (no costs, no tax)",0.328,1.63,-0.334,0.2798
+equal-weight universe,2016-02-01,net (costs + tax),0.1464,0.826,-0.515,0.1321
+equal-weight universe,2016-02-01,"gross (no costs, no tax)",0.1548,0.866,-0.512,0.1454
+council (frozen),2016-02-01,net (costs + tax),0.1831,1.111,-0.352,0.1013
+council (frozen),2016-02-01,"gross (no costs, no tax)",0.2751,1.616,-0.331,0.1786
+trend (momentum),2016-02-01,net (costs + tax),0.2249,0.92,-0.461,0.1821
+trend (momentum),2016-02-01,"gross (no costs, no tax)",0.2827,1.105,-0.428,0.2501
+momentum + delivery,2016-02-01,net (costs + tax),0.2781,1.348,-0.325,0.2171
+momentum + delivery,2016-02-01,"gross (no costs, no tax)",0.3298,1.591,-0.332,0.2784
+agent seed 1 (no-learning),2014-01-01,net (costs + tax),0.1032,0.628,-0.4,0.081
+agent seed 1 (no-learning),2014-01-01,"gross (no costs, no tax)",0.2452,1.308,-0.409,0.2907
+agent seed 2 (no-learning),2014-01-01,net (costs + tax),0.0881,0.573,-0.403,0.0919
+agent seed 2 (no-learning),2014-01-01,"gross (no costs, no tax)",0.2005,1.153,-0.352,0.2611
+agent seed 3 (no-learning),2014-01-01,net (costs + tax),0.0739,0.473,-0.543,0.1039
+agent seed 3 (no-learning),2014-01-01,"gross (no costs, no tax)",0.1343,0.773,-0.511,0.1648

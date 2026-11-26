@@ -27,3 +27,23 @@ no-learning version in 2 of 3 seeds, by tiny margins (Sharpe +0.01, +0.02; -0.08
   run; widening it would be a new trial.
 - Compared with the hindsight backtests (council 18%, momentum + delivery 28% a year), an agent with no
   hindsight made 6-10% a year. That gap is a measure of how much hindsight flatters backtests.
+
+## Diagnostic: before vs after costs and tax (27 Nov 2026)
+
+Same books with all costs (STT, charges, spread, impact) and tax set to zero (`gross_vs_net.csv`;
+agent = no-learning version rebuilt from the logged quarterly selections, net figures match the run).
+Jan 2014 - Nov 2026:
+
+| Book | Gross CAGR / Sharpe | Net CAGR / Sharpe | Lost to costs + tax |
+|---|---|---|---|
+| Equal-weight universe | 15.8% / 0.89 | 15.0% / 0.86 | 0.8 pts |
+| Momentum + delivery | 32.8% / 1.63 | 28.2% / 1.40 | 4.6 pts |
+| Trend (momentum) | 25.8% / 1.05 | 21.2% / 0.89 | 4.6 pts |
+| Council (frozen) | 28.6% / 1.69 | 20.3% / 1.24 | 8.3 pts |
+| Agent seed 1 | 24.5% / 1.31 | 10.3% / 0.63 | 14.2 pts |
+| Agent seed 2 | 20.1% / 1.15 | 8.8% / 0.57 | 11.2 pts |
+| Agent seed 3 | 13.4% / 0.77 | 7.4% / 0.47 | 6.0 pts |
+
+Before costs, two of three no-hindsight agents beat the equal-weight universe clearly. Their patterns
+were real but short-lived (fast turnover), so costs and short-term tax took most of the edge.
+Slow signals (momentum, momentum + delivery) keep most of theirs.
