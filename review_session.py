@@ -135,11 +135,11 @@ def main():
     # 3. why tomorrow's orders
     w("## 3. Orders for the next open, and why\n")
     try:
-        B = score_breakdown(cfg) if cfg.get("panel") == "council" else None
+        B = score_breakdown(cfg) if cfg.get("pool") else None
     except Exception as e:
         B = None; w(f"_(score breakdown unavailable: {e})_\n")
-    if cfg.get("panel") != "council":
-        w(f"_Signal for this account: {cfg.get('panel', 'see config')}; per-formula breakdown applies only to the council._\n")
+    if not cfg.get("pool"):
+        w(f"_This account ranks stocks by {cfg.get('signal', 'plain 12-1 momentum (return from 12 months to 1 month ago)')}, not the council, so there is no per-formula breakdown._\n")
     for s, tw in j["orders"].items():
         act = "SELL ALL" if tw == 0 else ("BUY" if s not in st["shares"] else "RESIZE")
         why = explain(s, B) if B else ""
