@@ -1,0 +1,2668 @@
+[
+ {
+  "date": "2014-01-01",
+  "pool": 1559,
+  "survivors": 29,
+  "selected": [
+   {
+    "formula": "ts_min_60(ts_delay_60(oi_chg))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "pool"
+   },
+   {
+    "formula": "add(close, ts_std_60(ts_delta_40(ts_std_20(neg(ts_delta_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.7,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_max_20(pcr)",
+    "sign": 1,
+    "discovery_t": 3.65,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(slog(ts_max_5(pcr))))))",
+    "sign": 1,
+    "discovery_t": 3.32,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_max_60(neg(ts_max_10(ts_delay_20(ts_min_10(ts_delay_60(deliv_val))))))",
+    "sign": -1,
+    "discovery_t": 3.13,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.05,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2014-04-01",
+  "pool": 1615,
+  "survivors": 4,
+  "selected": [
+   {
+    "formula": "ts_max_20(pcr)",
+    "sign": 1,
+    "discovery_t": 3.81,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_mean_60(ts_max_40(abs(ts_std_10(basis))))",
+    "sign": -1,
+    "discovery_t": 3.65,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_std_60(sub(sign(ts_std_5(deliv_val)), basis))",
+    "sign": -1,
+    "discovery_t": 3.26,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(slog(ts_max_5(pcr))))))",
+    "sign": 1,
+    "discovery_t": 3.05,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2014-07-01",
+  "pool": 1672,
+  "survivors": 2,
+  "selected": [
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(slog(ts_max_5(ts_std_20(basis)))))))",
+    "sign": -1,
+    "discovery_t": 3.25,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_std_60(sub(sign(ts_std_5(deliv_val)), basis))",
+    "sign": -1,
+    "discovery_t": 3.12,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2014-10-01",
+  "pool": 1727,
+  "survivors": 0,
+  "selected": []
+ },
+ {
+  "date": "2015-01-01",
+  "pool": 1785,
+  "survivors": 0,
+  "selected": []
+ },
+ {
+  "date": "2015-04-01",
+  "pool": 1845,
+  "survivors": 1,
+  "selected": [
+   {
+    "formula": "ts_std_60(ts_std_10(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.11,
+    "born": "2015-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2015-07-01",
+  "pool": 1901,
+  "survivors": 1,
+  "selected": [
+   {
+    "formula": "ts_std_60(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.12,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2015-10-01",
+  "pool": 1955,
+  "survivors": 1,
+  "selected": [
+   {
+    "formula": "ts_std_60(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.2,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2016-01-01",
+  "pool": 2010,
+  "survivors": 6,
+  "selected": [
+   {
+    "formula": "slog(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.32,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.28,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_std_60(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.08,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2016-04-01",
+  "pool": 2068,
+  "survivors": 17,
+  "selected": [
+   {
+    "formula": "slog(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.59,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_std_60(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.47,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.39,
+    "born": "2016-01-01"
+   }
+  ]
+ },
+ {
+  "date": "2016-07-01",
+  "pool": 2122,
+  "survivors": 17,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.46,
+    "born": "2016-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.22,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_std_60(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.14,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2016-10-03",
+  "pool": 2179,
+  "survivors": 23,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.6,
+    "born": "2016-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.48,
+    "born": "2016-01-01"
+   }
+  ]
+ },
+ {
+  "date": "2017-01-02",
+  "pool": 2234,
+  "survivors": 27,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.68,
+    "born": "2016-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.47,
+    "born": "2016-01-01"
+   }
+  ]
+ },
+ {
+  "date": "2017-04-03",
+  "pool": 2287,
+  "survivors": 4,
+  "selected": [
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.38,
+    "born": "2017-04-03"
+   },
+   {
+    "formula": "ts_corr_20(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.03,
+    "born": "2015-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2017-07-03",
+  "pool": 2338,
+  "survivors": 43,
+  "selected": [
+   {
+    "formula": "ts_mean_60(ts_max_60(ts_delta_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.59,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.18,
+    "born": "2015-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.16,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_5(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.13,
+    "born": "2016-04-01"
+   },
+   {
+    "formula": "ts_max_40(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.06,
+    "born": "2016-10-03"
+   }
+  ]
+ },
+ {
+  "date": "2017-10-03",
+  "pool": 2395,
+  "survivors": 48,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_max_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.63,
+    "born": "2016-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.34,
+    "born": "2015-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.14,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2018-01-01",
+  "pool": 2447,
+  "survivors": 79,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_std_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.69,
+    "born": "2018-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.38,
+    "born": "2015-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.37,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.24,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.13,
+    "born": "2017-07-03"
+   }
+  ]
+ },
+ {
+  "date": "2018-04-02",
+  "pool": 2496,
+  "survivors": 72,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_std_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.5,
+    "born": "2018-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.47,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.4,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.04,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.01,
+    "born": "2018-04-02"
+   }
+  ]
+ },
+ {
+  "date": "2018-07-02",
+  "pool": 2550,
+  "survivors": 125,
+  "selected": [
+   {
+    "formula": "ts_min_5(ts_std_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.64,
+    "born": "2018-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.54,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.32,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.31,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.14,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.06,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.03,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2018-10-01",
+  "pool": 2601,
+  "survivors": 180,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.81,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_5(ts_std_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.79,
+    "born": "2018-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.54,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.41,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.37,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.31,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.23,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 3.13,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_max_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.03,
+    "born": "2016-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2019-01-01",
+  "pool": 2656,
+  "survivors": 215,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.02,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_5(ts_std_60(ts_delay_60(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.0,
+    "born": "2018-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.85,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.52,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.49,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.3,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 3.18,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.16,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_mean_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.07,
+    "born": "2016-10-03"
+   },
+   {
+    "formula": "ts_max_40(ts_std_5(ts_max_60(pcr)))",
+    "sign": 1,
+    "discovery_t": 3.05,
+    "born": "2016-10-03"
+   }
+  ]
+ },
+ {
+  "date": "2019-04-01",
+  "pool": 2707,
+  "survivors": 249,
+  "selected": [
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.28,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.19,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(open, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.83,
+    "born": "2015-10-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.68,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.64,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_delay_5(ts_std_60(ts_mean_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.63,
+    "born": "2019-01-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.43,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.33,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.31,
+    "born": "2017-07-03"
+   }
+  ]
+ },
+ {
+  "date": "2019-07-01",
+  "pool": 2762,
+  "survivors": 288,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.45,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.38,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.15,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_20(open, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.0,
+    "born": "2015-10-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.93,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_delay_5(ts_std_60(ts_mean_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.65,
+    "born": "2019-01-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.64,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_max_5(ts_std_60(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.47,
+    "born": "2017-01-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.45,
+    "born": "2017-07-03"
+   }
+  ]
+ },
+ {
+  "date": "2019-10-01",
+  "pool": 2815,
+  "survivors": 284,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.45,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.42,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.3,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.04,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.02,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_20(vwap, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.02,
+    "born": "2019-01-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.77,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_delay_5(ts_std_60(ts_mean_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.73,
+    "born": "2019-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.66,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.54,
+    "born": "2017-07-03"
+   }
+  ]
+ },
+ {
+  "date": "2020-01-01",
+  "pool": 2865,
+  "survivors": 329,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.59,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.56,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.52,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.32,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.15,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.08,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 3.9,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.84,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.71,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 3.63,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2020-04-01",
+  "pool": 2911,
+  "survivors": 389,
+  "selected": [
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.8,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.77,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.69,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.47,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.24,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.23,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.97,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 3.9,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.73,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 3.63,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2020-07-01",
+  "pool": 2961,
+  "survivors": 411,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.77,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.68,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.64,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.58,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.28,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.2,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.19,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 3.93,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 3.59,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.49,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2020-10-01",
+  "pool": 3009,
+  "survivors": 449,
+  "selected": [
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_10(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.93,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.91,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.88,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.76,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.48,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.46,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.32,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.17,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.17,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.76,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2021-01-01",
+  "pool": 3056,
+  "survivors": 336,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.84,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.84,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.83,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.69,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.45,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.23,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.19,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.17,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.04,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 3.8,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2021-04-01",
+  "pool": 3104,
+  "survivors": 140,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.02,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.0,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.79,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_mean_60(ts_std_40(ts_std_20(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.65,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_mean_5(slog(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.39,
+    "born": "2016-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.29,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.29,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.22,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_delay_5(ts_std_60(ts_mean_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.12,
+    "born": "2019-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.1,
+    "born": "2019-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2021-07-01",
+  "pool": 3151,
+  "survivors": 352,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.09,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, slog(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.02,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.84,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.68,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.52,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.48,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.39,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.13,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.07,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.07,
+    "born": "2016-01-01"
+   }
+  ]
+ },
+ {
+  "date": "2021-10-01",
+  "pool": 3193,
+  "survivors": 518,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.05,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.02,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.91,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.83,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.76,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.5,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.29,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_60(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.27,
+    "born": "2014-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.23,
+    "born": "2019-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2022-01-03",
+  "pool": 3227,
+  "survivors": 524,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.96,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.91,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.78,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.75,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.65,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.31,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.27,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.24,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.2,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.01,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2022-04-01",
+  "pool": 3268,
+  "survivors": 172,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.13,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.07,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.95,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.95,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_min_60(ts_max_60(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.59,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.45,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.42,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.26,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.0,
+    "born": "2021-10-01"
+   }
+  ]
+ },
+ {
+  "date": "2022-07-01",
+  "pool": 3306,
+  "survivors": 518,
+  "selected": [
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.11,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, slog(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.09,
+    "born": "2018-04-02"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.9,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.89,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.86,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.43,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.4,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.37,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.32,
+    "born": "2016-01-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.31,
+    "born": "2015-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2022-10-03",
+  "pool": 3334,
+  "survivors": 556,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.15,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.08,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.98,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.87,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.75,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.44,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.42,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.39,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.36,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_std_40(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.25,
+    "born": "2016-01-01"
+   }
+  ]
+ },
+ {
+  "date": "2023-01-02",
+  "pool": 3362,
+  "survivors": 193,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.29,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.22,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.94,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.9,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.55,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.46,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_delta_10(ts_delay_10(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.44,
+    "born": "2021-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.43,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.34,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.3,
+    "born": "2022-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2023-04-03",
+  "pool": 3387,
+  "survivors": 399,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.41,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.29,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.04,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.02,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_max_20(ts_max_60(ts_std_20(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.73,
+    "born": "2018-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.59,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_max_40(neg(ts_delta_5(neg(ts_max_5(ts_max_5(deliv_pct))))))",
+    "sign": 1,
+    "discovery_t": 4.49,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.46,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.36,
+    "born": "2022-07-01"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.31,
+    "born": "2021-10-01"
+   }
+  ]
+ },
+ {
+  "date": "2023-07-03",
+  "pool": 3419,
+  "survivors": 536,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.42,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.32,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.11,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.09,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_max_60(ts_max_60(ts_std_5(ts_std_5(deliv_pct))))",
+    "sign": 1,
+    "discovery_t": 4.77,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.57,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.57,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.42,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_min_10(ts_std_40(ts_delay_60(ts_std_5(ts_delay_20(ts_pct_40(deliv_val))))))",
+    "sign": 1,
+    "discovery_t": 4.39,
+    "born": "2017-07-03"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.36,
+    "born": "2022-07-01"
+   }
+  ]
+ },
+ {
+  "date": "2023-10-03",
+  "pool": 3451,
+  "survivors": 65,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, value)))",
+    "sign": -1,
+    "discovery_t": 5.39,
+    "born": "2023-04-03"
+   },
+   {
+    "formula": "ts_corr_10(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.21,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.8,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.38,
+    "born": "2022-07-01"
+   },
+   {
+    "formula": "ts_corr_5(close, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.2,
+    "born": "2023-04-03"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.19,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.09,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.97,
+    "born": "2021-04-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.78,
+    "born": "2023-04-03"
+   },
+   {
+    "formula": "ts_corr_5(open, slog(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.7,
+    "born": "2019-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2024-01-01",
+  "pool": 3495,
+  "survivors": 43,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.43,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_10(open, abs(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.81,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_5(close, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.4,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.28,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.25,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_40(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.18,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.1,
+    "born": "2021-04-01"
+   },
+   {
+    "formula": "ts_corr_10(high, ts_std_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.35,
+    "born": "2021-04-01"
+   },
+   {
+    "formula": "ts_corr_40(add(deliv_val, vwap), ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 3.33,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_delay_20(ts_delay_60(ts_min_20(ts_pct_60(ts_delay_10(vwap)))))",
+    "sign": 1,
+    "discovery_t": 3.16,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2024-04-01",
+  "pool": 3536,
+  "survivors": 206,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.37,
+    "born": "2015-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.31,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.01,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.86,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.62,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.52,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.4,
+    "born": "2022-07-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.2,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.2,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.15,
+    "born": "2023-01-02"
+   }
+  ]
+ },
+ {
+  "date": "2024-07-01",
+  "pool": 3580,
+  "survivors": 492,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 5.46,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.37,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.07,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.0,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.68,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.53,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.4,
+    "born": "2022-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.36,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.26,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.22,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2024-10-01",
+  "pool": 3624,
+  "survivors": 626,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 5.4,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.33,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.05,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.98,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.63,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.54,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.37,
+    "born": "2022-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.28,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.22,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.15,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2025-01-01",
+  "pool": 3669,
+  "survivors": 655,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, abs(mul(deliv_val, ts_mean_40(ts_mean_10(high)))))",
+    "sign": -1,
+    "discovery_t": 5.49,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.45,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.22,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.1,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.74,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.68,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.42,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.33,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.29,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.23,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2025-04-01",
+  "pool": 3719,
+  "survivors": 698,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, abs(mul(deliv_val, ts_mean_40(ts_mean_10(high)))))",
+    "sign": -1,
+    "discovery_t": 5.61,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.56,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.36,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.21,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.89,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.79,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.51,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.49,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.45,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_5(high, slog(mul(deliv_val, ts_mean_40(ts_mean_10(ts_corr_5(deliv_val, vwap))))))",
+    "sign": -1,
+    "discovery_t": 4.38,
+    "born": "2025-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2025-07-01",
+  "pool": 3772,
+  "survivors": 681,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, abs(mul(deliv_val, ts_mean_40(ts_mean_10(high)))))",
+    "sign": -1,
+    "discovery_t": 5.76,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.66,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.22,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(open, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 5.04,
+    "born": "2015-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.01,
+    "born": "2020-07-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.7,
+    "born": "2021-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.64,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.59,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.56,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.42,
+    "born": "2021-04-01"
+   }
+  ]
+ },
+ {
+  "date": "2025-10-01",
+  "pool": 3823,
+  "survivors": 608,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_delta_40(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 5.82,
+    "born": "2025-10-01"
+   },
+   {
+    "formula": "ts_corr_10(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.66,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.45,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.38,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.08,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.87,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.84,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.72,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.63,
+    "born": "2024-07-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.57,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2026-01-01",
+  "pool": 3871,
+  "survivors": 681,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_delta_40(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 5.75,
+    "born": "2025-10-01"
+   },
+   {
+    "formula": "ts_corr_10(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.6,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.27,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.25,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.01,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_60(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.83,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_delta_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.78,
+    "born": "2019-07-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.71,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.59,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.59,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2026-04-01",
+  "pool": 3923,
+  "survivors": 447,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_delta_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 5.93,
+    "born": "2026-04-01"
+   },
+   {
+    "formula": "ts_corr_10(high, abs(mul(deliv_val, ts_mean_40(ts_max_10(high)))))",
+    "sign": -1,
+    "discovery_t": 5.86,
+    "born": "2025-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.37,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_rank_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.31,
+    "born": "2022-10-03"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.15,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.91,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_40(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 4.91,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.8,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.72,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.69,
+    "born": "pool"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-01",
+  "pool": 3976,
+  "survivors": 373,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, slog(add(deliv_val, ts_delta_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 6.04,
+    "born": "2026-04-01"
+   },
+   {
+    "formula": "ts_corr_10(high, neg(deliv_val))",
+    "sign": 1,
+    "discovery_t": 6.03,
+    "born": "2019-04-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.46,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.25,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.0,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_5(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.82,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_delta_10(add(deliv_val, ts_rank_60(ts_mean_60(ts_max_40(ts_rank_60(value)))))))",
+    "sign": -1,
+    "discovery_t": 4.78,
+    "born": "2025-01-01"
+   },
+   {
+    "formula": "ts_corr_5(high, slog(mul(deliv_val, ts_mean_40(ts_mean_10(ts_corr_5(deliv_val, vwap))))))",
+    "sign": -1,
+    "discovery_t": 4.77,
+    "born": "2025-04-01"
+   },
+   {
+    "formula": "ts_corr_10(ts_delta_5(value), high)",
+    "sign": -1,
+    "discovery_t": 4.72,
+    "born": "pool"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_60(add(deliv_val, ts_mean_10(ts_corr_40(value, value)))))",
+    "sign": -1,
+    "discovery_t": 4.61,
+    "born": "2025-10-01"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-01",
+  "pool": 4027,
+  "survivors": 727,
+  "selected": [
+   {
+    "formula": "ts_corr_5(high, abs(mul(deliv_val, neg(ts_mean_10(ts_mean_20(volume))))))",
+    "sign": -1,
+    "discovery_t": 6.18,
+    "born": "2026-10-01"
+   },
+   {
+    "formula": "ts_corr_10(high, slog(div(deliv_val, close)))",
+    "sign": -1,
+    "discovery_t": 5.98,
+    "born": "2024-01-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.52,
+    "born": "2020-01-01"
+   },
+   {
+    "formula": "ts_corr_40(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.47,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_pct_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.34,
+    "born": "2020-10-01"
+   },
+   {
+    "formula": "ts_corr_20(high, ts_rank_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 5.11,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_5(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.92,
+    "born": "2021-10-01"
+   },
+   {
+    "formula": "ts_corr_5(high, ts_pct_10(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.86,
+    "born": "2023-01-02"
+   },
+   {
+    "formula": "ts_corr_5(high, slog(mul(deliv_val, ts_mean_40(ts_mean_10(ts_corr_5(deliv_val, vwap))))))",
+    "sign": -1,
+    "discovery_t": 4.8,
+    "born": "2025-04-01"
+   },
+   {
+    "formula": "ts_corr_60(high, ts_rank_20(deliv_val))",
+    "sign": -1,
+    "discovery_t": 4.8,
+    "born": "2021-10-01"
+   }
+  ]
+ }
+]
