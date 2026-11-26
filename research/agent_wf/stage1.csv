@@ -1,0 +1,8 @@
+book,start,version,turnover,CAGR,Sharpe,MaxDD,CAGR_2022_26
+equal-weight universe,2014-01-01,stage 1 (spread + impact only),0.42,0.1567,0.888,-0.479,0.1379
+council (frozen),2014-01-01,stage 1 (spread + impact only),7.42,0.2604,1.562,-0.338,0.1473
+trend (momentum),2014-01-01,stage 1 (spread + impact only),2.0,0.2525,1.032,-0.437,0.2478
+momentum + delivery,2014-01-01,stage 1 (spread + impact only),1.77,0.3162,1.584,-0.33,0.2713
+agent seed 1 (no-learning),2014-01-01,stage 1 (spread + impact only),28.01,0.1834,1.025,-0.417,0.196
+agent seed 2 (no-learning),2014-01-01,stage 1 (spread + impact only),20.61,0.155,0.928,-0.386,0.1892
+agent seed 3 (no-learning),2014-01-01,stage 1 (spread + impact only),7.78,0.1113,0.662,-0.521,0.1456
