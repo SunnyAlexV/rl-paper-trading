@@ -98,14 +98,18 @@ def main():
         c1 = C.at[D, s]; base = bought[s]["price"] if s in bought else C.at[Dm1, s]
         q0 = q - (bought[s]["qty"] if s in bought else 0)
         pnl = q0 * (c1 - C.at[Dm1, s]) + (q - q0) * (c1 - base) if s in bought else q * (c1 - base)
-        rows.append((s, c1 / (C.at[Dm1, s]) - 1, pnl, q * c1 / n1))
+        rows.append((s, c1 / (C.at[Dm1, s]) - 1, pnl, q * c1 / n1, (ret[s] - u.mean()) / u.std()))
     for f in j["fills_today"]:
         if f["side"] == "sell":
             rows.append((f["symbol"] + " (sold at open)", f["price"] / C.at[Dm1, f["symbol"]] - 1,
-                         f["qty"] * (f["price"] - C.at[Dm1, f["symbol"]]), 0.0))
-    T = pd.DataFrame(rows, columns=["sym", "ret", "pnl", "w"]).sort_values("pnl", ascending=False)
-    w("| Holding | Day | P&L | Weight |\n|---|---|---|---|")
-    for _, x in T.iterrows(): w(f"| {x.sym} | {pct(x.ret)} | {rs(x.pnl)} | {x.w*100:.1f}% |")
+                         f["qty"] * (f["price"] - C.at[Dm1, f["symbol"]]), 0.0, np.nan))
+    T = pd.DataFrame(rows, columns=["sym", "ret", "pnl", "w", "z"]).sort_values("pnl", ascending=False)
+    w("Move z = (stock's day return - universe average) / universe standard deviation that day. "
+      "|z| > 2 is an unusual, stock-specific move; |z| < 1 is ordinary market noise.\n")
+    w("| Holding | Day | Move z | P&L | Weight |\n|---|---|---|---|---|")
+    for _, x in T.iterrows():
+        zs = "" if np.isnan(x.z) else f"{x.z:+.2f}" + (" **unusual**" if abs(x.z) > 2 else "")
+        w(f"| {x.sym} | {pct(x.ret)} | {zs} | {rs(x.pnl)} | {x.w*100:.1f}% |")
     costs_today = sum(f["costs"] for f in j["fills_today"])
     w(f"\nCosts today {rs(-costs_today)}. Best: {T.iloc[0].sym}; worst: {T.iloc[-1].sym}.\n")
 
@@ -148,9 +152,21 @@ def main():
     if "exposure" in j: w(f"\nTiming-agent exposure: {j['exposure']}.")
     w("")
     if B:
-        w("Current holdings by council rank (exit happens when rank > band):\n")
-        hr = sorted(((s, int(B["rank"].get(s, 9999))) for s in st["shares"]), key=lambda x: -x[1])
-        w(", ".join(f"{s} {r}" for s, r in hr) + "\n")
+        zs = pd.Series(B["score"], index=B["names"]).sort_values(ascending=False).dropna()
+        k, band = cfg.get("k", 20), cfg.get("band", 100)
+        w(f"**Council z-scores of current holdings.** Each of the 17 formulas is turned into a cross-sectional "
+          f"rank z-score (0 = average stock, +1 = one standard deviation better), weighted, summed, and re-standardised. "
+          f"Today a stock needs z >= {zs.iloc[k-1]:+.2f} to be in the top {k} (buy line) and is sold below "
+          f"z = {zs.iloc[band-1]:+.2f} (rank {band}, sell line).\n")
+        res = list(B["parts"])
+        w("| Holding | Rank | z-score | " + " | ".join(res) + " | Cushion to sell line |\n|" + "---|" * (len(res) + 4))
+        hold = sorted(st["shares"], key=lambda s: B["rank"].get(s, 9999))
+        for s in hold:
+            i = B["idx"].get(s)
+            if i is None: continue
+            w(f"| {s} | {int(B['rank'][s])} | {B['score'][i]:+.2f} | " + " | ".join(f"{B['parts'][r][i]:+.2f}" for r in res)
+              + f" | {B['score'][i]-zs.iloc[band-1]:+.2f} |")
+        w("")
 
     # 4. record since start
     start = nav.index[0]
