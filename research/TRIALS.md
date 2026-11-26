@@ -36,3 +36,5 @@ concentrated: +41 points in 2017 and +34 in 2024; -2 to -6 in 2022 and 2025.
 
 Reading: if the honest trial count is tens, momentum + delivery is probably real; if it includes
 the council's search (thousands), it is close to a coin flip. Forward paper trading settles it.
+
+| 27 Nov 2026 | Walk-forward discovery agent (`research/agent_wf/`) | 1 agent design x 3 seeds + 2 controls; inside each run the agent itself searches ~4,600 formulas walk-forward | rules in `research/agent_wf/SPEC.md`, run once |
