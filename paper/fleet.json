@@ -44,6 +44,16 @@
    "out": "paper_mom_10L",
    "config": "paper/config_mom_10L.json",
    "role": "Band rule 20/100 on plain 12-1 momentum instead of the council signal, Rs 10L"
+  },
+  {
+   "out": "paper_mdeliv_10L",
+   "config": "paper/config_mdeliv_10L.json",
+   "role": "Band rule 20/100 on momentum + delivery composite (equal weights), Rs 10L"
+  },
+  {
+   "out": "paper_integ_10L",
+   "config": "paper/config_integ_10L.json",
+   "role": "Band rule 20/100 on momentum + low vol + delivery composite (equal weights), Rs 10L"
   }
  ]
 }

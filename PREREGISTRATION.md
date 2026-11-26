@@ -140,3 +140,31 @@ results so they cannot be cherry-picked afterwards.
 - **Status.** Exploratory. The Rs 1,00,000 account in `paper/` remains the primary test; its rule,
   signal and conclusion criteria are unchanged. Comparison for this account: `paper_10L` (the frozen
   rule at the same capital), the null control and the Nifty 50, after at least 12 months.
+
+## Amendment, 27 Nov 2026 (two equal-weight composite accounts)
+
+- **Accounts.** `paper_mdeliv_10L/` (`paper/config_mdeliv_10L.json`) and `paper_integ_10L/`
+  (`paper/config_integ_10L.json`), Rs 10L each, same band rule (20 names / band 100, minimum trade
+  1% of NAV), universe, costs and tax as the frozen system. Scores, with nothing fitted: the equal-weight
+  mean of cross-sectional rank z-scores (`alpha.scoring.zrank`, universe mask) of
+  - `mdeliv`: 12-1 momentum (close(t-21)/close(t-252) - 1) and the 60-day mean delivery percentage;
+  - `integ`: the same two plus low volatility (minus the 250-day standard deviation of daily returns).
+  They start with orders written after the 27 Nov close (first fills at the 30 Nov open) and run
+  nightly in `run_fleet.py` after the existing accounts, on the same data.
+- **Why.** On NSE data rebuilt for Jun 2011 - Nov 2026 (`research/pods/`), Feb 2016 - Nov 2026,
+  Rs 10L, post-tax: `integ` 18.1% a year (11.1% in 2022-26), Sharpe 1.23, max drawdown -28%; it
+  **failed** its pre-set criteria (`research/pods/SPEC_INT.md`, `ROUND_INT.md`) on 2022-26 return and
+  years beating the equal-weight universe. `mdeliv` 27.8% a year (21.7% in 2022-26), Sharpe 1.35, max
+  drawdown -33%, the best book in any round, **but it was one of three diagnostic combinations
+  examined after the fact**, so its backtest is not evidence. Forward paper trading is the test.
+  Recorded here before any live result.
+- **Kill review.** Each account is reviewed (and may be stopped by Sunny) if after 6 months it trails
+  `paper_mom_10L` by more than 15 points, or its drawdown exceeds -40%. Main comparison after at
+  least 12 months: `paper_mom_10L`, `paper_10L`, the null control and the Nifty 50.
+- **Code.** `alpha/paper_trade.py` computes these scores only when a config sets
+  `"signal": "mom_deliv"` or `"mom_lowvol_deliv"`; every other account takes the unchanged path.
+  Check: the primary's and `paper_mom_10L`'s orders and fills for 26 Nov, replayed from their 25 Nov
+  state with the new code, are identical to those committed. The live code's 26 Nov picks match
+  the backtest's: 20 of 20 for both (one stock appears under its former symbol in the backtest).
+- **Status.** Exploratory. The Rs 1,00,000 account in `paper/` remains the primary test; its rule,
+  signal and conclusion criteria are unchanged.

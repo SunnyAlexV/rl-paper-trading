@@ -165,6 +165,18 @@ def main():
         # key (the primary included) keep the council score below
         c_ = pd.DataFrame(P.feat["close"], index=P.dates).ffill()
         score = (c_.shift(21) / c_.shift(252) - 1).values
+    elif cfg.get("signal") in ("mom_deliv", "mom_lowvol_deliv"):
+        # exploratory equal-weight composite accounts (added 27 Nov 2026, research/pods/SPEC_INT.md):
+        # cross-sectional rank z-scores over the universe mask, averaged with equal weights, nothing
+        # fitted. momentum = close(t-21)/close(t-252) - 1; low vol = -std of daily returns over 250
+        # days; delivery = mean delivery % over 60 days
+        from alpha.scoring import zrank
+        c_ = pd.DataFrame(P.feat["close"], index=P.dates).ffill()
+        z = [zrank((c_.shift(21) / c_.shift(252) - 1).values, P.mask),
+             zrank(pd.DataFrame(P.feat["deliv_pct"], index=P.dates).rolling(60, min_periods=36).mean().values, P.mask)]
+        if cfg["signal"] == "mom_lowvol_deliv":
+            z.append(zrank(-c_.pct_change().rolling(250, min_periods=200).std().values, P.mask))
+        score = np.where(P.mask, sum(z) / len(z), np.nan)
     else:
         score = pool_score(P, cfg["pool"])
     if cfg.get("rule") == "band":

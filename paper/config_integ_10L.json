@@ -1,0 +1,21 @@
+{
+ "system": "Equal-weight composite: 12-1 momentum + low volatility + 60-day delivery % (exploratory)",
+ "panel": "council",
+ "signal": "mom_lowvol_deliv",
+ "pool": null,
+ "rule": "band",
+ "k": 20,
+ "band": 100,
+ "min_trade_frac": 0.01,
+ "capital": 1000000,
+ "frozen_on": "2026-11-27",
+ "paper_trading_starts": "2026-11-30 (orders after the 27 Nov close; first open after the amendment)",
+ "signal_definition": "mean of rank z-scores of close(t-21)/close(t-252)-1, minus the 250-day volatility of daily returns, and the 60-day mean delivery %, over the frozen universe mask",
+ "rules": [
+  "no retraining or re-tuning during the paper-trading period",
+  "orders are written and hashed into the ledger before the next open",
+  "results are scored with the same cost and tax engine as the backtests",
+  "comparison: paper_mom_10L, paper_10L, the null control and the Nifty 50; kill review if more than 15 points behind paper_mom_10L after 6 months"
+ ],
+ "note": "Exploratory: same band rule 20/100, universe, costs and tax as the primary. Added 27 Nov 2026 (research/pods/ROUND_INT.md); not part of the frozen primary test."
+}
