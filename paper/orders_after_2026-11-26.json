@@ -1,0 +1,25 @@
+{
+ "decided_after_close_of": "2026-11-26",
+ "created_utc": "2026-11-26T15:17:14.996545+00:00",
+ "orders": {
+  "REDINGTON": 0.0,
+  "TATACOMM": 0.04695127282290523
+ },
+ "fills_today": [
+  {
+   "symbol": "FIVESTAR",
+   "side": "sell",
+   "qty": 12,
+   "price": 424.35,
+   "costs": 20.53
+  },
+  {
+   "symbol": "INDGN",
+   "side": "buy",
+   "qty": 9,
+   "price": 657.18,
+   "costs": 7.11
+  }
+ ],
+ "nav": 101149.52913848963
+}

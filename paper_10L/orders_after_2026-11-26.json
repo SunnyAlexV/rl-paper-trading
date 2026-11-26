@@ -1,0 +1,19 @@
+{
+ "decided_after_close_of": "2026-11-26",
+ "created_utc": "2026-11-26T15:17:16.492797+00:00",
+ "orders": {
+  "CARBORUNIV": 0.0554010914580258,
+  "LGEINDIA": 0.0554010914580258,
+  "REDINGTON": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "FIVESTAR",
+   "side": "sell",
+   "qty": 117,
+   "price": 424.27,
+   "costs": 67.2
+  }
+ ],
+ "nav": 988427.2803123887
+}

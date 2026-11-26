@@ -1,0 +1,25 @@
+{
+ "decided_after_close_of": "2026-11-26",
+ "created_utc": "2026-11-26T15:17:20.032812+00:00",
+ "orders": {
+  "FILATEX": 0.03640454453856257,
+  "SGMART": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "FIVESTAR",
+   "side": "sell",
+   "qty": 93,
+   "price": 424.28,
+   "costs": 55.82
+  },
+  {
+   "symbol": "UNOMINDA",
+   "side": "buy",
+   "qty": 29,
+   "price": 1378.23,
+   "costs": 47.49
+  }
+ ],
+ "nav": 986883.2035375417
+}
