@@ -41,3 +41,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Agent v2, diagnostic batter (`research/agent_v2/`) | 1 design x 3 pre-declared bars + no-bar control; the agent tracks 5,600 setups walk-forward | rules in `research/agent_v2/SPEC.md`, medium bar judged, run once |
 | 27 Nov 2026 | Agent v2 Stage 2 diagnostic | same 4 books + core with all fees and tax | diagnostic only |
 | 27 Nov 2026 | Candle wick diagnostic (`research/wicks/`) | 4 wick measures (daily and 20-day mean of upper wick %, lower wick %, lower minus upper) x 3 horizons x size buckets; rank IC only | diagnostic, Sunny's hypothesis: lower vs upper wick share |
+| 27 Nov 2026 | Wick backtest + mom+deliv holdout (`research/wicks/SPEC_BT.md`) | 3 scores x 3 k + 2 comparators, Stage 1 and 2, Jul 2012 - Nov 2026 | rules fixed before run |
