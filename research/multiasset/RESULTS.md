@@ -25,3 +25,15 @@ Daily correlations: E-gold -0.02, E-US 0.24, gold-US 0.07.
    undervalues a diversifier just before it is needed.
 4. Data note: SETF10GILT shows a -27.6% drawdown, implausible for a 10-year gilt fund (likely a bad print in thin
    trading); it was not used for selection.
+
+## Mix B (rules `SPEC_B.md`, chosen on principle before this backtest; `mix_b.csv`), pre-tax, Jul 2012 - Nov 2026
+
+| Book | CAGR | Sharpe | Max DD | Worst year | 2020-26 CAGR / max DD |
+|---|---|---|---|---|---|
+| **Mix B: E 40 / gold 20 / US 10 / cash 30** | **17.4%** | **1.91** | **-16.5%** | **-5.0% (2018)** | 21.0% / -16.5% |
+| Mix A: E 40 / US 10 / cash 50 | 16.6% | 1.95 | -15.5% | -5.1% | 18.4% / -15.5% |
+| Equity sleeve alone | 26.8% | 1.40 | -33.5% | -18.1% | 30.9% / -31.7% |
+
+Mix B by year: 2013 +10.3, 2014 +21.8, 2015 +6.6, 2016 +7.7, 2017 +47.9, 2018 -5.0, 2019 +15.2, 2020 +32.0, 2021 +27.5,
+2022 +0.5, 2023 +34.0, 2024 +36.3, 2025 +11.3, 2026 +8.2 (to 26 Nov). In 2025, when the equity sleeve lost 9.2%, gold's rise
+kept mix B at +11.3% (mix A +0.8%).
