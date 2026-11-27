@@ -1,0 +1,118 @@
+{
+ "costs": {
+  "mdeliv x1": {
+   "CAGR": 0.2672,
+   "Sharpe": 1.382,
+   "MaxDD": -0.318
+  },
+  "ew x1": {
+   "CAGR": 0.1334,
+   "Sharpe": 0.785,
+   "MaxDD": -0.486
+  },
+  "mdeliv x2": {
+   "CAGR": 0.2625,
+   "Sharpe": 1.363,
+   "MaxDD": -0.317
+  },
+  "ew x2": {
+   "CAGR": 0.1332,
+   "Sharpe": 0.785,
+   "MaxDD": -0.484
+  },
+  "mdeliv x3": {
+   "CAGR": 0.2543,
+   "Sharpe": 1.332,
+   "MaxDD": -0.316
+  },
+  "ew x3": {
+   "CAGR": 0.1311,
+   "Sharpe": 0.775,
+   "MaxDD": -0.486
+  },
+  "mdeliv cap 100000": {
+   "CAGR": 0.278,
+   "Sharpe": 1.425,
+   "MaxDD": -0.342
+  },
+  "mdeliv cap 5000000": {
+   "CAGR": 0.2502,
+   "Sharpe": 1.321,
+   "MaxDD": -0.322
+  }
+ },
+ "windows": {
+  "12m": {
+   "windows": 161,
+   "share_beating": 0.851,
+   "worst_relative_pct": -24.9,
+   "worst_start": "2013-07-31",
+   "median_relative_pct": 11.6,
+   "share_absolute_loss": 0.143
+  },
+  "24m": {
+   "windows": 149,
+   "share_beating": 0.987,
+   "worst_relative_pct": -2.2,
+   "worst_start": "2024-08-31",
+   "median_relative_pct": 30.4,
+   "share_absolute_loss": 0.04
+  },
+  "36m": {
+   "windows": 137,
+   "share_beating": 1.0,
+   "worst_relative_pct": 11.4,
+   "worst_start": "2013-08-31",
+   "median_relative_pct": 60.9,
+   "share_absolute_loss": 0.0
+  }
+ },
+ "drawdowns": [
+  {
+   "start": "2020-02-19",
+   "trough": "2020-03-23",
+   "depth_pct": -31.8,
+   "recovered": "2020-08-03",
+   "months": 5.5
+  },
+  {
+   "start": "2024-09-23",
+   "trough": "2025-02-28",
+   "depth_pct": -27.8,
+   "recovered": "2026-08-07",
+   "months": 22.5
+  },
+  {
+   "start": "2018-01-11",
+   "trough": "2018-10-09",
+   "depth_pct": -26.2,
+   "recovered": "2020-02-04",
+   "months": 24.8
+  },
+  {
+   "start": "2022-04-11",
+   "trough": "2022-06-20",
+   "depth_pct": -24.0,
+   "recovered": "2022-09-06",
+   "months": 4.9
+  },
+  {
+   "start": "2015-08-07",
+   "trough": "2016-02-29",
+   "depth_pct": -21.7,
+   "recovered": "2016-07-25",
+   "months": 11.6
+  }
+ ],
+ "longest_relative_underwater_months": 21.0,
+ "deepest_relative_drawdown_pct": -27.4,
+ "halves": {
+  "n": 50,
+  "share_rule_beats": 1.0,
+  "median_rule_sharpe": 1.2425000000000002,
+  "median_ew_sharpe": 0.7775000000000001,
+  "worst_gap": 0.17499999999999993,
+  "median_rule_cagr": 0.18309999999999998,
+  "median_ew_cagr": 0.1318
+ }
+}
