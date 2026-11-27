@@ -82,3 +82,23 @@ below the trigger at a gap open, and a few were blocked at the lower circuit.
 Caveats: a new simulator (pre-tax, fractional shares, no weight trimming); its base differs from `backtest.run`'s
 (25.3% pre-tax, -36.4% vs 26.7% post-tax, -31.8%), so only comparisons within this table are like for like. Only m = 2 was
 pre-declared; m = 1.5 and 3 are untested here. Fills at exactly the trigger assume a liquid market in the stock.
+
+## Robustness of climbing stops with intraday execution (rules `SPEC_ROBUST.md`; `robust_metrics.csv`)
+
+| Book | CAGR | Sharpe | Max DD | 2022-26 CAGR | Stops | vs bar |
+|---|---|---|---|---|---|---|
+| Pre-tax base | 25.3% | 1.42 | -36.4% | 25.7% | | bar: DD <= -29.1%, Sharpe >= 1.37 |
+| Pre-tax climb m=1.5, rest | 17.2% | 1.12 | -28.3% | 9.0% | 596 | **fail** (Sharpe) |
+| Pre-tax climb m=2, rest | 24.0% | 1.40 | -27.3% | 22.9% | 377 | pass (earlier run) |
+| Pre-tax climb m=3, rest | 23.4% | 1.39 | -27.8% | 22.1% | 189 | **pass** |
+| With tax: base | 22.0% | 1.24 | -37.2% | 20.3% | | bar: DD <= -29.8%, Sharpe >= 1.19 |
+| **With tax: climb m=2, rest** | 20.8% | 1.20 | -29.6% | 19.3% | 377 | **pass** |
+| With tax: climb m=1.5, rest (extra) | 15.2% | 0.98 | -28.4% | 7.7% | 592 | fail |
+| With tax: climb m=3, rest (extra) | 21.6% | 1.26 | -29.0% | 22.9% | 189 | pass |
+
+**Verdict: robust.** m = 2 passes with tax, and m = 3 passes pre-tax (and with tax). m = 1.5 fails: pins that tight
+are hit by normal swings (596 stops) and cost 8 points a year. With slack of 2-3 times the stock's normal one-month
+swing, the worst fall drops from about -37% to -29% for about 1 point of return a year.
+
+Next: a candidate for the next exploratory paper account (earliest slot Jan 2027 under the 27 Nov safeguards). It needs
+the paper engine to place and fill intraday stop orders (a code change to test before any amendment).

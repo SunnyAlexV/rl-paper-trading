@@ -1,0 +1,9 @@
+book,CAGR,Sharpe,MaxDD,CAGR_2022_26,stops
+pre-tax: base,0.2531,1.419,-0.364,0.2572,0
+"pre-tax: climb m=1.5, rest",0.1724,1.115,-0.283,0.0899,596
+"pre-tax: climb m=2, rest",0.2399,1.399,-0.273,0.2292,377
+"pre-tax: climb m=3, rest",0.2344,1.39,-0.278,0.221,189
+with tax: base,0.22,1.235,-0.372,0.2025,0
+"with tax: climb m=2, rest",0.2076,1.199,-0.296,0.1928,377
+"with tax: climb m=1.5, rest (extra)",0.1522,0.979,-0.284,0.0773,592
+"with tax: climb m=3, rest (extra)",0.2161,1.258,-0.29,0.2293,189
