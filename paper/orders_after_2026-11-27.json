@@ -1,0 +1,25 @@
+{
+ "decided_after_close_of": "2026-11-27",
+ "created_utc": "2026-11-27T15:17:06.381712+00:00",
+ "orders": {
+  "ADANIPORTS": 0.057874672587143516,
+  "SGMART": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "REDINGTON",
+   "side": "sell",
+   "qty": 14,
+   "price": 329.65,
+   "costs": 20.51
+  },
+  {
+   "symbol": "TATACOMM",
+   "side": "buy",
+   "qty": 2,
+   "price": 1710.55,
+   "costs": 3.64
+  }
+ ],
+ "nav": 101335.07424343254
+}

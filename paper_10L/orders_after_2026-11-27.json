@@ -1,0 +1,26 @@
+{
+ "decided_after_close_of": "2026-11-27",
+ "created_utc": "2026-11-27T15:17:09.209861+00:00",
+ "orders": {
+  "ADANIPORTS": 0.05099656163963889,
+  "LGEINDIA": 0.05099656163963889,
+  "SGMART": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "REDINGTON",
+   "side": "sell",
+   "qty": 146,
+   "price": 329.62,
+   "costs": 65.14
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 56,
+   "price": 975.85,
+   "costs": 65.24
+  }
+ ],
+ "nav": 992787.4753650285
+}

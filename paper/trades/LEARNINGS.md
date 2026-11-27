@@ -1,28 +1,28 @@
 # Learning ledger: paper
 
-_11 closed trades. Analysis only: patterns here are hypotheses, never changes to this account._
+_12 closed trades. Analysis only: patterns here are hypotheses, never changes to this account._
 
-Overall: 55% beat the market; mean return +3.5%, mean excess +0.5% (t 0.3); median holding 10 days.
+Overall: 50% beat the market; mean return +2.7%, mean excess -0.9% (t -0.5); median holding 11 days.
 
 ## By diagnosis
 
 | Diagnosis | Trades | Mean return | Mean excess | Mean worst point |
 |---|---|---|---|---|
-| market-driven | 2 | +4.8% | +1.8% | +0.0% |
-| stock-specific drift | 6 | -1.0% | -3.8% | -2.6% |
-| winner | 3 | +11.8% | +8.4% | -0.3% |
+| market-driven | 3 | +6.8% | +2.3% | +0.0% |
+| stock-specific drift | 7 | -1.9% | -5.1% | -2.0% |
+| winner | 2 | +12.3% | +8.9% | -0.4% |
 
 ## By symptom at entry (top vs bottom half of the universe)
 
 | Symptom at entry | High: n / mean excess | Low: n / mean excess | Difference (t) |
 |---|---|---|---|
-| momentum | 8 / -0.8% | 3 / +4.0% | -4.8 pts (-1.6) |
-| delivery | 8 / +1.5% | 3 / -2.2% | +3.7 pts (1.2) |
-| delivery trend | 10 / +0.4% | 1 / +1.5% | -1.1 pts (nan) |
-| lower wick | 5 / +2.4% | 6 / -1.1% | +3.5 pts (0.9) |
-| volatility | 7 / -1.4% | 4 / +3.8% | -5.2 pts (-1.0) |
-| size | 2 / +1.9% | 9 / +0.2% | +1.6 pts (0.3) |
-| return 20d | 3 / -0.1% | 8 / +0.8% | -0.8 pts (-0.1) |
+| momentum | 9 / -2.4% | 3 / +3.7% | -6.1 pts (-2.1) |
+| delivery | 8 / +0.8% | 4 / -4.2% | +5.0 pts (1.6) |
+| delivery trend | 11 / -1.0% | 1 / +0.5% | -1.5 pts (nan) |
+| lower wick | 5 / +1.4% | 7 / -2.6% | +4.0 pts (1.0) |
+| volatility | 8 / -2.9% | 4 / +3.0% | -5.9 pts (-1.2) |
+| size | 3 / -1.6% | 9 / -0.7% | -0.9 pts (-0.2) |
+| return 20d | 3 / -1.1% | 9 / -0.8% | -0.3 pts (-0.0) |
 
 ## Candidate hypotheses (n >= 30 and |t| >= 2)
 

@@ -141,11 +141,14 @@
   "THELEELA": "2026-11-17",
   "VINCOFE": "2026-11-17"
  },
- "orders": null,
+ "orders": {
+  "ADANIPORTS": 0.07395865282248792,
+  "REDINGTON": 0.0
+ },
  "st": 0.0,
  "lt": 0.0,
  "cf_st": [],
  "cf_lt": [],
  "fy": 2026,
- "last": "2026-11-26"
+ "last": "2026-11-27"
 }

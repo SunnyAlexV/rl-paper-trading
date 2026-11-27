@@ -1,0 +1,28 @@
+{
+ "decided_after_close_of": "2026-11-27",
+ "created_utc": "2026-11-27T15:17:32.672930+00:00",
+ "orders": {
+  "AJANTPHARM": 0.05,
+  "ANANDRATHI": 0.05,
+  "APOLLOHOSP": 0.05,
+  "AUROPHARMA": 0.05,
+  "BHARTIARTL": 0.05,
+  "CASTROLIND": 0.05,
+  "COALINDIA": 0.05,
+  "DIVISLAB": 0.05,
+  "FEDERALBNK": 0.05,
+  "GRASIM": 0.05,
+  "ICICIBANK": 0.05,
+  "INDHOTEL": 0.05,
+  "IPCALAB": 0.05,
+  "KOTAKBANK": 0.05,
+  "MARICO": 0.05,
+  "NYKAA": 0.05,
+  "PIDILITIND": 0.05,
+  "SUNPHARMA": 0.05,
+  "TITAN": 0.05,
+  "TORNTPHARM": 0.05
+ },
+ "fills_today": [],
+ "nav": 1000000
+}

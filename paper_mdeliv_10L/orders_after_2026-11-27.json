@@ -1,0 +1,28 @@
+{
+ "decided_after_close_of": "2026-11-27",
+ "created_utc": "2026-11-27T15:17:31.540745+00:00",
+ "orders": {
+  "ADANIPORTS": 0.05,
+  "AJANTPHARM": 0.05,
+  "ANANDRATHI": 0.05,
+  "CPPLUS": 0.05,
+  "DIVISLAB": 0.05,
+  "FEDERALBNK": 0.05,
+  "GLAND": 0.05,
+  "INDHOTEL": 0.05,
+  "IPCALAB": 0.05,
+  "KOTAKBANK": 0.05,
+  "KTKBANK": 0.05,
+  "LAURUSLABS": 0.05,
+  "PETRONET": 0.05,
+  "RUBICON": 0.05,
+  "SANSERA": 0.05,
+  "SBCL": 0.05,
+  "SGLTL": 0.05,
+  "SHRIPISTON": 0.05,
+  "STYLEBAAZA": 0.05,
+  "TORNTPHARM": 0.05
+ },
+ "fills_today": [],
+ "nav": 1000000
+}

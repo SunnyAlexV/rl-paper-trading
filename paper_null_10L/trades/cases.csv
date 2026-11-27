@@ -1,0 +1,2 @@
+symbol,entry,exit,days,qty,entry_px,exit_px,return_pct,pnl_rs,worst_point_pct,best_point_pct,market_pct,crash_day,momentum_entry,momentum_exit,delivery_entry,delivery_exit,delivery_trend_entry,delivery_trend_exit,lower_wick_entry,lower_wick_exit,volatility_entry,volatility_exit,size_entry,size_exit,return_20d_entry,return_20d_exit,excess_pct,diagnosis
+SHRIRAMFIN,2026-11-17,2026-11-27,10,50,981.25,961.55,-2.3,-1108.0,-6.0,1.3,-0.4,False,64.0,54.0,94.0,95.0,21.0,18.0,82.0,80.0,64.0,55.0,95.0,96.0,58.0,85.0,-1.9,stock-specific drift

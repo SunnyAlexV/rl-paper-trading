@@ -1,0 +1,137 @@
+{
+ "decided_after_close_of": "2026-11-27",
+ "created_utc": "2026-11-27T15:17:14.567706+00:00",
+ "orders": {
+  "63MOONS": 0.05,
+  "ADANIPORTS": 0.05,
+  "AJANTPHARM": 0.05,
+  "CARBORUNIV": 0.05,
+  "COROMANDEL": 0.05,
+  "FILATEX": 0.0,
+  "FSL": 0.05,
+  "GLAND": 0.05,
+  "HONASA": 0.05,
+  "INDIANB": 0.05,
+  "JUBLFOOD": 0.05,
+  "LALPATHLAB": 0.05,
+  "LGEINDIA": 0.05,
+  "NAZARA": 0.05,
+  "ONESOURCE": 0.05,
+  "PAISALO": 0.05,
+  "PVRINOX": 0.05,
+  "SAGILITY": 0.05,
+  "SANSERA": 0.0,
+  "SGLTL": 0.05,
+  "TATACOMM": 0.05,
+  "THELEELA": 0.05,
+  "VINCOFE": 0.0
+ },
+ "fills_today": [
+  {
+   "symbol": "ADANIPORTS",
+   "side": "sell",
+   "qty": 2,
+   "price": 1910.79,
+   "costs": 19.48
+  },
+  {
+   "symbol": "FSL",
+   "side": "sell",
+   "qty": 1,
+   "price": 290.3,
+   "costs": 15.35
+  },
+  {
+   "symbol": "GOODLUCK",
+   "side": "sell",
+   "qty": 9,
+   "price": 505.19,
+   "costs": 20.51
+  },
+  {
+   "symbol": "HONASA",
+   "side": "sell",
+   "qty": 9,
+   "price": 534.6,
+   "costs": 20.52
+  },
+  {
+   "symbol": "INDGN",
+   "side": "sell",
+   "qty": 7,
+   "price": 657.57,
+   "costs": 20.51
+  },
+  {
+   "symbol": "JUBLFOOD",
+   "side": "sell",
+   "qty": 11,
+   "price": 424.86,
+   "costs": 20.51
+  },
+  {
+   "symbol": "SAGILITY",
+   "side": "sell",
+   "qty": 3,
+   "price": 46.83,
+   "costs": 15.35
+  },
+  {
+   "symbol": "UNOMINDA",
+   "side": "sell",
+   "qty": 3,
+   "price": 1387.86,
+   "costs": 19.5
+  },
+  {
+   "symbol": "CARBORUNIV",
+   "side": "buy",
+   "qty": 1,
+   "price": 975.54,
+   "costs": 1.18
+  },
+  {
+   "symbol": "FILATEX",
+   "side": "buy",
+   "qty": 44,
+   "price": 110.66,
+   "costs": 5.91
+  },
+  {
+   "symbol": "NAZARA",
+   "side": "buy",
+   "qty": 12,
+   "price": 380.32,
+   "costs": 5.86
+  },
+  {
+   "symbol": "ONESOURCE",
+   "side": "buy",
+   "qty": 3,
+   "price": 1543.87,
+   "costs": 5.87
+  },
+  {
+   "symbol": "PAISALO",
+   "side": "buy",
+   "qty": 66,
+   "price": 74.38,
+   "costs": 5.92
+  },
+  {
+   "symbol": "PVRINOX",
+   "side": "buy",
+   "qty": 2,
+   "price": 1642.87,
+   "costs": 3.62
+  },
+  {
+   "symbol": "SANSERA",
+   "side": "buy",
+   "qty": 1,
+   "price": 4674.56,
+   "costs": 5.88
+  }
+ ],
+ "nav": 98246.21419542539
+}
