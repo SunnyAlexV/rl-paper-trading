@@ -1,0 +1,23 @@
+# Wick backtest and momentum + delivery holdout: results (27 Nov 2026)
+
+Rules: `SPEC_BT.md` (committed before the run). Jul 2012 - Nov 2026, Rs 10L, k = 20 unless stated (`wick_bt_metrics.csv`).
+
+| Book | Stage 2 CAGR all | Stage 2 Sharpe all | 2012-15 holdout CAGR / Sharpe (Stage 2) | 2022-26 CAGR (Stage 2) | Max DD (Stage 2) | Turnover/yr |
+|---|---|---|---|---|---|---|
+| Equal-weight universe | 13.3% | 0.79 | 11.2% / 0.68 | 12.8% | -49% | 0.4 |
+| Momentum 12-1 | 20.0% | 0.87 | 14.3% / 0.76 | 20.4% | | 2 |
+| **Momentum + delivery** | **26.7%** | **1.38** | **26.2% / 1.71** | 21.9% | -32% | 1.8 |
+| Momentum + delivery + wick | 21.8% | 1.26 | 24.4% / 1.62 | 13.1% | -33% | 4.8 |
+| Wick alone | 7.2% | 0.51 | 9.2% / 0.61 | 4.3% | -53% | 11.2 |
+
+**A. Wick as its own pod: Fail.** Stage 1 Sharpe 0.81 vs 0.82 for the equal-weight universe (median of k variants 0.79);
+Stage 2 0.51 vs 0.79. The signal is real (rank IC +0.03, t 4.2, `README.md`) but too small for its turnover (11x a year).
+
+**B. Wick adds to momentum + delivery: Fail.** Adding it lowered Stage 2 Sharpe in all three variants
+(k = 15: 1.12 vs 1.44; k = 20: 1.26 vs 1.38; k = 25: 1.23 vs 1.42), mainly by nearly tripling turnover.
+
+**C. Holdout for momentum + delivery: Pass.** In Jul 2012 - Dec 2015, a period its rules never saw, it returned 26.2% a
+year post-tax (Sharpe 1.71) against 11.2% (0.68) for the equal-weight universe; k = 15 and 25 gave 28.2% / 1.78 and
+26.4% / 1.77. Caveats: the universe was small then (about 180-230 stocks), and the delivery ingredient was partly
+suggested by the council, whose weights were fitted on 2013-19, so the holdout is clean for the rule but not
+perfectly clean for the idea. Momentum has decades of outside evidence.
