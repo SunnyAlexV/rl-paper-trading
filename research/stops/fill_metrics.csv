@@ -1,0 +1,5 @@
+book,CAGR,Sharpe,MaxDD,stops
+with tax: base,0.22,1.235,-0.372,
+"with tax: climb m=2, rest, fill=trigger",0.2076,1.199,-0.296,377.0
+"with tax: climb m=2, rest, fill=1pct",0.1972,1.142,-0.304,377.0
+"with tax: climb m=2, rest, fill=halfway",0.1955,1.131,-0.303,377.0

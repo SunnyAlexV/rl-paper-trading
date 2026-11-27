@@ -102,3 +102,16 @@ swing, the worst fall drops from about -37% to -29% for about 1 point of return 
 
 Next: a candidate for the next exploratory paper account (earliest slot Jan 2027 under the 27 Nov safeguards). It needs
 the paper engine to place and fill intraday stop orders (a code change to test before any amendment).
+
+## Pessimistic stop fills (addendum to `SPEC_ROBUST.md`; `fill_metrics.csv`), m = 2, rest, with tax
+
+| Fill assumption | CAGR | Sharpe | Max DD | vs bar (DD <= -29.8%, Sharpe >= 1.19) |
+|---|---|---|---|---|
+| Base, no stops | 22.0% | 1.24 | -37.2% | |
+| At the trigger | 20.8% | 1.20 | -29.6% | pass |
+| 1% below the trigger | 19.7% | 1.14 | -30.4% | **fail** (both, narrowly) |
+| Halfway to the day's low | 19.6% | 1.13 | -30.3% | **fail** (both, narrowly) |
+
+The drawdown cut survives worse fills (about -37% -> -30%), but its price rises from about 1 to about 2.3 points of
+return a year, and the result no longer clears the pre-set bar. **The verdict depends on real fill quality**, which daily
+data cannot settle: it needs intraday data or real stop orders. Upgrade "robust" above to "promising, fill-sensitive".
