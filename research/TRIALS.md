@@ -59,3 +59,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Multi-asset mix B (`research/multiasset/SPEC_B.md`) | 1 principle-based mix, chosen before its backtest | information only |
 | 27 Nov 2026 | Factor attribution (`research/factors/`) | 3 books x 2 regressions | rules fixed before run |
 | 27 Nov 2026 | Neural nets vs simple models (`research/nn/`) | 6 models, train 2013-19, test 2020-26, rank IC | diagnostic |
+| 27 Nov 2026 | Dividends added to backtests (`research/dividends/`) | measurement correction: 4 books re-run with dividends; no selection | diagnostic |

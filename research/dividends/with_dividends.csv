@@ -1,0 +1,9 @@
+book,version,CAGR,Sharpe,MaxDD,CAGR_2022_26,dividends_gross_rs
+momentum + delivery (primary),price only,0.2672,1.382,-0.318,0.219,0
+momentum + delivery (primary),with dividends,0.2742,1.416,-0.319,0.2227,735642
+momentum only,price only,0.2004,0.874,-0.445,0.204,0
+momentum only,with dividends,0.1978,0.864,-0.451,0.1861,410902
+council (frozen),price only,0.1941,1.204,-0.34,0.0963,0
+council (frozen),with dividends,0.2032,1.251,-0.339,0.1023,721948
+equal-weight universe,price only,0.1334,0.785,-0.486,0.1283,0
+equal-weight universe,with dividends,0.1443,0.841,-0.467,0.1366,460144
