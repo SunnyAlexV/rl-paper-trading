@@ -21,3 +21,17 @@ year post-tax (Sharpe 1.71) against 11.2% (0.68) for the equal-weight universe; 
 26.4% / 1.77. Caveats: the universe was small then (about 180-230 stocks), and the delivery ingredient was partly
 suggested by the council, whose weights were fitted on 2013-19, so the holdout is clean for the rule but not
 perfectly clean for the idea. Momentum has decades of outside evidence.
+
+## Wick long-short (rules `SPEC_LS.md`, pre-tax, Rs 2 crore, Jul 2012 - Nov 2026; `wick_ls_metrics.csv`)
+
+| Book | CAGR | Sharpe | Max DD | Positive years |
+|---|---|---|---|---|
+| **Long lower wick / short upper wick** | **-9.7%** | **-0.97** | **-77%** | 2/15 |
+| Same, implicit costs doubled | -16.3% | -1.70 | -92% | 0/15 |
+| Long-only lower wick (same simulator) | 6.1% | 0.45 | -56% | 9/15 |
+| Equal-weight universe | 12.4% | 0.72 | -55% | 11/15 |
+| Nifty 50 (price) | 11.7% | 0.79 | -38% | 13/15 |
+
+**Fail on every criterion.** The short leg lost 65% of starting capital over the period; it made money only in 2013,
+2016, 2018 and 2022. Upper wicks carry almost no predictive information (rank IC -0.013 at 20 days, t -1.7), so the
+short leg was close to shorting at random in a market that rose about 12% a year, and its fast turnover added costs.
