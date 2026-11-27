@@ -49,3 +49,5 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Climbing-protection stops (`research/stops/SPEC_CLIMB.md`) | 3 slack settings x rest/reinvest | rules fixed before run |
 | 27 Nov 2026 | Diagnostic: momentum + delivery held at 80% invested | 1 run, comparison for the climbing stops | diagnostic only |
 | 27 Nov 2026 | Diagnostic: what stopped stocks did next; price level vs volatility | event study on the climbing stops (m=2, reinvest) | diagnostic only |
+| 27 Nov 2026 | Diagnostic: what stocks did after a one-day crash (`research/stops/DIAGNOSTIC.md`) | event study, all universe stocks 2012-2026 | diagnostic only |
+| 27 Nov 2026 | Bad-news exit (`research/stops/SPEC_NEWS.md`) | 3 thresholds + base | rules fixed before run; idea formed after the crash event study |
