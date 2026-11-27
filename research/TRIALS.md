@@ -53,3 +53,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Bad-news exit (`research/stops/SPEC_NEWS.md`) | 3 thresholds + base | rules fixed before run; idea formed after the crash event study |
 | 27 Nov 2026 | Stops with intraday stop-order execution (`research/stops/SPEC_INTRADAY.md`) | 4 stop variants + base, OHLC fills | rules fixed before run; methodology correction |
 | 27 Nov 2026 | Climbing stops robustness (`research/stops/SPEC_ROBUST.md`) | m=1.5, m=3 pre-tax; base and m=2 with tax | rules fixed before run |
+| 27 Nov 2026 | Climbing stops with pessimistic fills (`SPEC_ROBUST.md` addendum) | 2 fill assumptions, m=2 with tax | rules fixed before run |

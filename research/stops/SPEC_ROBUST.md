@@ -11,3 +11,8 @@ Same simulator and rules as `SPEC_INTRADAY.md`, rest variant.
 Pass bar for each run (as before): max drawdown at least 20% smaller than the matching base, and Sharpe no more than
 0.05 below it.
 **The add-on is robust if m = 2 passes with tax and at least one of m = 1.5 / 3 passes pre-tax.**
+
+## Addendum (27 Nov 2026, before the run): pessimistic stop fills
+Without intraday data, test fill assumptions worse than "fill at the trigger": (a) 1% below the trigger; (b) halfway
+between the trigger and the day's low. Gap-opens still fill at the open. m = 2, rest, with tax. Same pass bar
+(drawdown at least 20% smaller than the with-tax base, Sharpe no more than 0.05 below it).
