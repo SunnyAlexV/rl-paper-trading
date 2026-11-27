@@ -1,0 +1,6 @@
+limit,mix,design_CAGR,design_MaxDD,test_CAGR,test_Sharpe,test_MaxDD,test_worst_year,test_within_limit,hindsight_full_mix,hindsight_full_CAGR,hindsight_full_MaxDD
+10%,E 40% / G 0% / US 10% / C 50%,0.1485,-0.085,0.1841,1.881,-0.155,-0.007,False,E 30% / G 10% / US 0% / C 60%,0.1298,-0.1
+15%,E 60% / G 0% / US 20% / C 20%,0.2005,-0.148,0.2554,1.633,-0.244,-0.062,False,E 30% / G 0% / US 20% / C 50%,0.1636,-0.15
+20%,E 70% / G 0% / US 30% / C -0%,0.2355,-0.186,0.3017,1.55,-0.299,-0.106,False,E 30% / G 40% / US 30% / C -0%,0.1981,-0.199
+25%,E 70% / G 0% / US 30% / C -0%,0.2355,-0.186,0.3017,1.55,-0.299,-0.106,False,E 50% / G 20% / US 30% / C -0%,0.2337,-0.249
+none,E 70% / G 0% / US 30% / C -0%,0.2355,-0.186,0.3017,1.55,-0.299,-0.106,True,E 90% / G 0% / US 10% / C -0%,0.2687,-0.31
