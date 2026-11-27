@@ -1,0 +1,14 @@
+
+IC vs 20-day forward return (non-overlapping, 2012-2026):
+  lower wick 20d               IC +0.0311  t +4.19
+  momentum 12-1                IC +0.0424  t +3.33
+  delivery share 20d           IC +0.0519  t +3.70
+  mom + delivery               IC +0.0636  t +4.30
+  mom + delivery + lower wick  IC +0.0643  t +4.58
+
+IC vs 60-day forward return (non-overlapping, 2012-2026):
+  lower wick 20d               IC +0.0366  t +2.68
+  momentum 12-1                IC +0.0613  t +3.06
+  delivery share 20d           IC +0.0678  t +2.88
+  mom + delivery               IC +0.0897  t +3.86
+  mom + delivery + lower wick  IC +0.0861  t +4.02
