@@ -251,3 +251,14 @@ each month) checks that every account ran every trading day, the integrity check
 and post-trade learnings, and lists at most three improvement proposals. Proposals are never applied automatically: bug
 fixes go through a dated fix entry, new ideas through a new pre-registered account within the 27 Nov safeguards, and
 research stays frozen until the 6-month checkpoint.
+
+## Decision, 27 Nov 2026 (Sunny): run horizon to 31 Dec 2028
+
+The fleet keeps paper trading, unchanged, **until 31 Dec 2028** (about 25 months for the primary, which first trades on
+30 Nov 2026). Checks continue throughout: the daily run (fleet, integrity check, tests, reviews, post-trade analysis,
+committee) and the monthly review. The pre-set checkpoints still apply on their dates: 6 months (late May 2027, broken
+checks only), 12 months (late Nov 2027) and 24 months (late Nov 2028). The monthly review of December 2028 (run on
+1 Jan 2029) also writes the **final report** for the whole period: every account against its pre-set verdicts, the
+primary against the Nifty 50 / Nifty 500 and the backtest's normal ranges, what the post-trade ledger learned, and what
+was and was not shown at the t >= 2.8 bar. After that, what happens next is Sunny's decision; nothing changes
+automatically, and real money stays off the table unless he decides otherwise.
