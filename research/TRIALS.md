@@ -45,3 +45,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Wick long-short (`research/wicks/SPEC_LS.md`) | 1 book + stress + long-only comparator, Jul 2012 - Nov 2026 | rules fixed before run |
 | 27 Nov 2026 | Upper wick as a sell signal (`research/wicks/SPEC_EXIT.md`) | 2 books x 3 thresholds + 3 comparators, Stage 1 and 2 | rules fixed before run |
 | 27 Nov 2026 | Stress tests of momentum + delivery (`research/stress/`) | 50 half-universe runs, rolling windows, cost x2/x3, capital 1L/50L | rules fixed before run; no rule changes |
+| 27 Nov 2026 | Stop-losses on momentum + delivery (`research/stops/`) | 3 stop types x 3 settings + base | rules fixed before run |
