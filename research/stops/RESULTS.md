@@ -12,7 +12,7 @@ Pass bar: max drawdown -25.6% or better **and** Sharpe >= 1.33, at the 15% setti
 
 **Verdict: no stop passes.** None cut the maximum drawdown by 20%.
 - **Fixed stops** did not reduce drawdown (slightly worse at 15-20%), though they nudged Sharpe up (1.44 at 15%).
-- **Trailing stops** hurt: they sold strong stocks on normal pullbacks (717 stops a year-set at 15%, 1,577 at 10%), raising
+- **Trailing stops** hurt: they sold strong stocks on normal pullbacks (717 stop events over the period at 15%, 1,577 at 10%), raising
   turnover and lowering returns; drawdowns got worse.
 - **Portfolio stops** helped a little: drawdown -31.8% -> -28.4% (11% better, short of the 20% bar) with Sharpe 1.44, but
   the 10% version cost 3.6 points a year (in-and-out whipsaw).
