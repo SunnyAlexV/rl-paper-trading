@@ -22,3 +22,11 @@ Possible fixes (Sunny to decide; a fix to trading code is a separate dated commi
 (a) download every calendar day (non-trading days return 404 and are skipped), so weekend sessions are ordinary
 trading days; or (b) only accept a factor that is confirmed by an NSE corporate-action record or is a large split-like
 jump. Next known risk date: any weekend special session announced by NSE.
+
+## Engine tests (added 27 Nov 2026)
+
+`tests/` (run: `python3 -m pytest -q tests`): costs (STT rounding, DP, stamp, ETF fees), tax (rates, exemption, set-off,
+carry-forward and expiry, FIFO and holding period), corporate-action factors on synthetic bhavcopies (recorded split,
+unrecorded split, weekend special session, ordinary fall; the weekend test fails on the pre-fix code), ETF price parsing,
+and `check_integrity.py` (ledger hashes, dates, lots vs shares, NAV = cash + holdings), including tampered, wrong-NAV
+and mismatched-lots synthetic accounts. Not yet covered: delistings, circuit-locked fills, dividends.
