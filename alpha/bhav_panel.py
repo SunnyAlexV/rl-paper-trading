@@ -78,6 +78,16 @@ def build(cache="data/bhav/panel.pkl", n_univ=500):
     f = (wide["prev"] / last_close).where(close.notna())
     f = f.where((f > 0.01) & (f < 100)).fillna(1.0)
     f[(f - 1).abs() < 0.005] = 1.0                           # rounding noise is not an action
+    # Fix (27 Nov 2026, ISSUES.md #1): weekend special sessions (Budget days, Muhurat trading, exchange test sessions)
+    # are not downloaded, so the next bhavcopy's PREVCLOSE is that session's close and most stocks show a "factor".
+    # A real corporate action touches a few stocks; on a day when more than 30% of stocks show one, it is a missed
+    # session (18 such days 2011-2026, 56-89% of stocks; a normal day's 99th percentile is 5%). On those days only
+    # split-sized factors (>= 20% away from 1) are kept; the close-to-close chain already includes the missed session.
+    _share = (f != 1.0).sum(axis=1) / close.notna().sum(axis=1).clip(lower=1)
+    _gap_days = _share[_share > 0.30].index
+    if len(_gap_days):
+        _fx = f.loc[_gap_days]
+        f.loc[_gap_days] = _fx.where((_fx - 1).abs() >= 0.20, 1.0)
     # Older bhavcopies do not always adjust PREVCLOSE (e.g. TITAN's 2011 split shows factor 1).
     # NSE price bands cap genuine one-day moves well below 35% for almost all stocks, so an
     # overnight gap beyond 35% with no recorded factor is treated as an unrecorded corporate

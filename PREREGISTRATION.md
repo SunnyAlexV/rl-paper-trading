@@ -217,3 +217,17 @@ Decided by Sunny on 27 Nov 2026, **before the account's first live trade** (its 
   - **Broken** means: stop and review with Sunny; no rule is changed in place (safeguard 1), and real money stays out.
   - "Working" at 12 months is still not proof (safeguard 6 needs t >= 2.8 against the comparisons), but it allows
     discussing a small real-money satellite next to an index core (safeguard 7).
+
+## Fix, 27 Nov 2026 (data): weekend special sessions are no longer read as corporate actions
+
+`alpha/bhav_panel.py` now ignores sub-split "corporate-action factors" on days when more than 30% of stocks show one
+(`ISSUES.md` #1). Those days follow weekend special sessions (Budget days, Muhurat trading, exchange test sessions) that
+the weekday download misses; 18 such days in 2011-2026 (56-89% of stocks), against a normal day's 99th percentile of
+5%. Without the fix, the live trader would rescale share counts of holdings on such days (it happened on 9 Nov 2026;
+rounding left every count unchanged) and the back-adjusted prices drop the missed session's move.
+
+Check: replaying 26 Nov from each account's 25 Nov state, the orders, fills and NAV are identical with and without the fix
+for `paper/`, `paper_10L`, `paper_hi_10L`, `paper_lo_10L`, `paper_null_10L`, `paper_timed_10L` and `paper_mom_10L`. The two
+daily-rule accounts (`paper_daily_10L`, `paper_daily_1L`), which re-pick their top 20 every day with no band, would have
+swapped one stock: the restored 9 Nov move shifts momentum scores slightly. No live share count was ever changed, and
+no rule, parameter or signal changed. The new primary has not traded yet.

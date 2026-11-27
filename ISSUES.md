@@ -1,6 +1,8 @@
-# Known issues (open)
+# Known issues
 
-## 1. Weekend special sessions are treated as corporate actions (found 27 Nov 2026)
+## 1. Weekend special sessions are treated as corporate actions (found 27 Nov 2026; FIXED 27 Nov 2026)
+
+**Fixed** in `alpha/bhav_panel.py` (fix (b), market-wide rule), see the "Fix, 27 Nov 2026 (data)" entry in PREREGISTRATION.md.
 
 `data_download_bhav.py` downloads weekdays only, so special weekend sessions (Budget days on a weekend, Diwali Muhurat
 trading, exchange test sessions) are missing. The next weekday's bhavcopy carries that session's close as PREVCLOSE, so
