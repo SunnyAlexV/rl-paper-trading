@@ -241,3 +241,13 @@ Jan 2027. Check: replaying 26 Nov from each account's 25 Nov state, all nine exi
 identical with the previous and the new engine. A dry run of the multi account (25-26 Nov, scratch copy) bought 20 stocks at
 2% each, GOLDBEES 20% and MON100 10%, leaving 32% cash. Before activation, `review_session.py` must also learn to value ETF
 holdings.
+
+## Decision, 27 Nov 2026 (Sunny): paper trading only; monthly review
+
+Safeguard 7 stays as written: no real money before an account passes the live bar (t >= 2.8), which on the backtest's
+own variability would take about 7 years if the live edge matched the backtest and decades if it were half as large.
+**Paper trading continues until Sunny decides otherwise.** A monthly review (`monthly_review.py`, scheduled on the 1st of
+each month) checks that every account ran every trading day, the integrity check, results against the pre-set verdicts,
+and post-trade learnings, and lists at most three improvement proposals. Proposals are never applied automatically: bug
+fixes go through a dated fix entry, new ideas through a new pre-registered account within the 27 Nov safeguards, and
+research stays frozen until the 6-month checkpoint.
