@@ -39,3 +39,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 
 | 27 Nov 2026 | Walk-forward discovery agent (`research/agent_wf/`) | 1 agent design x 3 seeds + 2 controls; inside each run the agent itself searches ~4,600 formulas walk-forward | rules in `research/agent_wf/SPEC.md`, run once |
 | 27 Nov 2026 | Agent v2, diagnostic batter (`research/agent_v2/`) | 1 design x 3 pre-declared bars + no-bar control; the agent tracks 5,600 setups walk-forward | rules in `research/agent_v2/SPEC.md`, medium bar judged, run once |
+| 27 Nov 2026 | Agent v2 Stage 2 diagnostic | same 4 books + core with all fees and tax | diagnostic only |
