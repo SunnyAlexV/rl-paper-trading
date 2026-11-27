@@ -35,3 +35,10 @@ Sizing: at Rs 2 crore a short position is about Rs 10.7 lakh, about 1.6 median s
 **Conclusion under the pre-set rules.** Shorting via futures did not help any book. The long-only
 books remain the better ones. A beta-neutral book with both legs inside the F&O universe would be
 a new hypothesis and needs its own rules written down first.
+
+## Correction, 27 Nov 2026: futures STT
+
+`SPEC_LS.md` assumed futures STT of 0.02% on sells. Budget 2026 raised it to 0.05% from 1 Apr 2026.
+Re-run at 0.05% (`stt2026_ls_metrics.csv`; the script now defaults to 0.05%): LS-Trend 4.6% a year,
+Sharpe 0.34 (was 5.0%, 0.36); LS-Council 0.7%, 0.13 (was 1.0%, 0.15); Hedged-Trend 12.9%, 0.82 (was
+13.2%, 0.83). Conclusion unchanged: all three fail.

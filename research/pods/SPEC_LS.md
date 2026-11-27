@@ -35,7 +35,7 @@ ban list, Jun 2011 - 26 Nov 2026 (`get_futures.py`).
 - **Costs (today's schedule applied to the whole history, as in every repo backtest).**
   Cash leg: the repo's `costs.py` (explicit + half-spread + square-root impact).
   Futures (Zerodha, as known mid-2026, to be verified): brokerage min(Rs 20, 0.03%) per order,
-  STT 0.02% on sells, exchange 0.00173%, SEBI Rs 10/crore, stamp 0.002% on buys, GST 18% on
+  STT 0.02% on sells (corrected 27 Nov 2026 to 0.05%, the rate from 1 Apr 2026; see ROUND_LS.md), exchange 0.00173%, SEBI Rs 10/crore, stamp 0.002% on buys, GST 18% on
   brokerage + exchange + SEBI; implicit cost = the underlying stock's half-spread + impact
   (conservative: futures are usually at least as liquid as the stock). No interest on cash.
 - **Tax is not modelled** for long-short books: futures profits are business income taxed at the

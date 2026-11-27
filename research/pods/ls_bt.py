@@ -78,7 +78,7 @@ SC = {"trend": np.where(MASK, (c.shift(21) / c.shift(252) - 1).values, np.nan),
       "council": np.where(MASK, pool_score(P, "c_council_real"), np.nan)}
 month_end = np.r_[D[1:].month != D[:-1].month, True]
 
-FUT_BROK, FUT_STT, FUT_EXCH, FUT_SEBI, FUT_STAMP, GST = 20.0, 2e-4, 1.73e-5, 1e-6, 2e-5, 0.18
+FUT_BROK, FUT_STT, FUT_EXCH, FUT_SEBI, FUT_STAMP, GST = 20.0, 5e-4, 1.73e-5, 1e-6, 2e-5, 0.18
 
 
 def fut_cost(v, side, t, j, mult):
