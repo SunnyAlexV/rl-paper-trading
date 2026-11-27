@@ -56,3 +56,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Climbing stops with pessimistic fills (`SPEC_ROBUST.md` addendum) | 2 fill assumptions, m=2 with tax | rules fixed before run |
 | 27 Nov 2026 | Universe choice for momentum + delivery (`research/universe/`) | 6 universes x (rule + equal weight) | rules fixed before run |
 | 27 Nov 2026 | Multi-asset menu (`research/multiasset/`) | ~300 static mixes of E/G/US/C, chosen on 2012-19, tested 2020-26 | rules fixed before run |
+| 27 Nov 2026 | Multi-asset mix B (`research/multiasset/SPEC_B.md`) | 1 principle-based mix, chosen before its backtest | information only |
