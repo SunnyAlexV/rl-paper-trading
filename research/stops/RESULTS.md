@@ -57,3 +57,28 @@ the second setting must too: 20% matches Sharpe and misses CAGR by 0.03 points; 
 Reading: the rule does what it was meant to do, costing essentially nothing, but it matters little because
 stock-specific crashes were rare among these holdings (14 exits in 14 years at 15%). The book's large drawdowns were
 market-wide, which this rule deliberately ignores.
+
+## Stops executed intraday like real stop orders (rules `SPEC_INTRADAY.md`; `intraday_metrics.csv`)
+
+Value-based simulator, pre-tax, all cash costs; fills at the stop price when the day's low reaches it, at the open on a gap
+below it, none while locked at the lower circuit. Pass bar: drawdown at least 20% smaller than this simulator's base
+(-36.4% -> -29.1% or better) and Sharpe at least 1.37.
+
+| Book | CAGR | Sharpe | Max DD | Stops | Filled at a gap open | Days blocked at lower circuit |
+|---|---|---|---|---|---|---|
+| Base (no stop), this simulator | 25.3% | 1.42 | -36.4% | | | |
+| Fixed 15% | 29.1% | 1.53 | -32.7% | 218 | 26 | 5 |
+| Trailing 15% | 23.0% | 1.30 | -33.6% | 981 | 102 | 17 |
+| **Climbing pins m=2, rest** | **24.0%** | **1.40** | **-27.3%** | 377 | 44 | 3 |
+| Climbing pins m=2, reinvest | 21.9% | 1.24 | -32.3% | 445 | 49 | 5 |
+
+**Climbing pins with rest: Pass** (drawdown 25% smaller, Sharpe 1.40 vs 1.42). **Fixed 15%:** more return and a higher
+Sharpe, but the drawdown is only 10% smaller (fails the drawdown bar). Trailing and climb-reinvest: fail.
+
+Why this differs from the close-based tests: a resting order sells during the day at the trigger instead of waiting
+for the next open, which avoids the overnight continuation of a falling stock. About 1 in 8 stops still filled
+below the trigger at a gap open, and a few were blocked at the lower circuit.
+
+Caveats: a new simulator (pre-tax, fractional shares, no weight trimming); its base differs from `backtest.run`'s
+(25.3% pre-tax, -36.4% vs 26.7% post-tax, -31.8%), so only comparisons within this table are like for like. Only m = 2 was
+pre-declared; m = 1.5 and 3 are untested here. Fills at exactly the trigger assume a liquid market in the stock.
