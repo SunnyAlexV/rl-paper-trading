@@ -47,3 +47,4 @@ the council's search (thousands), it is close to a coin flip. Forward paper trad
 | 27 Nov 2026 | Stress tests of momentum + delivery (`research/stress/`) | 50 half-universe runs, rolling windows, cost x2/x3, capital 1L/50L | rules fixed before run; no rule changes |
 | 27 Nov 2026 | Stop-losses on momentum + delivery (`research/stops/`) | 3 stop types x 3 settings + base | rules fixed before run |
 | 27 Nov 2026 | Climbing-protection stops (`research/stops/SPEC_CLIMB.md`) | 3 slack settings x rest/reinvest | rules fixed before run |
+| 27 Nov 2026 | Diagnostic: momentum + delivery held at 80% invested | 1 run, comparison for the climbing stops | diagnostic only |

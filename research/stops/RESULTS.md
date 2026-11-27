@@ -20,3 +20,22 @@ Pass bar: max drawdown -25.6% or better **and** Sharpe >= 1.33, at the 15% setti
 Why: the deepest falls were market-wide and fast (COVID: -32% in five weeks). Stock-level stops swap one falling
 stock for another falling stock, so the book stays fully invested; a portfolio stop reacts only after most of the
 fall has happened, and overnight gaps fill exits at the next open.
+
+## Climbing-protection stops (rules `SPEC_CLIMB.md`; `climb_metrics.csv`)
+
+| Book | CAGR | Sharpe | Max DD | 2022-26 CAGR | Turnover/yr | Stops |
+|---|---|---|---|---|---|---|
+| Base (no stop) | 26.7% | 1.38 | -31.8% | 21.9% | 1.8 | |
+| Climb m=1.5, rest | 21.4% | 1.34 | **-22.3%** | 18.2% | 2.8 | 458 |
+| **Climb m=2, rest (judged)** | 21.4% | 1.30 | -26.9% | 20.3% | 2.4 | 294 |
+| Climb m=3, rest | 21.2% | 1.32 | -24.7% | 20.1% | 1.9 | 141 |
+| Climb m=1.5 / 2 / 3, reinvest | 23.5 / 23.4 / 26.6% | 1.26 / 1.26 / 1.42 | -35.9 / -32.3 / -31.5% | | | |
+| *Diagnostic: base held at 80%, 20% cash, no stops* | 22.7% | 1.38 | -27.3% | | | |
+
+**Verdict: Fail, narrowly.** At the judged setting (m = 2, rest) the drawdown is -26.9% (bar -25.6%) and Sharpe 1.30 (bar
+1.33). m = 1.5 with rest would pass on its own (-22.3%, 1.34), but the judged setting does not.
+
+What it shows: the protection comes from **resting in cash after a stop**, not from where the pins sit (the reinvest versions
+do not cut drawdown). Resting costs about 5 points a year, and the result is close to simply keeping 20% in cash
+(22.7% a year, Sharpe 1.38, -27.3%). The climbing rule trades a smaller drawdown for a lower return at about the same
+risk-adjusted rate; it is not a free improvement.
