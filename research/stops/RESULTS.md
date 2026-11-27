@@ -39,3 +39,21 @@ What it shows: the protection comes from **resting in cash after a stop**, not f
 do not cut drawdown). Resting costs about 5 points a year, and the result is close to simply keeping 20% in cash
 (22.7% a year, Sharpe 1.38, -27.3%). The climbing rule trades a smaller drawdown for a lower return at about the same
 risk-adjusted rate; it is not a free improvement.
+
+## Bad-news exit (rules `SPEC_NEWS.md`; `news_exit_metrics.csv`)
+
+Sell a holding that falls X% or more in a day while the market is calm (universe down less than 1%); no rebuy for 63 days.
+
+| Book | CAGR | Sharpe | Max DD | Exits in 14 years |
+|---|---|---|---|---|
+| Base (no exit rule) | 26.72% | 1.382 | -31.8% | |
+| Bad-news exit 10% | 26.49% | 1.363 | -33.2% | 27 |
+| **Bad-news exit 15% (judged)** | **27.25%** | **1.409** | -30.2% | 14 |
+| Bad-news exit 20% | 26.69% | 1.385 | -30.7% | 5 |
+
+**Verdict: Fail, by a hair.** The judged 15% version meets the bar (more return and higher Sharpe than the base), but
+the second setting must too: 20% matches Sharpe and misses CAGR by 0.03 points; 10% is slightly worse.
+
+Reading: the rule does what it was meant to do, costing essentially nothing, but it matters little because
+stock-specific crashes were rare among these holdings (14 exits in 14 years at 15%). The book's large drawdowns were
+market-wide, which this rule deliberately ignores.

@@ -1,0 +1,5 @@
+book,CAGR,Sharpe,MaxDD,CAGR_2022_26,turnover,exits,worst_holding_loss_at_exit
+base (no exit rule),0.2672,1.382,-0.318,0.219,1.77,0,-0.504
+bad-news exit 10%,0.2649,1.363,-0.332,0.2235,1.91,27,-0.496
+bad-news exit 15%,0.2725,1.409,-0.302,0.2125,1.85,14,-0.496
+bad-news exit 20%,0.2669,1.385,-0.307,0.2161,1.77,5,-0.504
