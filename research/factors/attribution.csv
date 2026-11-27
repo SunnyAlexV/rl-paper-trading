@@ -1,0 +1,7 @@
+book,factors,months,alpha_pct_yr,alpha_t,R2,beta_MKT,beta_SIZE,beta_MOM,beta_LOWVOL,t_MKT,t_SIZE,t_MOM,t_LOWVOL,beta_DELIV,t_DELIV
+momentum + delivery (primary),MKT+SIZE+MOM+LOWVOL,172,4.3,1.44,0.74,0.97,0.23,0.41,0.33,17.2,2.3,5.5,4.5,,
+momentum + delivery (primary),MKT+SIZE+MOM+LOWVOL+DELIV,172,1.9,0.72,0.78,1.03,0.03,0.4,-0.02,19.3,0.3,6.4,-0.3,0.53,5.5
+momentum only,MKT+SIZE+MOM+LOWVOL,172,-1.4,-0.46,0.83,1.03,0.06,0.68,-0.16,14.1,0.6,9.1,-1.8,,
+momentum only,MKT+SIZE+MOM+LOWVOL+DELIV,172,-1.5,-0.5,0.83,1.03,0.05,0.68,-0.17,13.8,0.5,9.1,-1.5,0.02,0.2
+council (frozen),MKT+SIZE+MOM+LOWVOL,172,1.3,0.49,0.71,1.0,0.19,0.15,0.42,14.1,1.9,2.0,5.5,,
+council (frozen),MKT+SIZE+MOM+LOWVOL+DELIV,172,-0.1,-0.03,0.72,1.03,0.07,0.14,0.21,14.9,0.7,1.9,2.1,0.31,2.8
