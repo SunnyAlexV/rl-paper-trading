@@ -35,3 +35,21 @@ perfectly clean for the idea. Momentum has decades of outside evidence.
 **Fail on every criterion.** The short leg lost 65% of starting capital over the period; it made money only in 2013,
 2016, 2018 and 2022. Upper wicks carry almost no predictive information (rank IC -0.013 at 20 days, t -1.7), so the
 short leg was close to shorting at random in a market that rose about 12% a year, and its fast turnover added costs.
+
+## Upper wick as a SELL signal on long holdings (rules `SPEC_EXIT.md`; Jul 2012 - Nov 2026, Rs 10L; `wick_exit_metrics.csv`)
+
+| Book | Stage 2 CAGR | Stage 2 Sharpe | Max DD | Turnover/yr |
+|---|---|---|---|---|
+| Equal-weight universe | 13.3% | 0.79 | -49% | 0.4 |
+| Lower-wick band rule (no exit signal) | 7.2% | 0.51 | -54% | 11.0 |
+| **Pure wick, sell on upper wick top 20% (judged)** | 7.8% | 0.53 | -42% | 3.4 |
+| Pure wick, top 10% / top 30% | 9.8% / 7.4% | 0.63 / 0.51 | -41% / -46% | 1.7 / 5.4 |
+| Mom + deliv (no exit signal) | 26.7% | 1.38 | -32% | 1.8 |
+| **Mom + deliv + upper-wick exit top 20% (judged)** | 17.6% | 0.98 | -34% | 6.3 |
+| Mom + deliv + exit top 10% / top 30% | 19.6% / 15.4% | 1.07 / 0.89 | -37% / -32% | 3.9 / 9.0 |
+
+**Book 1 (pure wick): Fail.** The upper-wick exit is an improvement on the band rule (turnover 11 -> 3.4 a year, drawdown -54% -> -42%),
+but the book still trails the equal-weight universe by a wide margin (Sharpe 0.53 vs 0.79).
+**Book 2 (exit added to momentum + delivery): Fail.** Every threshold lowered returns; the more often it sold, the worse
+(Sharpe 1.38 -> 1.07 / 0.98 / 0.89). Strong stocks often show upper wicks near their highs, so the rule sold winners early and
+more than tripled trading.
