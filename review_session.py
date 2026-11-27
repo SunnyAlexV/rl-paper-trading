@@ -68,7 +68,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--account", default="paper"); ap.add_argument("--date")
     a = ap.parse_args(); acc = a.account
     cfgp = json.load(open("paper/fleet.json"))
-    cfgfile = next(x["config"] for x in cfgp["accounts"] if x["out"] == acc)
+    cfgfile = next((x["config"] for x in cfgp["accounts"] if x["out"] == acc), f"paper/config_{acc.replace('paper_', '', 1)}.json")
     cfg = json.load(open(cfgfile))
     p = pd.read_pickle("data/bhav/panel.pkl")
     C, O, A, M, TV = p["raw_close"], p["raw_open"], p["adj"]["close"], p["member"].astype(bool), p["tv"]
@@ -78,10 +78,17 @@ def main():
     Dm1 = A.index[A.index.get_loc(D) - 1] if first_day else nav.index[nav.index.get_loc(D) - 1]
     ix = pd.read_csv("data/indices/closes.csv", index_col=0, parse_dates=True)
     st = json.load(open(f"{acc}/state.json"))
+    # multi-asset accounts hold ETFs too (not in the stock panel): value them at their last close and keep them
+    # out of the stock-by-stock sections
+    etf_last = st.get("etf_last", {})
+    etf_hold = {s: q for s, q in st["shares"].items() if s in etf_last}
+    st["shares"] = {s: q for s, q in st["shares"].items() if s not in etf_last}
     j = json.load(open(f"{acc}/orders_after_{D.date()}.json"))
     pf = f"{acc}/orders_after_{Dm1.date()}.json"
     jprev = json.load(open(pf)) if os.path.exists(pf) else {"orders": {}}
-    F = load_fills(acc)
+    etf_fills = [x for x in j["fills_today"] if x["symbol"] in etf_last]
+    j["fills_today"] = [x for x in j["fills_today"] if x["symbol"] not in etf_last]
+    F = load_fills(acc); F = F[~F.symbol.isin(list(etf_last))]
     L = []; w = L.append
     n1 = nav.at[D, "nav"]; n0 = n1 if first_day else nav.at[Dm1, "nav"]
     w(f"# Session review: {acc}, {D.date()}\n")
@@ -112,12 +119,14 @@ def main():
     for _, x in T.iterrows():
         zs = "" if np.isnan(x.z) else f"{x.z:+.2f}" + (" **unusual**" if abs(x.z) > 2 else "")
         w(f"| {x.sym} | {pct(x.ret)} | {zs} | {rs(x.pnl)} | {x.w*100:.1f}% |")
-    costs_today = sum(f["costs"] for f in j["fills_today"])
+    costs_today = sum(f["costs"] for f in j["fills_today"]) + sum(f["costs"] for f in etf_fills)
     w(f"\nCosts today {rs(-costs_today)}." + (f" Best: {T.iloc[0].sym}; worst: {T.iloc[-1].sym}.\n" if len(T) else " No holdings yet (first session).\n"))
 
     # 2. each fill
     w("## 2. Today's fills\n")
-    if not j["fills_today"]: w("No fills.\n")
+    if not j["fills_today"] and not etf_fills: w("No fills.\n")
+    for f in etf_fills:
+        w(f"- **{f['side'].upper()} {f['symbol']}** (ETF) {f['qty']} @ {f['price']:.2f}, cost {f['costs']:.2f}.")
     for f in j["fills_today"]:
         s = f["symbol"]; o, c = O.at[D, s], C.at[D, s]
         slip = (f["price"] / o - 1) * (1 if f["side"] == "buy" else -1)
@@ -201,6 +210,10 @@ def main():
     # 5. watch-list
     w("## 5. Watch-list\n")
     wts = {s: q * C.at[D, s] / n1 for s, q in st["shares"].items()}
+    wts.update({s: q * etf_last[s] / n1 for s, q in etf_hold.items()})
+    if etf_hold:
+        w("ETF holdings: " + ", ".join(f"{s} {q} units ({q * etf_last[s] / n1 * 100:.1f}%)" for s, q in etf_hold.items())
+          + f"; stocks {sum(q * C.at[D, s] for s, q in st['shares'].items()) / n1 * 100:.1f}%.\n")
     big = sorted(wts.items(), key=lambda x: -x[1])[:3]
     w("Largest weights: " + ", ".join(f"{s} {v*100:.1f}%" for s, v in big) + f". Cash {st['cash']/n1*100:.1f}%.")
     tv = TV.iloc[-60:].median(); lr = tv[M.iloc[-1]].rank(ascending=False)
