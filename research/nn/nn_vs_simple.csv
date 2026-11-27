@@ -1,0 +1,7 @@
+model,train_IC,train_t,test_IC,test_t,drop_pct
+momentum + delivery (no training),0.0732,2.97,0.0516,3.37,30.0
+ridge regression,0.0965,3.68,0.0591,3.01,39.0
+gradient-boosted trees (depth 3),0.1417,5.81,0.0564,3.17,60.0
+"neural net, 1 layer (32)",0.1201,5.62,0.0598,3.76,50.0
+"neural net, 3 layers (64-32-16)",0.1369,6.33,0.0543,3.63,60.0
+"neural net, 5 layers (256-128-64-32-16)",0.1735,9.79,0.0462,3.65,73.0
