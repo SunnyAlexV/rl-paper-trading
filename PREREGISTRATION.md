@@ -231,3 +231,13 @@ for `paper/`, `paper_10L`, `paper_hi_10L`, `paper_lo_10L`, `paper_null_10L`, `pa
 daily-rule accounts (`paper_daily_10L`, `paper_daily_1L`), which re-pick their top 20 every day with no band, would have
 swapped one stock: the restored 9 Nov move shifts momentum scores slightly. No live share count was ever changed, and
 no rule, parameter or signal changed. The new primary has not traded yet.
+
+## Code, 27 Nov 2026: ETF support for a future multi-asset account (not yet active)
+
+`alpha/paper_trade.py` gains a `"rule": "multi"` path and `alpha/etf_prices.py` (ETF prices from the day's bhavcopy, ETF
+costs: STT 0.001%, half-spread 0.05%), for `paper/config_multi_10L.json` (mix B, `research/multiasset/SPEC_B.md`).
+**The account is not in `paper/fleet.json`**; under the 27 Nov safeguards it can be added by a dated amendment from
+Jan 2027. Check: replaying 26 Nov from each account's 25 Nov state, all nine existing accounts' orders, fills and NAV are
+identical with the previous and the new engine. A dry run of the multi account (25-26 Nov, scratch copy) bought 20 stocks at
+2% each, GOLDBEES 20% and MON100 10%, leaving 32% cash. Before activation, `review_session.py` must also learn to value ETF
+holdings.

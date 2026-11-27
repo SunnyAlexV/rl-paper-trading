@@ -15,3 +15,6 @@ CAGR, Sharpe, max drawdown, worst calendar year, 2020-26 separately.
 **Paper account (to be added in Jan 2027 under the 27 Nov safeguards):** `paper_multi_10L`, Rs 10L, these rules
 unchanged; cash earns a liquid-fund rate through the engine's existing `cash_rate` (taxed at slab rate, as in
 `research/timing`). Requires ETF support in `alpha/paper_trade.py`, built and checked before the amendment.
+
+Engine support added and checked on 27 Nov 2026 (see the "Code, 27 Nov 2026" entry in PREREGISTRATION.md); config
+`paper/config_multi_10L.json` (cash_rate 5.5%, as `paper_timed_10L`).

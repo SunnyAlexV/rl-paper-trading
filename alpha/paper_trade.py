@@ -70,6 +70,17 @@ def main():
         print("already processed", D.date()); return
     names = P.names; ix = {s: i for i, s in enumerate(names)}
     raw_o, raw_c = b["raw_open"], b["raw_close"]; fac = b["factor"]
+    ETF = {}
+    if cfg.get("rule") == "multi":
+        # multi-asset accounts (added 27 Nov 2026, research/multiasset/SPEC_B.md): ETF prices from the day's bhavcopy
+        from alpha.etf_prices import etf_day, ETF_FEES, ETF_HALF_SPREAD
+        ETF = etf_day(D, list(cfg["etfs"]))
+        last = st.setdefault("etf_last", {})
+        for s_, (o_, c_) in ETF.items(): last[s_] = c_
+    def p_open(s):
+        return raw_o[s].iloc[t] if s in raw_o.columns else (ETF[s][0] if s in ETF else np.nan)
+    def p_close(s):
+        return np.nan_to_num(raw_c[s].ffill().iloc[t]) if s in raw_c.columns else st.get("etf_last", {}).get(s, 0.0)
     book = TaxBook(1)
     # 0. new financial year: pay last year's tax
     if fy_of(D) != st["fy"]:
@@ -114,10 +125,10 @@ def main():
     # 2. fill yesterday's orders at today's open
     fills = []
     if st["orders"]:
-        nav_open = st["cash"] + sum(q * raw_o[s].iloc[t] for s, q in st["shares"].items() if np.isfinite(raw_o[s].iloc[t]))
+        nav_open = st["cash"] + sum(q * p_open(s) for s, q in st["shares"].items() if np.isfinite(p_open(s)))
         for side in ("sell", "buy"):
             for s, w in st["orders"].items():
-                p = raw_o[s].iloc[t] if s in raw_o else np.nan
+                p = p_open(s)
                 if not np.isfinite(p):
                     continue
                 cur = st["shares"].get(s, 0)
@@ -127,10 +138,13 @@ def main():
                     continue
                 if want > 0 and cur > 0 and abs(q) * p < cfg.get("min_trade_frac", 0.0) * nav_open:
                     continue
-                i = ix[s]; sp = P.spread[t - 1, i]
-                f = float(implicit_cost_frac(abs(q), sp, 0.02, max(1.0, float(np.nan_to_num(b["vol"][s].iloc[t - 20:t].median())))))
+                if s in ETF:
+                    f = ETF_HALF_SPREAD
+                else:
+                    i = ix[s]; sp = P.spread[t - 1, i]
+                    f = float(implicit_cost_frac(abs(q), sp, 0.02, max(1.0, float(np.nan_to_num(b["vol"][s].iloc[t - 20:t].median())))))
                 fill = p * (1 - f) if q < 0 else p * (1 + f)
-                val = abs(q) * fill; ec = explicit_costs(val, side)
+                val = abs(q) * fill; ec = explicit_costs(val, side, ETF_FEES) if s in ETF else explicit_costs(val, side)
                 if side == "sell":
                     st["cash"] += val - ec["total"]; rem = -q
                     while rem > 0:
@@ -149,7 +163,7 @@ def main():
                     st["shares"].pop(s); st["lots"].pop(s, None); st["entry"].pop(s, None)
                 fills.append(dict(symbol=s, side=side, qty=int(abs(q)), price=round(fill, 2), costs=round(ec["total"], 2)))
     # 3. mark to close
-    mv = sum(q * np.nan_to_num(raw_c[s].ffill().iloc[t]) for s, q in st["shares"].items())
+    mv = sum(q * p_close(s) for s, q in st["shares"].items())
     accrued = book._settle(st["fy"], st["st"], st["lt"], st["cf_st"], st["cf_lt"])[0]
     nav = st["cash"] + mv
     pd.DataFrame([dict(date=str(D.date()), nav=nav, nav_post_tax=nav - accrued, cash=st["cash"],
@@ -157,7 +171,8 @@ def main():
         f"{OUT}/nav.csv", mode="a", header=not os.path.exists(f"{OUT}/nav.csv"), index=False)
     # 4. decide for tomorrow (same rules as the backtests)
     sh = np.zeros(len(names), dtype=np.int64)
-    for s_, q in st["shares"].items(): sh[ix[s_]] = q
+    for s_, q in st["shares"].items():
+        if s_ in ix: sh[ix[s_]] = q
     w_now = sh * np.nan_to_num(raw_c.ffill().values[t]) / nav
     if cfg.get("signal") == "momentum_12_1":
         # exploratory momentum account (added 18 Nov 2026): 12-month return skipping the latest
@@ -220,6 +235,32 @@ def main():
             for i in new: target[i] = max(rest, 0) / len(new)
             if target.sum() > e + 1e-9: target *= e / target.sum()     # never above exposure
         st["e"] = e; st["timing"] = timing_rec
+    elif cfg.get("rule") == "multi":
+        # multi-asset (added 27 Nov 2026, research/multiasset/SPEC_B.md): the band rule runs inside an equity sleeve of
+        # weight E; ETFs held at fixed weights; the rest is cash (earning cash_rate). On the first trading day of each
+        # month, the sleeve is scaled back to E and the ETFs reset to their targets.
+        E_w = cfg["equity_weight"]; k, band = cfg.get("k", 20), cfg.get("band", 100)
+        new_month = st.get("rebal_month") != D.strftime("%Y-%m")
+        sc = np.where(P.mask[t] & np.isfinite(score[t]), score[t], -np.inf)
+        order = list(np.argsort(-sc)); rank = {i: r for r, i in enumerate(order)}
+        held = [i for i in np.where(sh > 0)[0]]
+        keep = [i for i in held if rank[i] < band and np.isfinite(sc[i])]
+        target = None; etf_orders = {}
+        if new_month or not (len(keep) == len(held) == k):
+            sleeve = float(w_now.sum())
+            scale = (E_w / sleeve) if (new_month and sleeve > 0) else 1.0
+            target = np.zeros(len(names))
+            for i in keep: target[i] = w_now[i] * scale
+            slot = nav * E_w / k
+            new = [i for i in order if i not in keep and np.isfinite(sc[i])
+                   and 0 < raw_c.ffill().values[t, i] <= slot][: k - len(keep)]
+            rest = E_w - target.sum()
+            for i in new: target[i] = max(rest, 0) / len(new)
+            if target.sum() > E_w + 1e-9 and new_month: target *= E_w / target.sum()
+        if new_month:
+            for s_, w_ in cfg["etfs"].items():
+                etf_orders[s_] = float(w_)
+            st["rebal_month"] = D.strftime("%Y-%m")
     elif cfg.get("rule") == "daily":
         # daily rule (added 16 Nov 2026 for the fleet; not used by the frozen account): every day,
         # equal weight in today's top k buyable names, no band; with min_trade_frac 0 every drift
@@ -240,6 +281,8 @@ def main():
     orders = None
     if target is not None:
         orders = {names[i]: float(target[i]) for i in np.where(np.abs(target - w_now) > 1e-9)[0]}
+    if cfg.get("rule") == "multi" and etf_orders:
+        orders = dict(orders or {}); orders.update(etf_orders)
     st["orders"], st["last"] = orders, str(D.date())
     json.dump(st, open(f"{OUT}/state.json", "w"), indent=1, default=float)
     rec = dict(decided_after_close_of=str(D.date()), created_utc=datetime.now(timezone.utc).isoformat(),

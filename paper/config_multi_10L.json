@@ -1,0 +1,20 @@
+{
+ "panel": "council",
+ "pool": null,
+ "k": 20,
+ "band": 100,
+ "min_trade_frac": 0.01,
+ "system": "Multi-asset mix B: momentum + delivery sleeve 40% (band 20/100), gold 20%, Nasdaq-100 10%, cash 30% (exploratory)",
+ "signal": "mom_deliv",
+ "rule": "multi",
+ "equity_weight": 0.4,
+ "etfs": {
+  "GOLDBEES": 0.2,
+  "MON100": 0.1
+ },
+ "cash_rate": 0.055,
+ "capital": 1000000,
+ "frozen_on": "2026-11-27 (rules); account to be added by amendment, earliest Jan 2027",
+ "paper_trading_starts": "not yet: added by a dated amendment (27 Nov 2026 safeguards: at most one new account per quarter)",
+ "note": "research/multiasset/SPEC_B.md. Monthly reset to 40/20/10/30 on the first trading day of each month; the band rule runs inside the 40% sleeve; cash earns cash_rate (5.5% a year, as paper_timed_10L, taxed at 31.2% as in research/timing)."
+}
