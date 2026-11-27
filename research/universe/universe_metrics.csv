@@ -1,0 +1,13 @@
+universe,book,median_stocks,band,CAGR,Sharpe,MaxDD,CAGR_2022_26
+current (top 500),rule,333,100.0,0.2672,1.382,-0.318,0.219
+current (top 500),equal weight,333,,0.1334,0.785,-0.486,0.1283
+top 300,rule,300,100.0,0.229,1.285,-0.35,0.1454
+top 300,equal weight,300,,0.1296,0.763,-0.48,0.1224
+top 200,rule,200,100.0,0.1821,1.128,-0.371,0.1529
+top 200,equal weight,200,,0.1187,0.72,-0.47,0.1133
+top 100,rule,100,50.0,0.1364,0.866,-0.333,0.1179
+top 100,equal weight,100,,0.0991,0.625,-0.458,0.0972
+current minus most volatile third,rule,222,100.0,0.1799,1.139,-0.331,0.1104
+current minus most volatile third,equal weight,222,,0.1415,0.931,-0.356,0.1177
+F&O stocks only,rule,179,89.0,0.1414,0.935,-0.329,0.102
+F&O stocks only,equal weight,179,,0.104,0.697,-0.374,0.0982
