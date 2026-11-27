@@ -189,3 +189,31 @@ Written before any live result of the 27 Nov accounts.
    realistic edges this needs two to three years of live data; 12 months will usually be "not yet known".
 7. **Real money gate.** No real money follows any account before it passes rule 6 out of sample. Even
    then, it starts as a small satellite next to a broad index core.
+
+## Amendment, 27 Nov 2026 (new primary test: momentum + delivery)
+
+Decided by Sunny on 27 Nov 2026, **before the account's first live trade** (its first orders are written after the
+27 Nov close and first filled at the 30 Nov open), so no live result informed it.
+
+- **New primary test:** `paper_mdeliv_10L/` (rules in the amendment "two equal-weight composite accounts" above;
+  unchanged). The 12-month clock starts at its first fill on 30 Nov 2026.
+- **Why:** the council's blended signal showed no predictive power over the year to Nov 2026 (`research/committee/`),
+  its members offset each other, and at Rs 1L the account is handicapped by charges and whole-share rounding. Momentum +
+  delivery led every study (`research/pods/`, `research/wicks/RESULTS_BT.md`), passed its unseen Jul 2012 - Dec 2015
+  holdout (26.2% a year post-tax, Sharpe 1.71), was rediscovered by the no-hindsight agents, and passed all three
+  pre-set stress tests (`research/stress/RESULTS.md`: 50 of 50 random halves, 100% of 36-month windows, costs x3).
+  Caveats: trial count (`research/TRIALS.md`), and the delivery idea is partly hindsight.
+- **The council account `paper/` keeps running unchanged as a comparison.** It stays first in `run_fleet.py` because it
+  downloads the day's data.
+- **Verdicts, fixed now from the stress-test ranges** (benchmark: Nifty 500 price index over the same dates; also the
+  null control `paper_null_10L`), post-tax:
+  - *At 6 months:* **broken** if the drawdown is worse than -40% or it trails the Nifty 500 by more than 20 points.
+  - *At 12 months:* **working** if ahead of the Nifty 500 with max drawdown better than -35%; **unclear but normal** if
+    behind by up to 25 points (the rule trailed the equal-weight universe in 15% of past 12-month windows, by up to 25
+    points), in which case it continues; **broken** if behind by more than 25 points, or more than 15 points behind the
+    null control.
+  - *At 24 months:* trailing the Nifty 500 is a serious warning (it trailed the equal-weight universe in only 1.3% of
+    past 24-month windows); trailing by more than 10 points counts as broken.
+  - **Broken** means: stop and review with Sunny; no rule is changed in place (safeguard 1), and real money stays out.
+  - "Working" at 12 months is still not proof (safeguard 6 needs t >= 2.8 against the comparisons), but it allows
+    discussing a small real-money satellite next to an index core (safeguard 7).

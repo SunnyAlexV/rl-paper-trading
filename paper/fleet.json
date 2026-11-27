@@ -3,7 +3,7 @@
   {
    "out": "paper",
    "config": "paper/config.json",
-   "role": "PRIMARY frozen test, Rs 1L"
+   "role": "Former primary (council, frozen 31 Oct 2026, Rs 1L); comparison account since the 27 Nov 2026 amendment. Runs first because it downloads the day's data."
   },
   {
    "out": "paper_10L",
@@ -48,7 +48,7 @@
   {
    "out": "paper_mdeliv_10L",
    "config": "paper/config_mdeliv_10L.json",
-   "role": "Band rule 20/100 on momentum + delivery composite (equal weights), Rs 10L"
+   "role": "PRIMARY test from 30 Nov 2026 (amendment of 27 Nov 2026): band rule 20/100 on momentum + delivery composite (equal weights), Rs 10L"
   },
   {
    "out": "paper_integ_10L",

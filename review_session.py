@@ -74,14 +74,16 @@ def main():
     C, O, A, M, TV = p["raw_close"], p["raw_open"], p["adj"]["close"], p["member"].astype(bool), p["tv"]
     nav = pd.read_csv(f"{acc}/nav.csv", index_col=0, parse_dates=True)
     D = pd.Timestamp(a.date) if a.date else nav.index[-1]
-    Dm1 = nav.index[nav.index.get_loc(D) - 1]
+    first_day = nav.index.get_loc(D) == 0          # an account's first run: no previous session of its own
+    Dm1 = A.index[A.index.get_loc(D) - 1] if first_day else nav.index[nav.index.get_loc(D) - 1]
     ix = pd.read_csv("data/indices/closes.csv", index_col=0, parse_dates=True)
     st = json.load(open(f"{acc}/state.json"))
     j = json.load(open(f"{acc}/orders_after_{D.date()}.json"))
-    jprev = json.load(open(f"{acc}/orders_after_{Dm1.date()}.json"))
+    pf = f"{acc}/orders_after_{Dm1.date()}.json"
+    jprev = json.load(open(pf)) if os.path.exists(pf) else {"orders": {}}
     F = load_fills(acc)
     L = []; w = L.append
-    n1, n0 = nav.at[D, "nav"], nav.at[Dm1, "nav"]
+    n1 = nav.at[D, "nav"]; n0 = n1 if first_day else nav.at[Dm1, "nav"]
     w(f"# Session review: {acc}, {D.date()}\n")
     w(f"_Analysis only. The trading rule is frozen (PREREGISTRATION.md); nothing here changes it._\n")
 
@@ -111,7 +113,7 @@ def main():
         zs = "" if np.isnan(x.z) else f"{x.z:+.2f}" + (" **unusual**" if abs(x.z) > 2 else "")
         w(f"| {x.sym} | {pct(x.ret)} | {zs} | {rs(x.pnl)} | {x.w*100:.1f}% |")
     costs_today = sum(f["costs"] for f in j["fills_today"])
-    w(f"\nCosts today {rs(-costs_today)}. Best: {T.iloc[0].sym}; worst: {T.iloc[-1].sym}.\n")
+    w(f"\nCosts today {rs(-costs_today)}." + (f" Best: {T.iloc[0].sym}; worst: {T.iloc[-1].sym}.\n" if len(T) else " No holdings yet (first session).\n"))
 
     # 2. each fill
     w("## 2. Today's fills\n")
